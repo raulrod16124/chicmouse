@@ -10,13 +10,9 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:     
-      # - task: CmdLine@1
-      #   displayName: "Build ignoring TS errors"
-      #   inputs:
-      #     script: "yarn build-ignore-errors"
-          
+
       - uses: actions/checkout@v3
-      - run: yarn build
+      - run: vite build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'

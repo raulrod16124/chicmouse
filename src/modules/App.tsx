@@ -1,7 +1,11 @@
-function App() {
+import { Main } from "./App.styles";
+import { Nav } from "./nav/Nav";
 
+function App() {
   return (
-    <div>Hello chicmouse</div>
+    <Main>
+      <Nav />
+    </Main>
   )
 }
 

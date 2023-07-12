@@ -4,7 +4,13 @@ import svgrPlugin from "vite-plugin-svgr";
 import tsConfigPaths from "vite-tsconfig-paths";
 import topLevelAwait from "vite-plugin-top-level-await";
 
-const serverOptions: ServerOptions = {
+const devServerOptions: ServerOptions = {
+  host: "localhost",
+  port: 3000,
+  open: false
+};
+
+const prodServerOptions: ServerOptions = {
   host: "localhost",
   port: 3000,
   open: false
@@ -19,10 +25,10 @@ export default defineConfig({
     topLevelAwait(),
   ],
   server: {
-    ...serverOptions
+    ...devServerOptions
   },
   preview: {
-    ...serverOptions
+    ...prodServerOptions
   },
   build: {
     outDir: "build",

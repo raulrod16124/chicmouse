@@ -18,7 +18,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^6.4.4",
-    "styled-components": "^6.0.3"
+    "styled-components": "^6.0.3",
+    "tsc-silent": "1.2.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
@@ -30,7 +31,6 @@
     "eslint": "^8.44.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
-    "tsc-silent": "1.2.2",
     "typescript": "^5.0.2",
     "vite": "^4.4.0",
     "vite-plugin-svgr": "^3.2.0",

@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:          
       - uses: actions/checkout@v3
-      - run: vite build
+      - run: yarn build-no-tsc
       # - run: yarn build
       # - run: yarn build-ignore-errors
       - uses: FirebaseExtended/action-hosting-deploy@v0

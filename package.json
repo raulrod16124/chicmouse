@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build-ignore-errors": "vite tsc-silent -p tsconfig.json --suppress @ && vite build",
+    "build-ignore-errors": "npx tsc-silent -p tsconfig.json --suppress @ && vite build",
     "firebase-deploy": "tsc && vite build && firebase deploy",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

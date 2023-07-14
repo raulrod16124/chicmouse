@@ -1,3 +1,6 @@
 import styled from "styled-components";
 
-export const Main = styled.div``;
+export const Main = styled.div`
+    width: 100%;
+    height: calc(100vh - 100px);
+`;

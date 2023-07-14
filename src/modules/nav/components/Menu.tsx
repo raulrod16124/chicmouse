@@ -8,21 +8,15 @@ export const Menu = () => {
   const intl = useIntl();
 
   const { pathname } = useLocation();
-  const currentPath = pathname.split("/")[1];
-
-  const onChangeSection = () => {
-
-  }
 
   const renderMenuItem = ({ name, icon, path}: MenuItem) => {
+    const currentPath = pathname.split("/")[1].length ? pathname : "/home";
+
     return (
       <MenuItemContent 
         key={name}
         to={path}
-        onClick={onChangeSection}
-        style={ currentPath === name.toLocaleLowerCase() ? {
-          backgroundColor: "##36CDBB"
-        } : null}
+        selected={currentPath === path}
       >
         {intl.formatMessage({id: name})}
       </MenuItemContent>

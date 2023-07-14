@@ -1,7 +1,7 @@
 import { ErrorPage } from "common/ErrorPage";
 import { Home } from "modules/home/Home";
 import { Nav } from "modules/nav/Nav";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 const pages = ["home", "applications", "about-us", "contact", ""];
 

@@ -16,7 +16,7 @@ interface ILanguageProviderProps {
 export const LanguageContext = createContext({} as ILanguageContextProps);
 
 export const LanguageProvider = ({children}: ILanguageProviderProps) => {
-    const [language, setLanguage] = useState<string>("en-GB");
+    const [language, setLanguage] = useState<string>();
     const [messages, setMessages] = useState<{}>(appEn);
 
     const changeMessages = async (language:string) => {
@@ -31,17 +31,11 @@ export const LanguageProvider = ({children}: ILanguageProviderProps) => {
         }
     };
 
-    // useEffect(()=>{
-        // if(user?.settings){
-        //     if(user.settings.language){
-        //         setLanguage(user.settings.language)
-        //         changeMessages(user.settings.language)
-        //     } else {
-        //         setLanguage(deviceLanguage || "en-GB")
-        //         changeMessages(deviceLanguage || "en-GB")
-        //     }
-        // }
-    // }, [])
+    useEffect(()=>{
+        if(!language){
+            changeMessages(navigator.language)
+        }
+    }, [navigator.language])
 
     return (
         <LanguageContext.Provider value={{
@@ -49,9 +43,11 @@ export const LanguageProvider = ({children}: ILanguageProviderProps) => {
             messages,
             changeMessages
         }} >
-            <IntlProvider messages={messages} locale={language}>
-                {children}
-            </IntlProvider>
+            { language ? (
+                <IntlProvider messages={messages} locale={language}>
+                    {children}
+                </IntlProvider>
+            ) : null}
         </LanguageContext.Provider>
     )
 }

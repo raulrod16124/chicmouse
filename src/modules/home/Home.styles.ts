@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "utils";
 
 export const HomeWrapper= styled.div`
     width: 100%;
@@ -29,4 +30,14 @@ export const HomeTitle = styled.h1`
 export const HomeText = styled.p`
     font-size: 25px;
     font-style: italic;
+    text-align: center;
+    margin: 0 20px;
+
+    @media ${device.mobileL} { 
+        font-size: 20px;
+    }
+
+    @media ${device.mobileS} {
+        font-size: 15px;
+    }
 `;

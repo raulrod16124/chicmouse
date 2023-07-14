@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+type TMenuItem = {
+    selected: boolean
+}
+
 export const NavContainer = styled.div`
     display: grid;
     grid-template-columns: .5fr 3fr .5fr;
@@ -29,17 +33,17 @@ export const MenuWrapper = styled.div`
     border-right: 0.5px solid #333;
 `;
 
-export const MenuItemContent = styled(Link)`
+export const MenuItemContent = styled(Link)<TMenuItem>`
     height: 100%;
     display: flex;
     align-items: center;
     padding: 0 20px;
     text-decoration: none;
-    color: #fff;
+    background-color: ${props => props.selected && "#ACE5DE"};
+    color: ${props => props.selected ? "#000" : "#fff"};
+    cursor: default;
     
     &:hover{
-        cursor: default;
-        color: #000;
-        background-color: #8DE3D9;
+        background: ${props => !props.selected && "rgba(141,227,217, .5)"};
     }
 `;

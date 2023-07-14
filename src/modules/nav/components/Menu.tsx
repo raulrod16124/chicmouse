@@ -1,5 +1,5 @@
 import { MenuItem } from "types";
-import { menu } from "utils/menu";
+import { menu } from "utils";
 import { MenuItemContent, MenuWrapper } from "../Nav.styles";
 import { useIntl } from "react-intl";
 import { useLocation } from "react-router-dom";

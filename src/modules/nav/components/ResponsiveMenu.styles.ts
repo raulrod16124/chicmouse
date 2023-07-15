@@ -18,7 +18,7 @@ export const FloatMenu = styled.div`
     left: 0;
     background-color: #343434;
     width: 100%;
-    min-height: 200px;
+    min-height: 170px;
     z-index: 100;
 `;
 
@@ -33,7 +33,7 @@ export const FloatItemContent = styled.ul`
 export const FloatItem = styled(Link)<TFloatItem>`
     text-align: center;
     padding: 10px 0;
-    font-size: 20px;
+    font-size: 15px;
     color: #fff;
     width: 100%;
     text-decoration: none;

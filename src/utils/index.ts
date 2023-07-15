@@ -25,7 +25,7 @@ export const menu: MenuItem[] =[
 
 // Styles utils
 
-const size = {
+export const size = {
     mobileS: '320px',
     mobileM: '375px',
     mobileL: '425px',

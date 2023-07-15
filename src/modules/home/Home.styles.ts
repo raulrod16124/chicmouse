@@ -21,16 +21,21 @@ export const HomeContainer = styled.div`
     align-items: center;
     justify-content: space-around;
     @media ${device.tablet} { 
-        height: 500px;
+        height: 400px;
     }
 `;
 
 export const HomeImage = styled.img`
     width: 292px;
     height: 442px;
+    transition: all .3s ease-out;
     @media ${device.tablet} { 
         width: 192px;
         height: 282px;
+    }
+
+    &:hover{
+        transform: scale(1.1);
     }
 `;
 

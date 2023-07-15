@@ -4,17 +4,10 @@ import { NavContainer } from "./Nav.styles"
 import { FarMenuItems } from "./components/FarMenuItems"
 import { Menu } from "./components/Menu"
 import { ResponsiveMenu } from "./components/ResponsiveMenu";
+import { useWindowSize } from "hooks/useWindowSize";
 
 export const Nav = () => {
-  const [smallScreenDetected, setSmallScreenDetected] = useState<boolean>(false);
-
-  const handleWindowResize = () => {
-    if(window.innerWidth < 1024){
-      setSmallScreenDetected(true);
-    } else {
-      setSmallScreenDetected(false);
-    }
-  };
+  const { smallScreenDetected } = useWindowSize();
 
   const renderNavigation = (smallWindow:boolean) => {
     if(smallWindow){
@@ -22,15 +15,6 @@ export const Nav = () => {
     }
     return ( <> <Logo /> <Menu /> </>)
   }
-
-  useEffect(() => {
-    handleWindowResize()
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  });
 
   return (
     <NavContainer>

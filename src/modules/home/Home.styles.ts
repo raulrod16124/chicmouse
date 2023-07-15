@@ -7,6 +7,10 @@ export const HomeWrapper= styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media ${device.tablet} { 
+        margin-top: 50px;
+        align-items: flex-start;
+    }
 `;
 
 export const HomeContainer = styled.div`
@@ -16,6 +20,9 @@ export const HomeContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    @media ${device.tablet} { 
+        height: 500px;
+    }
 `;
 
 export const HomeImage = styled.img`

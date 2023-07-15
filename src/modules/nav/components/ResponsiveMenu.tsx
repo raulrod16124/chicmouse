@@ -1,9 +1,8 @@
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FloatItem, FloatItemContent, FloatMenu, ResponsiveNavContainer } from './ResponsiveMenu.styles'
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { MenuItemContent } from '../Nav.styles'
 import { useIntl } from 'react-intl'
 import { MenuItem } from 'types'
 import { menu } from 'utils'
@@ -32,7 +31,11 @@ export const ResponsiveMenu = () => {
     return (
         <>
             <ResponsiveNavContainer onClick={() => setOpenMenu(!openMenu)}>
-                <FontAwesomeIcon icon={faBars} />
+                { openMenu ? (
+                  <FontAwesomeIcon icon={faClose} />
+                ) : (
+                  <FontAwesomeIcon icon={faBars} />
+                ) }
             </ResponsiveNavContainer>
             { openMenu && (
                 <FloatMenu>

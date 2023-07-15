@@ -5,11 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useIntl } from "react-intl";
 import { useWindowSize } from "hooks/useWindowSize";
+import ClipLoader from "react-spinners/ClipLoader";
 
 export const Applications = () => {
     const intl = useIntl();
 
     const { smallScreenDetected } = useWindowSize();
+    
 
     const renderApp = ({ name, icon, stars, downloadsNumber}: AppInfo) => {
         const notReadyText = intl.formatMessage({id:"comingSoon"});
@@ -19,7 +21,17 @@ export const Applications = () => {
 
         return (
             <AppContent key={name} hover={hoverResult} >
-                <AppIcon src={icon} alt={`${name}-icon`} />
+                { !icon ? (
+                    <ClipLoader
+                        color={"#000"}
+                        loading={!!icon}
+                        size={50}
+                        aria-label="Loading Spinner"
+                        data-testid="loader"
+                    />
+                ) : (
+                    <AppIcon src={icon} alt={`${name}-icon`} />
+                ) }
 
                 <AppInfoContent>
                     <AppTitle>{nameText}</AppTitle>

@@ -1,7 +1,7 @@
 {
   "name": "chicmouse",
   "private": true,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -26,6 +26,7 @@
     "react-dom": "^18.2.0",
     "react-intl": "^6.4.4",
     "react-router-dom": "^6.14.1",
+    "react-spinners": "^0.13.8",
     "sort-by": "^1.2.0",
     "styled-components": "^6.0.3",
     "tsc-silent": "1.2.2"

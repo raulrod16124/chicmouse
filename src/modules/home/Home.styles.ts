@@ -21,6 +21,10 @@ export const HomeContainer = styled.div`
 export const HomeImage = styled.img`
     width: 292px;
     height: 442px;
+    @media ${device.tablet} { 
+        width: 192px;
+        height: 282px;
+    }
 `;
 
 export const HomeTitle = styled.h1`
@@ -31,13 +35,8 @@ export const HomeText = styled.p`
     font-size: 25px;
     font-style: italic;
     text-align: center;
-    margin: 0 20px;
-
+    margin: 0 50px;
     @media ${device.mobileL} { 
-        font-size: 20px;
-    }
-
-    @media ${device.mobileS} {
         font-size: 15px;
     }
 `;

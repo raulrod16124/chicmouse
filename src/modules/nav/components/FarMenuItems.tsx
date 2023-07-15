@@ -1,8 +1,8 @@
 import spainFlag from "assets/spain.png";
 import englandFlag from "assets/england.png";
-import { Flag, FlagsWrapper } from "../Nav.styles";
 import { useContext } from "react";
 import { LanguageContext } from "context/LanguageContext";
+import { Flag, FlagsWrapper } from "./FarMenuItems.styles";
 
 export const FarMenuItems = () => {
   const { language, changeMessages } = useContext(LanguageContext);

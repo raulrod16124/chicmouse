@@ -6,11 +6,6 @@ type TMenuItem = {
     selected: boolean,
 }
 
-type TFlag = {
-    selected: boolean;
-    onClick: (language: string) => void;
-}
-
 export const NavContainer = styled.div`
     display: grid;
     grid-template-columns: .5fr 3fr .5fr;
@@ -20,7 +15,6 @@ export const NavContainer = styled.div`
     padding: 0;
     background-color: #000;
     color: #fff;
-
     overflow: hidden;
 
     & div{
@@ -36,7 +30,9 @@ export const NavContainer = styled.div`
 
     @media ${device.laptop} { 
         font-size: 20px;
-        grid-template-columns: .2fr 2fr .2fr;
+    }
+    @media ${device.tablet} {
+        grid-template-columns: .5fr 2fr .5fr;
     }
 `;
 
@@ -92,20 +88,4 @@ export const MenuItemContent = styled(Link)<TMenuItem>`
         padding: 0 5px;
         width: 60px;
     }
-`;
-
-export const FlagsWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-`;
-
-export const Flag = styled.img<TFlag>`
-    width: 25px;
-    height: 25px;
-    margin: 0 20px;
-    cursor: pointer;
-    border-radius: 50%;
-    border: ${props => props.selected && "2px solid white"};
 `;

@@ -1,4 +1,6 @@
-import { MenuItem } from "types";
+import { AppInfo, MenuItem } from "types";
+import matchupIcon from "../assets/matchupIcon.png"
+import imageNotFound from "../assets/image_not_found.png"
 
 export const menu: MenuItem[] =[
     {
@@ -45,3 +47,22 @@ export const device = {
   desktop: `(max-width: ${size.desktop})`,
   desktopL: `(max-width: ${size.desktop})`
 };
+
+// Apps information
+
+export const Apps: AppInfo[] = [
+    {
+        name: "Matchup",
+        icon: matchupIcon,
+        stars: 0.0,
+        downloadsNumber: 0,
+        url: "/",
+    },
+    {
+        name: "notReady",
+        icon: imageNotFound,
+        stars: 0.0,
+        downloadsNumber: 0,
+        url: "/",
+    },
+]

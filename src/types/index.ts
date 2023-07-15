@@ -4,3 +4,11 @@ export type MenuItem = {
     icon: string;
     path: string;
 }
+
+export type AppInfo = {
+    name: string;
+    icon: string;
+    stars: number;
+    downloadsNumber: number;
+    url: string;
+}

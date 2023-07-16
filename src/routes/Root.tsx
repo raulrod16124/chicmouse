@@ -1,5 +1,6 @@
 import { ErrorPage } from "common/ErrorPage";
 import { Applications } from "modules/apps/Applications";
+import AppPage from "modules/apps/components/AppPage";
 import { Home } from "modules/home/Home";
 import { Nav } from "modules/nav/Nav";
 import { Route, Routes, useLocation } from "react-router-dom";
@@ -23,6 +24,7 @@ export const Root = () => {
         <Route path={"/"} element={<Home />}/>
         <Route path={"/home"} element={<Home />}/>
         <Route path={"/applications"} element={<Applications />}/>
+          <Route path={"applications/:id"} element={<AppPage />} />
         <Route path="/about-us" element={<div>About us</div>}/>
         <Route path="/contact" element={<div>Contact</div>}/>
       </Routes>

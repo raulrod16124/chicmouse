@@ -1,5 +1,6 @@
 {
     "comingSoon": "Próximamente...",
+    "download": "Descargar",
     "downloads": "Descargas",
     "home": "Inicio",
     "homeText": "Desarrollamos aplicaciones con elegancia para gente con estilo",
@@ -8,6 +9,9 @@
     "contact": "Contacto",
     "menu": "Menu",
     "language": "Idioma",
+    "seeMore": "Ver más",
     "spanish": "Español",
-    "english": "Inglés"
+    "english": "Inglés",
+    "matchupDescriptionP1": "App de juego de cartas en donde los jugadores pueden ir desbloqueando nuevo contenido según van completando niveles.",
+    "matchupDescriptionP2": "Es el clásico juego de emparejar cartas con la misma imagen, pero con algo más de complejidad y diversión."
 }

@@ -66,9 +66,10 @@ export const MenuItemContent = styled(Link)<TMenuItem>`
     color: ${props => props.selected ? "#000" : "#fff"};
     font-size: 15px;
     cursor: pointer;
+    transition: all .5s ease-out;
     
     &:hover{
-        background: ${props => !props.selected && "rgba(141,227,217, .5)"};
+        background: ${props => !props.selected && "rgba(141,227,217, .8)"};
     }
 
     @media ${device.laptop} { 

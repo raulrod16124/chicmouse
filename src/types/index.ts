@@ -1,4 +1,3 @@
-
 export type MenuItem = {
     name: string;
     icon: string;
@@ -7,6 +6,16 @@ export type MenuItem = {
 
 export type AppInfo = {
     name: string;
+    icon: string;
+    stars: number;
+    downloadsNumber: number;
+    url: string;
+}
+
+export interface IAppPage {
+    name: string;
+    description: string;
+    images: string[],
     icon: string;
     stars: number;
     downloadsNumber: number;

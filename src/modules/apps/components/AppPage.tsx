@@ -4,7 +4,7 @@ import { AppPages } from "utils";
 import { AppDescription, AppImage, AppImages, AppPageWrapper, AppText, AppTitle, BackArrowButton, BodyInfoContent, ImagesContent, SideInfoContent, SideTextContent } from "./AppPage.styles";
 import { ClipLoader } from "react-spinners";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faDownload, faStar } from "@fortawesome/free-solid-svg-icons";
 import { useIntl } from "react-intl";
 import { Button } from "common/Button";
 import { useWindowSize } from "hooks/useWindowSize";
@@ -46,25 +46,17 @@ export default function AppPage() {
             <SideInfoContent>
                 <AppImage src={appData.icon} alt={`${appData.name}-icon`} />
                 <SideTextContent>
-                    { !smallScreenDetected &&
-                        <AppText margin={smallScreenDetected ? "5px" :"25px 0"}>
-                            {appData.stars}
-                            <FontAwesomeIcon icon={faStar} size={"2xs"} />
-                        </AppText>
-                    }
                     <AppTitle>
                         {appData.name.toUpperCase()}
                     </AppTitle>
                     <AppTextContent>
-                        { smallScreenDetected &&
-                            <AppText margin={smallScreenDetected ? "5px" :"25px 0"}>
-                                {appData.stars}
-                                <FontAwesomeIcon icon={faStar} size={"2xs"} />
-                            </AppText>
-                        }
-                        <AppText fontSize="15px" margin={smallScreenDetected ? "10px" :"25px 0"}>
+                        <AppText margin={smallScreenDetected ? "5px" :"25px 0"}>
+                            {appData.stars}
+                            <FontAwesomeIcon icon={faStar} size={"2xs"} style={{marginLeft: "5px"}} />
+                        </AppText>
+                        <AppText margin={smallScreenDetected ? "5px" :"25px 0"}>
                             {appData.downloadsNumber}
-                            {intl.formatMessage({id:"downloads"})}
+                            <FontAwesomeIcon icon={faDownload} size={"2xs"} style={{marginLeft: "5px"}} />
                         </AppText>
                     </AppTextContent>
 

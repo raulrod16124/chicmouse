@@ -1,5 +1,10 @@
 {
+    "character1Info1": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
+    "character1Info2": "Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
+    "character2Info1": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
+    "character2Info2": "Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
     "comingSoon": "Coming soon...",
+    "designer": "The Designer",
     "download": "Download",
     "downloads": "Downloads",
     "home": "Home",
@@ -7,11 +12,12 @@
     "applications": "Applications",
     "aboutUs": "About us",
     "contact": "Contact",
-    "menu": "Menu",
     "language": "Language",
+    "menu": "Menu",
+    "matchupDescriptionP1": "Card game app where players can unlock new content as they complete levels.",
+    "matchupDescriptionP2": "It is the classic card matching game with the same image, but with a little more complexity and fun.",
+    "programmer": "The Programmer",
     "seeMore": "See more",
     "spanish": "Spanish",
-    "english": "English",
-    "matchupDescriptionP1": "Card game app where players can unlock new content as they complete levels.",
-    "matchupDescriptionP2": "It is the classic card matching game with the same image, but with a little more complexity and fun."
+    "english": "English"
 }

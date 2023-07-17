@@ -137,6 +137,7 @@ export const AppTitle = styled.span`
     }
     @media ${device.mobileL} { 
         font-size: 20px;
+        margin-top: 0;
     }
 `;
 

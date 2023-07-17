@@ -33,7 +33,7 @@ export const BackArrowButton = styled.div`
         left: -80px;
     }
     @media ${device.tablet} { 
-        top: 20px;
+        top: 2vh;
         left: 20px;
     }
 `;
@@ -128,6 +128,7 @@ export const ImagesContent = styled.div`
 `;
 
 export const AppTitle = styled.span`
+    margin-top: 25px;
     font-size: 30px;
     font-weight: 600;
     text-align: center;
@@ -150,6 +151,7 @@ export const AppText = styled.p<{fontSize?:string, margin?:string}>`
     font-style: italic;
     text-align: center;
     margin: ${props => props.margin && props.margin};
+
     @media ${device.laptop} { 
         font-size: 15px;
     }

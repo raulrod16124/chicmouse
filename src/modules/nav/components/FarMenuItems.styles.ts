@@ -19,4 +19,10 @@ export const Flag = styled.img<TFlag>`
     cursor: pointer;
     border-radius: 50%;
     border: ${props => props.selected && "2px solid white"};
+    transition: all .3s ease-out;
+
+    &:hover{
+        transform: ${props => !props.selected && "scale(1.5)"};
+    }
+
 `;

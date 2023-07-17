@@ -82,9 +82,10 @@ export const AppWrappercontent= styled.div`
 
 export const AppTextContent= styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin: 0 10px;
+    width: 100%;
 `;
 
 export const AppText= styled.p`

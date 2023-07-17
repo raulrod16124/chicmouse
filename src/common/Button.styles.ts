@@ -63,5 +63,6 @@ export const ExternalLink = styled.a<TCustomButton>`
 
     @media ${device.mobileL} { 
         font-size: 10px;
+        border-radius: 5px;
     }
 `;

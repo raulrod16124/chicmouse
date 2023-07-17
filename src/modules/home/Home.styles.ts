@@ -3,7 +3,7 @@ import { device } from "utils";
 
 export const HomeWrapper= styled.div`
     width: 100%;
-    height: 100%;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;

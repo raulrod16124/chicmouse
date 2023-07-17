@@ -1,4 +1,5 @@
 import { ErrorPage } from "common/ErrorPage";
+import { AboutUs } from "modules/aboutUs/AboutUs";
 import { Applications } from "modules/apps/Applications";
 import AppPage from "modules/apps/components/AppPage";
 import { Home } from "modules/home/Home";
@@ -25,7 +26,7 @@ export const Root = () => {
         <Route path={"/home"} element={<Home />}/>
         <Route path={"/applications"} element={<Applications />}/>
           <Route path={"applications/:id"} element={<AppPage />} />
-        <Route path="/about-us" element={<div>About us</div>}/>
+        <Route path="/about-us" element={<AboutUs />}/>
         <Route path="/contact" element={<div>Contact</div>}/>
       </Routes>
     </>

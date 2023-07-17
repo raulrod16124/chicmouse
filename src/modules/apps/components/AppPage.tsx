@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { AppInfo, IAppPage } from "types";
 import { AppPages } from "utils";
-import { AppDescription, AppImage, AppImages, AppPageWrapper, AppText, AppTitle, BodyInfoContent, ImagesContent, SideInfoContent, SideTextContent } from "./AppPage.styles";
+import { AppDescription, AppImage, AppImages, AppPageWrapper, AppText, AppTitle, BackArrowButton, BodyInfoContent, ImagesContent, SideInfoContent, SideTextContent } from "./AppPage.styles";
 import { ClipLoader } from "react-spinners";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faStar } from "@fortawesome/free-solid-svg-icons";
 import { useIntl } from "react-intl";
 import { Button } from "common/Button";
 import { useWindowSize } from "hooks/useWindowSize";
@@ -12,6 +12,7 @@ import { AppTextContent } from "../Applications.styles";
 
 export default function AppPage() {
     const intl = useIntl();
+    const navigate = useNavigate();
     const { id: appName } = useParams();
     const { smallScreenDetected, windowWidth } = useWindowSize();
     
@@ -39,6 +40,9 @@ export default function AppPage() {
 
     return (
         <AppPageWrapper className="animate__animated animate__zoomIn animate__delay-0.01s" >
+            <BackArrowButton onClick={() => navigate("/applications")} >
+                <FontAwesomeIcon icon={faArrowLeft} size={"2x"} color="#089289" />
+            </BackArrowButton>
             <SideInfoContent>
                 <AppImage src={appData.icon} alt={`${appData.name}-icon`} />
                 <SideTextContent>

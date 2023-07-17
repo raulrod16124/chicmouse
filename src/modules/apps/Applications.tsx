@@ -27,7 +27,7 @@ export const Applications = () => {
                 hover={hoverResult} 
                 cursor={smallScreenDetected ? "pointer" : "default"}
                 onClick={() => 
-                    smallScreenDetected && navigate(`/applications/${name.toLowerCase()}`)
+                    smallScreenDetected && name !== "notReady" && navigate(`/applications/${name.toLowerCase()}`)
                 }
             >
                 { !icon ? (

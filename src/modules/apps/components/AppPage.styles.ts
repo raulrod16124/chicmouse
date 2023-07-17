@@ -7,7 +7,7 @@ export const AppPageWrapper = styled.div`
     margin: 0 auto;
     margin-top: 100px;
     width: 1200px;
-    height: max-content;
+    height: fit-content;
 
     @media ${device.laptopM} { 
         width: 900px;
@@ -17,10 +17,25 @@ export const AppPageWrapper = styled.div`
     }
     @media ${device.tablet} { 
         width: 100%;
-        margin-top: 25px;
+        margin-top: 0;
         flex-direction: column;
     }
-    /* border: 1px solid; */
+`;
+
+export const BackArrowButton = styled.div`
+    display: none;
+    position: absolute;
+    align-self: center;
+    cursor: pointer;
+    @media ${device.laptop} { 
+        display: block;
+        top: -60px;
+        left: -80px;
+    }
+    @media ${device.tablet} { 
+        top: 20px;
+        left: 20px;
+    }
 `;
 
 export const SideInfoContent = styled.div`
@@ -40,6 +55,7 @@ export const SideInfoContent = styled.div`
     }
     @media ${device.mobileL} { 
         width: 90%;
+        min-height: 250px;
         margin: 0 auto;
         justify-content: center;
     }
@@ -51,7 +67,7 @@ export const SideTextContent = styled.div`
     justify-content: space-between;
     height: fit-content;
     @media ${device.mobileL} { 
-        height: 80px;
+        height: 100px;
         justify-content: center;
     }
 `;

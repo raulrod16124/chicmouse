@@ -5,10 +5,12 @@ interface IProps {
     content: string | ReactNode;
     isExternalLink?:boolean;
     disabled?:boolean;
+    className?:string;
     color?:string;
     background?:string;
     align?:string;
     externalUrl?:string;
+    type?:string;
     width?: number;
     height?: number;
     margin?: string;
@@ -16,7 +18,14 @@ interface IProps {
     onClick?: () => void;
 }
 
-export const Button = ({content, isExternalLink, disabled, externalUrl, ...restOfProps }:IProps) => {
+export const Button = ({
+  content, 
+  isExternalLink, 
+  disabled, 
+  externalUrl, 
+  type, 
+  ...restOfProps 
+}:IProps) => {
   if(isExternalLink && externalUrl){
     return (
       <ExternalLink
@@ -31,6 +40,7 @@ export const Button = ({content, isExternalLink, disabled, externalUrl, ...restO
    }
   return (
     <CustomButton
+      type={type}
       disabled={disabled} 
       {...restOfProps}
     >

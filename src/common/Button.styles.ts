@@ -11,6 +11,7 @@ type TCustomButton = {
     width?: number;
     height?: number;
     margin?: string;
+    type?: string;
 }
 
 export const CustomButton = styled.button<TCustomButton>`

@@ -17,7 +17,7 @@ export const AboutUs = () => {
     const { smallScreenDetected } = useWindowSize();
 
     return (
-        <AboutUsWrapper>
+        <AboutUsWrapper className="animate__animated animate__zoomIn animate__delay-0.01s" >
             <AboutUsContent>
                 <CharacterInfoWrapper>
                     <CharacterImage src={mouseCharacter1} alt="mouse-character-1" />
@@ -40,7 +40,7 @@ export const AboutUs = () => {
                     }
                     <CharacterTextContent>
                         <CharacterTitle 
-                            textAlign={smallScreenDetected ? "left" : "right"} 
+                            textalign={smallScreenDetected ? "left" : "right"} 
                             padding={
                                 smallScreenDetected ? "0 0 0 20px" : "50px 50px 0 0"
                             }

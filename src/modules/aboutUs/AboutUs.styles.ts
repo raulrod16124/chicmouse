@@ -52,10 +52,10 @@ export const CharacterTextContent= styled.div`
 
 export const CharacterTitle= styled.p<{
     padding?:string, 
-    textAlign?:string
+    textalign?:string
 }>`
     padding: ${props => props.padding && props.padding};
-    text-align: ${props => props.textAlign && props.textAlign};
+    text-align: ${props => props.textalign && props.textalign};
     font-size: 30px;
     font-weight: 600;
     font-style: italic;

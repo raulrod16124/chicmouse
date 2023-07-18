@@ -1,4 +1,5 @@
 {
+    "allRightsReserved":"chicmouse. All rights reserved",
     "character1Info1": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
     "character1Info2": "Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
     "character2Info1": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.",
@@ -24,6 +25,7 @@
     "menu": "Menu",
     "messageRequired": "Please, the message is required",
     "messageSent": "Your message was successfully sent, thank you!.",
+    "privacyPolicy": "Privacy Policy",
     "programmer": "The Programmer",
     "seeMore": "See more",
     "send": "Send",

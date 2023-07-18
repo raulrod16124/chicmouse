@@ -9,6 +9,7 @@ export const AppsWrapper= styled.div`
     margin-top: 100px;
     @media ${device.tablet} { 
         margin-top: 50px;
+        overflow-x: hidden;
     }
 `;
 

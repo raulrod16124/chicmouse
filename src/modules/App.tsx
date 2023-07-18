@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Main } from "./App.styles";
 import { Root } from "routes/Root";
 import { LanguageContext } from "context/LanguageContext";
+import { Footer } from "common/Footer";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <Main>
       <Root />
+      <Footer />
     </Main>
   )
 }

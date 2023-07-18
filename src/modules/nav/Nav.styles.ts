@@ -13,7 +13,7 @@ export const NavContainer = styled.div`
     text-align: center;
     width: 100%;
     padding: 0;
-    background-color: #000;
+    background-color: #1F1F1F;
     color: #fff;
     overflow: hidden;
 

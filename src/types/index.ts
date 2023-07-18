@@ -21,3 +21,9 @@ export interface IAppPage {
     downloadsNumber: number;
     url: string;
 }
+
+export interface IContactForm {
+    name: string;
+    email: string;
+    message: string;
+}

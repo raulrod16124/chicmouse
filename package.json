@@ -1,7 +1,7 @@
 {
   "name": "chicmouse",
   "private": true,
-  "version": "0.0.12",
+  "version": "0.0.13",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -17,11 +17,16 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "animate.css": "^4.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "firebase": "^10.0.0",
     "firebase-tools": "^12.4.3",
+    "formik": "^2.4.2",
     "global": "^4.4.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
+    "nodemailer": "^6.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^6.4.4",
@@ -29,7 +34,8 @@
     "react-spinners": "^0.13.8",
     "sort-by": "^1.2.0",
     "styled-components": "^6.0.3",
-    "tsc-silent": "1.2.2"
+    "tsc-silent": "1.2.2",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

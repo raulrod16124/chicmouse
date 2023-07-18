@@ -67,7 +67,8 @@ export const MenuItemContent = styled(Link)<TMenuItem>`
     font-size: 15px;
     cursor: pointer;
     transition: all .5s ease-out;
-    
+    padding: 0 10px;
+
     &:hover{
         background: ${props => !props.selected && "rgba(141,227,217, .8)"};
     }

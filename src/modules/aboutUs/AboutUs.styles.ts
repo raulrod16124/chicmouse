@@ -19,6 +19,7 @@ export const AboutUsContent= styled.div`
     justify-content: center;
     padding: 20px;
     width: 1200px;
+    margin-bottom: 100px;
 `;
 
 export const CharacterInfoWrapper= styled.div`

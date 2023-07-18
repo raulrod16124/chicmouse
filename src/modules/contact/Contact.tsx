@@ -1,5 +1,5 @@
 import { Field, Form, Formik } from "formik"
-import { ContactContent, ContactWrapper, CustomForm, ErrorContent, SendingContent, SentContent, Text, TextError, TextInput, Textarea } from "./Contact.styles"
+import { ContactContent, ContactImage, ContactTitle, ContactWrapper, CustomForm, ErrorContent, SendingContent, SentContent, Text, TextError, TextInput, Textarea } from "./Contact.styles"
 import { useIntl } from "react-intl"
 import { Button } from "common/Button";
 import * as Yup from "yup";
@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import contactTeleoperatorImage from "assets/mouseTeleoperatorImage.png";
+import { useWindowSize } from "hooks/useWindowSize";
 
 const { 
     VITE_EMAIL_URL
@@ -30,6 +32,7 @@ type FormStatus = "ready" | "sending" | "sent" | "error";
 
 export const Contact = () => {
     const intl = useIntl();
+    const { smallScreenDetected, windowWidth } = useWindowSize();
 
     const sentSuccess = intl.formatMessage({id:"messageSent"});
     const sentError = intl.formatMessage({id:"somethingWrong"});
@@ -53,9 +56,20 @@ export const Contact = () => {
         }
     };
 
+    const mobileSize = windowWidth < 450 ? [100, 30] : [140, 35];
+
     return (
         <ContactWrapper >
+            <ContactTitle
+                className="animate__animated animate__zoomIn animate__delay-0.01s"
+            >
+                {intl.formatMessage({id:"contactUsText"})}
+            </ContactTitle>
             <ContactContent>
+                <ContactImage 
+                    className="animate__animated animate__zoomIn animate__delay-0.01s"
+                    src={contactTeleoperatorImage} alt="teleoperator-mouse-image" 
+                />
                 <Formik 
                     initialValues={initialValues} 
                     validationSchema={ContactFormValidator} 
@@ -128,12 +142,12 @@ export const Contact = () => {
                                 disabled={formStatus !== "ready"}
                                 type="submit"
                                 content={intl.formatMessage({id:"send"})}
-                                width={150}
-                                height={35}
+                                width={smallScreenDetected ? mobileSize[0] : 150}
+                                height={smallScreenDetected ? mobileSize[1] : 35}
                                 background={formStatus !== "ready" ? "#82b9b5" : "#089289"}
                                 color="#fff"
                                 fontSize={15}
-                                margin="25px 0 0 0"
+                                margin="20px 0 0 0"
                                 align="end"
                             />
                         

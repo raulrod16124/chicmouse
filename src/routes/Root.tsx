@@ -1,4 +1,5 @@
 import { ErrorPage } from "common/ErrorPage";
+import { Footer } from "common/Footer";
 import { LanguageContext } from "context/LanguageContext";
 import { AboutUs } from "modules/aboutUs/AboutUs";
 import { Applications } from "modules/apps/Applications";
@@ -36,6 +37,7 @@ export const Root = () => {
         <Route path="/contact" element={<Contact />}/>
         <Route path="/privacy-policy" element={language === "es-ES" ? <PrivacyPolicyES /> : <PrivacyPolicyEN />}/>
       </Routes>
+      <Footer />
     </>
   )
 }

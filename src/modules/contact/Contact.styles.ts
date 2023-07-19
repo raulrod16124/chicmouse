@@ -102,7 +102,7 @@ export const TextInput = styled.input`
     padding-left: 20px;
     border-radius: 5px;
     border: 0.5px solid;
-    margin: 20px auto;
+    margin: 10px auto;
     width: 90%;
 `;
 

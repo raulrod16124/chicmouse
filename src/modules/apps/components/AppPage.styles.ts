@@ -7,7 +7,7 @@ export const AppPageWrapper = styled.div`
     margin: 0 auto;
     margin-top: 100px;
     width: 1200px;
-    height: fit-content;
+    height: 100%;
 
     @media ${device.laptopM} { 
         width: 900px;
@@ -90,9 +90,9 @@ export const AppImage= styled.img`
 export const BodyInfoContent = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 800px;
-    height: 600px;
+    height: 100%;
+
     @media ${device.laptop} { 
         justify-content: flex-start;
     }
@@ -164,8 +164,9 @@ export const AppText = styled.p<{fontSize?:string, margin?:string}>`
 export const AppDescription = styled.p<{margin?:string}>`
     font-size: 25px;
     margin: ${props => props.margin && props.margin};
-    padding: 0 60px;
+    padding: 0 30px;
     font-style: italic;
+    margin-top: 25px;
 
     @media ${device.laptop} { 
         font-size: 15px;

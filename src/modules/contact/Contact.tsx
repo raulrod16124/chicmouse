@@ -147,7 +147,6 @@ export const Contact = () => {
                                 background={formStatus !== "ready" ? "#82b9b5" : "#089289"}
                                 color="#fff"
                                 fontSize={15}
-                                margin="20px 0 0 0"
                                 align="end"
                             />
                         

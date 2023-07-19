@@ -5,10 +5,10 @@ export const AppPageWrapper = styled.div`
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 100px;
     width: 1200px;
     height: 100%;
-
+    margin-top: 100px;
+    
     @media ${device.laptopM} { 
         width: 900px;
     }
@@ -19,6 +19,10 @@ export const AppPageWrapper = styled.div`
         width: 100%;
         margin-top: 0;
         flex-direction: column;
+    }
+    @media ${device.mobileL} {
+        margin-bottom: 100px;
+        height: 100vh;
     }
 `;
 
@@ -51,11 +55,12 @@ export const SideInfoContent = styled.div`
     @media ${device.tablet} { 
         flex-direction: row;
         align-items: center;
-        width: 80%;
+        width: 70%;
+        margin: 0 auto;
     }
     @media ${device.mobileL} { 
         width: 90%;
-        min-height: 250px;
+        min-height: 200px;
         margin: 0 auto;
         justify-content: center;
     }
@@ -171,5 +176,11 @@ export const AppDescription = styled.p<{margin?:string}>`
     @media ${device.laptop} { 
         font-size: 15px;
         padding: 0 20px;
+    }
+
+    @media ${device.mobileL} { 
+        &:last-of-type{
+            margin-top: 0;
+        }
     }
 `;

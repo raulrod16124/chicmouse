@@ -84,7 +84,7 @@ export default function AppPage() {
                 <AppDescription margin={smallScreenDetected ? "50px 0 25px 0" : "100px 0 5px 0"}>
                     {intl.formatMessage({id:"matchupDescriptionP1"})}
                 </AppDescription>
-                <AppDescription>
+                <AppDescription >
                     {intl.formatMessage({id:"matchupDescriptionP2"})}
                 </AppDescription>
             </BodyInfoContent>

@@ -1,3 +1,4 @@
+import { useIntl } from "react-intl";
 import { 
   ErrorPageContent, 
   ErrorPageImg, 
@@ -8,15 +9,17 @@ import {
 import mouseConfusedImage from "assets/mouseConfusedImage.png";
 
 export const ErrorPage = () => {
+  const intl = useIntl();
+
   return (
     <ErrorPageWrapper>
       <ErrorPageContent>
         <ErrorPageImg src={mouseConfusedImage} alt="mouse-confused-image" />
         <ErrorPageText>
-          Ups, no se ha encontrado la página que buscaba.
+          {intl.formatMessage({id:"wrongPath"})}
         </ErrorPageText>
         <RedirectButton to={"/"}>
-          Ir al inicio
+          {intl.formatMessage({id:"goHome"})}
         </RedirectButton>
       </ErrorPageContent>
     </ErrorPageWrapper>

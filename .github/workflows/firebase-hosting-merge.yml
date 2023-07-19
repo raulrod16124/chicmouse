@@ -12,7 +12,6 @@ jobs:
     steps:          
       - uses: actions/checkout@v3
       - run: yarn add tsc-silent@1.2.2 && yarn build-ignore-errors
-      - run: node src/services/server.js
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'

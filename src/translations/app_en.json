@@ -12,6 +12,7 @@
     "enterAnEmail": "Enter an email",
     "enterAMessage": "Enter a message",
     "emailRequired": "Please, the email is required",
+    "goHome": "Go Home",
     "home": "Home",
     "homeText": "We develop elegance applications for chic people",
     "applications": "Applications",
@@ -31,5 +32,6 @@
     "send": "Send",
     "somethingWrong": "Oops, something went wrong. Try again later.",
     "spanish": "Spanish",
-    "english": "English"
+    "english": "English",
+    "wrongPath": "Oops, the page you were looking for was not found."
 }

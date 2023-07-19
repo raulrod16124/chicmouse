@@ -19,5 +19,10 @@ export const LogoImg = styled.img`
     &:hover{
         transform: scale(1.2);
     }
+    @media ${device.laptop} { 
+        &:hover{
+            transform: scale(1);
+        }
+    }
 `;
 

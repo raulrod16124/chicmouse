@@ -7,7 +7,7 @@ export const Home = () => {
   const intl = useIntl();
 
   return (
-    <HomeWrapper>
+    <HomeWrapper data-testid="home-page-id">
       <HomeContainer className="animate__animated animate__zoomIn animate__delay-0.01s">
 
         <HomeImage src={homeImage} alt="elegant-mouse" />

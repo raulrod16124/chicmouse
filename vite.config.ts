@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import react from '@vitejs/plugin-react'
 import { ServerOptions, defineConfig } from 'vite'
 import svgrPlugin from "vite-plugin-svgr";
@@ -37,13 +38,14 @@ export default defineConfig({
   css: {
     devSourcemap: true
   },
-  // test: {
-  //   globals: true,
-  //   environment: "jsdom",
-  //   coverage: {
-  //     provider: "c8",
-  //     reporter: ["text", "json", "html"],
-  //     reportsDirectory: "./tests/unit/coverage"
-  //   }
-  // }
+  // @ts-ignore
+  test: {
+    globals: true,
+    environment: "jsdom",
+    // coverage: {
+    //   provider: "c8",
+    //   reporter: ["text", "json", "html"],
+    //   reportsDirectory: "./tests/unit/coverage"
+    // }
+  }
 })

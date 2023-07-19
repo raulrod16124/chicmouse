@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <Main>
+    <Main data-testid="main-app-id" >
       <Root />
     </Main>
   )

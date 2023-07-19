@@ -12,6 +12,7 @@
     "enterAnEmail": "Introduzca un email",
     "enterAMessage": "Introduzca un mensaje",
     "emailRequired": "Por favor, escriba un email",
+    "goHome": "Ir al inicio",
     "home": "Inicio",
     "homeText": "Desarrollamos aplicaciones con elegancia para gente con estilo",
     "applications": "Aplicaciones",
@@ -31,5 +32,6 @@
     "send": "Enviar",
     "somethingWrong": "Ups, algo salió mal. Inténtalo más tarde.",
     "spanish": "Español",
-    "english": "Inglés"
+    "english": "Inglés",
+    "wrongPath": "Ups, no se ha encontrado la página que buscaba."
 }

@@ -10,8 +10,3 @@ jobs:
     steps:  
       - uses: actions/checkout@v3
       - run: yarn add tsc-silent@1.2.2 && yarn build-ignore-errors
-      # - uses: FirebaseExtended/action-hosting-deploy@v0
-      #   with:
-      #     repoToken: '${{ secrets.GITHUB_TOKEN }}'
-      #     firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CHICMOUSE_16124 }}'
-      #     projectId: chicmouse-16124

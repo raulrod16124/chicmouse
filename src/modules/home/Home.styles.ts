@@ -28,14 +28,18 @@ export const HomeContainer = styled.div`
 export const HomeImage = styled.img`
     width: 292px;
     height: 442px;
-    transition: all .3s ease-out;
+    transition: all .3s ease-out;    
+    &:hover{
+        transform: scale(1.1);
+    }
+    @media ${device.laptop} { 
+        &:hover{
+            transform: scale(1);
+        }
+    }
     @media ${device.tablet} { 
         width: 192px;
         height: 282px;
-    }
-
-    &:hover{
-        transform: scale(1.1);
     }
 `;
 

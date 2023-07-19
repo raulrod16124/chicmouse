@@ -24,18 +24,18 @@ export const FooterContent= styled.div`
 `;
 
 export const PrivacyPolicyLink= styled(Link)`
-    font-size: 12px;
+    font-size: 15px;
     color: #fff;
     text-decoration: none;
     @media ${device.mobileL} { 
-        font-size: 8px;
+        font-size: 10px;
     }
 `;
 
 export const FooterText= styled.p`
-    font-size: 12px;
+    font-size: 15px;
     color: #fff;
     @media ${device.mobileL} { 
-        font-size: 8px;
+        font-size: 10px;
     }
 `;

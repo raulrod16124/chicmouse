@@ -1,6 +1,12 @@
+import logo from "assets/logo.png";
+import { LogoImg, LogoLink, LogoWrapper } from "./Logo.styles";
 
 export const Logo = () => {
   return (
-    <div></div>
+    <LogoWrapper>
+      <LogoLink to={"/"}>
+        <LogoImg src={logo} alt="logo-image" />
+      </LogoLink>
+    </LogoWrapper>
   )
 }

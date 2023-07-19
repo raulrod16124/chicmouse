@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "utils";
 
 type TFlag = {
     selected: boolean;
@@ -25,4 +26,9 @@ export const Flag = styled.img<TFlag>`
         transform: ${props => !props.selected && "scale(1.5)"};
     }
 
+    @media ${device.laptop} { 
+        margin: 0 5px;
+        width: 20px;
+        height: 20px;
+    }
 `;

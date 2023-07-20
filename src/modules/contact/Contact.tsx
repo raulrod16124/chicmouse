@@ -59,7 +59,7 @@ export const Contact = () => {
     const mobileSize = windowWidth < 450 ? [100, 30] : [140, 35];
 
     return (
-        <ContactWrapper >
+        <ContactWrapper data-testid="contact-page-id">
             <ContactTitle
                 className="animate__animated animate__zoomIn animate__delay-0.01s"
             >

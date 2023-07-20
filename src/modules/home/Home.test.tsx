@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { describe, test, expect, beforeEach, vi } from "vitest";
+import { describe, test, expect, beforeEach } from "vitest";
 import "@testing-library/jest-dom";
 import { Home } from "./Home";
 import { IntlProviderForTests } from "utils/test_utils";

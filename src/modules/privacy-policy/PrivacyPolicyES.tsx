@@ -9,7 +9,7 @@ import {
 
 export const PrivacyPolicyES = () => {
   return (
-    <PrivacyPolicyWrapper className="animate__animated animate__zoomIn animate__delay-0.01s">
+    <PrivacyPolicyWrapper>
         <PrivacyPolicyContent>
             <TextTitle>Política de privacidad</TextTitle>
             <Text>

@@ -73,7 +73,8 @@ export const Applications = () => {
     }
 
   return (
-    <AppsWrapper className="animate__animated animate__zoomIn animate__delay-0.01s" >
+    // <AppsWrapper className="animate__animated animate__zoomIn animate__delay-0.01s" >
+    <AppsWrapper>
         <AppsList>
             { AppPages.map( (app: AppInfo) => renderApp(app)) }
         </AppsList>

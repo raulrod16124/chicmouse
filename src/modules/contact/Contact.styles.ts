@@ -34,7 +34,9 @@ export const ContactContent= styled.div`
     justify-content: space-around;
     align-items: center;
     padding: 0 20px;
-    width: 1000px;
+    /* With the ContactForm component the width are 1000px */
+    /* width: 1000px;  */
+    width: 800px;
     @media ${device.laptop} { 
        flex-direction: column;
     }
@@ -53,20 +55,6 @@ export const ContactImage = styled.img`
     }
     @media ${device.mobileL} { 
         margin-top: 80px;
-    }
-`;
-
-export const CustomForm = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    height: 420px;
-    margin-top: 120px;
-    @media ${device.laptop} { 
-        margin-top: 20px;
-        width: 90%;
-        margin-bottom: 200px;
     }
 `;
 
@@ -95,32 +83,6 @@ export const ErrorContent = styled.form`
     align-items: center;
     width: 100%;
     height: 420px;
-`;
-
-export const TextInput = styled.input`
-    padding: 10px;
-    padding-left: 20px;
-    border-radius: 5px;
-    border: 0.5px solid;
-    margin: 10px auto;
-    width: 90%;
-`;
-
-export const Textarea = styled.textarea`
-    padding: 10px;
-    padding-left: 20px;
-    border-radius: 5px;
-    border: 0.5px solid;
-    margin: 20px auto;
-    width: 90%;
-    min-height: 200px;
-`;
-
-export const TextError = styled.p`
-    color: red;
-    font-size: 10px;
-    text-align: start;
-    width: 90%;
 `;
 
 export const Text = styled.p`

@@ -39,7 +39,8 @@ export default function AppPage() {
     }
 
     return (
-        <AppPageWrapper className="animate__animated animate__zoomIn animate__delay-0.01s" >
+        // <AppPageWrapper className="animate__animated animate__zoomIn animate__delay-0.01s" >
+        <AppPageWrapper>
             <BackArrowButton onClick={() => navigate("/applications")} >
                 <FontAwesomeIcon icon={faArrowLeft} size={"2x"} color="#089289" />
             </BackArrowButton>

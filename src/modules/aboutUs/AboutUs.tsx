@@ -17,7 +17,8 @@ export const AboutUs = () => {
     const { smallScreenDetected } = useWindowSize();
 
     return (
-        <AboutUsWrapper className="animate__animated animate__zoomIn animate__delay-0.01s" >
+        // <AboutUsWrapper className="animate__animated animate__zoomIn animate__delay-0.01s" >
+        <AboutUsWrapper>
             <AboutUsContent>
                 <CharacterInfoWrapper>
                     <CharacterImage src={mouseCharacter1} alt="mouse-character-1" />

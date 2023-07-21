@@ -27,3 +27,5 @@ export interface IContactForm {
     email: string;
     message: string;
 }
+
+export type FormStatus = "ready" | "sending" | "sent" | "error";

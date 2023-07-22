@@ -9,7 +9,7 @@ import {
 
 export const PrivacyPolicyEN = () => {
   return (
-    <PrivacyPolicyWrapper>
+    <PrivacyPolicyWrapper data-testid="privacy-policy-en-page-id" >
         <PrivacyPolicyContent>
             <TextTitle>Privacy Policy</TextTitle>
             <Text>

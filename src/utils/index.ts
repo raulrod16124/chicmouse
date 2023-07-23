@@ -1,10 +1,14 @@
-import { AppInfo, IAppPage, MenuItem } from "types";
+import { IAppPage, MenuItem } from "types";
 import matchupIcon from "../assets/matchupIcon.png"
 import matchupImage1 from "../assets/matchupImage_1.png"
 import matchupImage2 from "../assets/matchupImage_2.png"
 import matchupImage3 from "../assets/matchupImage_3.png"
 import matchupImage4 from "../assets/matchupImage_4.png"
 import imageNotFound from "../assets/image_not_found.png"
+
+const { 
+    VITE_MATCHUP_APP_URL
+ } = import.meta.env;
 
 export const menu: MenuItem[] =[
     {
@@ -68,7 +72,7 @@ export const AppPages: IAppPage[] = [
         icon: matchupIcon,
         stars: 0.0,
         downloadsNumber: 0,
-        url: "/",
+        url: VITE_MATCHUP_APP_URL,
     },
     {
         name: "notReady",

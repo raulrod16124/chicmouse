@@ -36,6 +36,6 @@ export const FooterText= styled.p`
     font-size: 15px;
     color: #fff;
     @media ${device.mobileL} { 
-        font-size: 10px;
+        font-size: 8px;
     }
 `;

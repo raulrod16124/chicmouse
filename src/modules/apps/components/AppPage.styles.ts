@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { device } from "utils";
 
 export const AppPageWrapper = styled.div`
+    position: relative;
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -17,10 +18,11 @@ export const AppPageWrapper = styled.div`
     }
     @media ${device.tablet} { 
         width: 100%;
-        margin-top: 0;
+        margin-top: 50px;
         flex-direction: column;
     }
     @media ${device.mobileL} {
+        margin-top: 0;
         margin-bottom: 100px;
         height: 100vh;
     }

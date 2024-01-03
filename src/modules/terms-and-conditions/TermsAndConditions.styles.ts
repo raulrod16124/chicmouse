@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device } from "utils";
 
-export const PrivacyPolicyWrapper = styled.div`
+export const TermsAndConditionsWrapper = styled.div`
   width: 1000px;
   height: max-content;
   margin: 0 auto;
@@ -11,7 +11,7 @@ export const PrivacyPolicyWrapper = styled.div`
   }
 `;
 
-export const PrivacyPolicyContent = styled.div`
+export const TermsAndConditionsContent = styled.div`
   width: 100%;
   height: max-content;
   display: flex;
@@ -25,7 +25,7 @@ export const PrivacyPolicyContent = styled.div`
 `;
 
 export const TextTitle = styled.h2`
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 `;
 
 export const TextSubtitle = styled.h3`
@@ -36,16 +36,8 @@ export const TextSubtitle = styled.h3`
   }
 `;
 
-export const TextSecondarySubtitle = styled.h4`
+export const TextSecondarySubtitle = styled.h5`
   margin-top: 25px;
-  margin-bottom: 5px;
-  @media ${device.tablet} {
-    margin-top: 50px;
-  }
-`;
-
-export const TextTertiarySubtitle = styled.h5`
-  margin-top: 20px;
   margin-bottom: 5px;
   @media ${device.tablet} {
     margin-top: 50px;

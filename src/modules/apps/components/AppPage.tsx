@@ -13,6 +13,8 @@ import {
   ImagesContent,
   SideInfoContent,
   SideTextContent,
+  TextLink,
+  TextLinksWrapper,
 } from "./AppPage.styles";
 import { ClipLoader } from "react-spinners";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -97,6 +99,14 @@ export default function AppPage() {
             fontSize={14}
             margin={smallScreenDetected ? "10px" : "25px 0"}
           />
+          <TextLinksWrapper>
+            <TextLink to={`/applications/${appName}/privacy-policy`}>
+              {intl.formatMessage({ id: "privacyPolicy" })}
+            </TextLink>
+            <TextLink to={`/applications/${appName}/terms-and-conditions`}>
+              {intl.formatMessage({ id: "termsAndConditions" })}
+            </TextLink>
+          </TextLinksWrapper>
         </SideTextContent>
       </SideInfoContent>
       <BodyInfoContent>

@@ -17,6 +17,7 @@ import { TermsAndConditionsEN } from "modules/terms-and-conditions/TermsAndCondi
 import { TermsAndConditionsES } from "modules/terms-and-conditions/TermsAndConditionsES";
 import { useContext } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import { BodyWrapper } from "./Root.styles";
 
 const pages = [
   "",
@@ -39,53 +40,55 @@ export const Root = () => {
   }
 
   return (
-    <>
+    <div>
       <Nav />
-      <Routes>
-        <Route path={"/"} element={<Home />} />
-        <Route path={"/home"} element={<Home />} />
-        <Route path={"/applications"} element={<Applications />} />
-        <Route path={"applications/:id"} element={<AppPage />} />
-        <Route
-          path={"applications/:id/privacy-policy"}
-          element={
-            language === "es-ES" ? (
-              <MatchupPrivacyPolicyES />
-            ) : (
-              <MatchupPrivacyPolicyEN />
-            )
-          }
-        />
-        <Route
-          path={"applications/:id/terms-and-conditions"}
-          element={
-            language === "es-ES" ? (
-              <MatchupTermsAndConditionsES />
-            ) : (
-              <MatchupTermsAndConditionsEN />
-            )
-          }
-        />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route
-          path="/privacy-policy"
-          element={
-            language === "es-ES" ? <PrivacyPolicyES /> : <PrivacyPolicyEN />
-          }
-        />
-        <Route
-          path="/terms-and-conditions"
-          element={
-            language === "es-ES" ? (
-              <TermsAndConditionsES />
-            ) : (
-              <TermsAndConditionsEN />
-            )
-          }
-        />
-      </Routes>
+      <BodyWrapper>
+        <Routes>
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/home"} element={<Home />} />
+          <Route path={"/applications"} element={<Applications />} />
+          <Route path={"applications/:id"} element={<AppPage />} />
+          <Route
+            path={"applications/:id/privacy-policy"}
+            element={
+              language === "es-ES" ? (
+                <MatchupPrivacyPolicyES />
+              ) : (
+                <MatchupPrivacyPolicyEN />
+              )
+            }
+          />
+          <Route
+            path={"applications/:id/terms-and-conditions"}
+            element={
+              language === "es-ES" ? (
+                <MatchupTermsAndConditionsES />
+              ) : (
+                <MatchupTermsAndConditionsEN />
+              )
+            }
+          />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/privacy-policy"
+            element={
+              language === "es-ES" ? <PrivacyPolicyES /> : <PrivacyPolicyEN />
+            }
+          />
+          <Route
+            path="/terms-and-conditions"
+            element={
+              language === "es-ES" ? (
+                <TermsAndConditionsES />
+              ) : (
+                <TermsAndConditionsEN />
+              )
+            }
+          />
+        </Routes>
+      </BodyWrapper>
       <Footer />
-    </>
+    </div>
   );
 };

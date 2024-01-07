@@ -1,9 +1,9 @@
 :root {
   background-color: #ffffff;
-  /* background-color: #DCFFFB; */
+  overflow-x: hidden;
 }
 
 * {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }

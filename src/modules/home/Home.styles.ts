@@ -5,7 +5,7 @@ import theme from "./../../theme.json";
 export const HomeWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;

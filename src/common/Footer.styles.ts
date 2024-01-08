@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "utils";
+import theme from "./../theme.json";
 
 export const FooterWrapper = styled.div`
   position: absolute;
@@ -8,7 +9,10 @@ export const FooterWrapper = styled.div`
   bottom: 0;
   width: 100%;
   height: 50px;
-  background-color: #1f1f1f;
+  background: linear-gradient(
+    ${theme.colors.blueDark},
+    ${theme.colors.blueDarken}
+  );
 `;
 
 export const FooterContent = styled.div`

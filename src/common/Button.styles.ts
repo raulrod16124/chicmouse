@@ -53,7 +53,7 @@ export const ExternalLink = styled.a<TCustomButton>`
   text-decoration: none;
   text-align: center;
   border-radius: 10px;
-  border: 0.5px solid;
+  border: 0.5px solid transparent;
   cursor: pointer;
   display: flex;
   justify-content: center;

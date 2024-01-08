@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { device } from "utils";
+import styled from "styled-components";
+import theme from "./../../../theme.json";
 
 export const AppPageWrapper = styled.div`
   position: relative;
@@ -8,8 +9,8 @@ export const AppPageWrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
   width: 1200px;
-  height: 100%;
-  margin-top: 100px;
+  margin-top: 80px;
+  margin-bottom: 100px;
 
   @media ${device.laptopM} {
     width: 900px;
@@ -105,7 +106,7 @@ export const TextLinksWrapper = styled.div`
 
 export const TextLink = styled(Link)`
   font-size: 12px;
-  color: #000;
+  color: ${theme.colors.white};
   text-decoration: none;
   padding: 10px 0;
   @media ${device.mobileL} {
@@ -129,8 +130,8 @@ export const BodyInfoContent = styled.div`
 `;
 
 export const AppImages = styled.img`
-  width: 150px;
-  height: 320px;
+  width: 130px;
+  height: 280px;
   margin: 0 auto;
   border-radius: 5px;
   @media ${device.laptop} {
@@ -158,6 +159,7 @@ export const AppTitle = styled.span`
   font-size: 30px;
   font-weight: 600;
   text-align: center;
+  color: ${theme.colors.white};
   @media ${device.laptop} {
     font-size: 25px;
   }
@@ -167,10 +169,12 @@ export const AppTitle = styled.span`
   }
 `;
 
-export const AppTextContent = styled.p`
+export const AppTextContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 50%;
+  margin: 0 auto;
 `;
 
 export const AppText = styled.p<{ fontSize?: string; margin?: string }>`
@@ -178,6 +182,7 @@ export const AppText = styled.p<{ fontSize?: string; margin?: string }>`
   font-style: italic;
   text-align: center;
   margin: ${(props) => props.margin && props.margin};
+  color: ${theme.colors.white};
 
   @media ${device.laptop} {
     font-size: 15px;
@@ -187,15 +192,14 @@ export const AppText = styled.p<{ fontSize?: string; margin?: string }>`
   }
 `;
 
-export const AppDescription = styled.p<{ margin?: string }>`
-  font-size: 25px;
-  margin: ${(props) => props.margin && props.margin};
+export const AppDescription = styled.div<{ margin?: string }>`
   padding: 0 30px;
-  font-style: italic;
   margin-top: 25px;
+  margin: ${(props) => props.margin && props.margin};
+  color: ${theme.colors.white};
+  height: max-content;
 
   @media ${device.laptop} {
-    font-size: 15px;
     padding: 0 20px;
   }
 

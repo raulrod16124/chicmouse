@@ -33,6 +33,8 @@ export const Applications = () => {
     const hoverCondition = appReady && !smallScreenDetected;
     const hoverResult = hoverCondition ? "active" : " inactive";
 
+    const appName = nameText.charAt(0).toUpperCase() + nameText.slice(1);
+
     return (
       <AppContent
         key={name}
@@ -47,7 +49,7 @@ export const Applications = () => {
         {appReady && <AppImage src={icon} alt={`${name}-icon`} />}
 
         <AppInfoContent opacity={name === "notReady" ? 0.5 : 1}>
-          <AppTitle>{nameText}</AppTitle>
+          <AppTitle>{appName}</AppTitle>
           <AppTextContent>
             <AppText>{intl.formatMessage({ id: "mobileApp" })}</AppText>
           </AppTextContent>

@@ -60,15 +60,14 @@ export default function AppPage() {
   }
 
   return (
-    // <AppPageWrapper className="animate__animated animate__zoomIn animate__delay-0.01s" >
     <AppPageWrapper>
-      <BackArrowButton onClick={() => navigate("/applications")}>
+      {/* <BackArrowButton onClick={() => navigate("/applications")}>
         <FontAwesomeIcon
           icon={faArrowLeft}
           size={"2x"}
           color={theme.colors.blue}
         />
-      </BackArrowButton>
+      </BackArrowButton> */}
       <SideInfoContent>
         <AppImage src={appData.icon} alt={`${appData.name}-icon`} />
         <SideTextContent>

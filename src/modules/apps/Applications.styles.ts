@@ -4,7 +4,6 @@ import theme from "./../../theme.json";
 
 export const AppsWrapper = styled.div`
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -19,7 +18,14 @@ export const AppsList = styled.ul`
   flex-wrap: wrap;
   padding: 20px;
   width: 1600px;
+  min-height: 60vh;
   justify-content: center;
+  margin-bottom: 50px;
+  @media ${device.tablet} {
+    min-height: 100vh;
+    margin-top: 50px;
+    overflow-x: hidden;
+  }
 `;
 
 export const AppContent = styled.div<{

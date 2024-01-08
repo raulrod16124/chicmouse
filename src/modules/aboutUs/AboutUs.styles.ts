@@ -52,6 +52,9 @@ export const CharacterTextContent = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 50px;
+  @media ${device.laptop} {
+    margin-left: 0;
+  }
 `;
 
 export const CharacterTitle = styled.p<{

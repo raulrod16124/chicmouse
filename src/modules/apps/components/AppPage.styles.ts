@@ -58,9 +58,9 @@ export const SideInfoContent = styled.div`
   }
   @media ${device.tablet} {
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
     width: 70%;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
   }
   @media ${device.mobileL} {
     width: 90%;
@@ -86,13 +86,13 @@ export const AppImage = styled.img`
   height: 200px;
   margin: 0 auto;
   @media ${device.laptop} {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
+    margin: 0;
   }
   @media ${device.mobileL} {
     width: 80px;
     height: 80px;
-    margin: 0;
   }
 `;
 
@@ -162,10 +162,10 @@ export const AppTitle = styled.span`
   color: ${theme.colors.white};
   @media ${device.laptop} {
     font-size: 25px;
+    margin-top: 0;
   }
   @media ${device.mobileL} {
     font-size: 20px;
-    margin-top: 0;
   }
 `;
 
@@ -201,6 +201,7 @@ export const AppDescription = styled.div<{ margin?: string }>`
 
   @media ${device.laptop} {
     padding: 0 20px;
+    margin-bottom: 100px;
   }
 
   @media ${device.mobileL} {

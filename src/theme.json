@@ -1,6 +1,17 @@
 {
-    "colors":{
-        "black": "#020202",
-        "primaryText": "#fff"
-    }
+  "colors": {
+    "white": "#FFFFFF",
+    "black": "#020202",
+    "primaryText": "#fff",
+    "blueGreen": "#34A0A4",
+    "blueLight": "#168AAD",
+    "blue": "#1A759F",
+    "blueDark": "#1E6091",
+    "blueDarken": "#184E77",
+    "greenLighter": "#D9ED92",
+    "greenLight": "#B5E48C",
+    "green": "#99D98C",
+    "greenDark": "#76C893",
+    "greenDarken": "#52B69A"
+  }
 }

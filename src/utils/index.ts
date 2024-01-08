@@ -71,7 +71,7 @@ export const AppPages: IAppPage[] = [
     name: "notReady",
     description: "noDescription",
     images: [],
-    icon: imageNotFound,
+    icon: "notReady",
     stars: 0.0,
     downloadsNumber: 0,
     url: "/",

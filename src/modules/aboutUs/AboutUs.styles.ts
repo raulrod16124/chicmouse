@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { device } from "utils";
+import theme from "./../../theme.json";
 
 export const AboutUsWrapper = styled.div`
   position: absolute;
@@ -20,37 +21,37 @@ export const AboutUsContent = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  width: 1200px;
-  margin-bottom: 100px;
+  max-width: 1000px;
+  margin-bottom: 50px;
 `;
 
 export const CharacterInfoWrapper = styled.div`
   display: flex;
-  align-items: center;
   &:last-of-type {
     margin-top: 50px;
   }
 
   @media ${device.laptop} {
+    align-items: center;
     flex-direction: column;
   }
 `;
 
 export const CharacterImage = styled.img`
-  width: 300px;
-  height: 450px;
+  width: 250px;
+  height: auto;
   @media ${device.laptop} {
-    width: 150px;
-    height: 250px;
+    width: 250px;
+    height: auto;
     margin-bottom: 50px;
   }
 `;
 
 export const CharacterTextContent = styled.div`
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin-left: 50px;
 `;
 
 export const CharacterTitle = styled.p<{
@@ -59,21 +60,23 @@ export const CharacterTitle = styled.p<{
 }>`
   padding: ${(props) => props.padding && props.padding};
   text-align: ${(props) => props.textalign && props.textalign};
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
   font-style: italic;
+  color: ${theme.colors.white};
 
   @media ${device.laptop} {
-    font-size: 25px;
     width: 90%;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
   }
 `;
 
-export const CharacterText = styled.p<{ padding?: string }>`
-  padding: ${(props) => props.padding && props.padding};
-  font-size: 20px;
+export const CharacterText = styled.p`
+  padding: 20px 100px 0 20px;
+  font-size: 18px;
+  color: ${theme.colors.white};
+
   @media ${device.laptop} {
     font-size: 15px;
     width: 90%;

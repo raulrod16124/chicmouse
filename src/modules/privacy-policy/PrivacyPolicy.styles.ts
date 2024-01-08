@@ -28,11 +28,13 @@ export const PrivacyPolicyContent = styled.div`
 export const TextTitle = styled.h2`
   margin-bottom: 50px;
   color: ${theme.colors.white};
+  font-style: italic;
 `;
 
 export const TextSubtitle = styled.h3`
   margin-top: 25px;
   margin-bottom: 5px;
+  font-style: italic;
   color: ${theme.colors.white};
   @media ${device.tablet} {
     margin-top: 50px;
@@ -61,7 +63,6 @@ export const Text = styled.p<{ margin?: string }>`
   color: ${theme.colors.white};
   margin: ${(props) => props.margin && props.margin};
   font-size: 15px;
-  font-style: italic;
   & a {
     color: ${theme.colors.white};
   }

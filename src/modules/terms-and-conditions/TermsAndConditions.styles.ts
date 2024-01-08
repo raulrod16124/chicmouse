@@ -28,12 +28,14 @@ export const TermsAndConditionsContent = styled.div`
 export const TextTitle = styled.h2`
   margin-bottom: 30px;
   color: ${theme.colors.white};
+  font-style: italic;
 `;
 
 export const TextSubtitle = styled.h3`
   margin-top: 25px;
   margin-bottom: 5px;
   color: ${theme.colors.white};
+  font-style: italic;
   @media ${device.tablet} {
     margin-top: 50px;
   }
@@ -43,6 +45,7 @@ export const TextSecondarySubtitle = styled.h5`
   margin-top: 25px;
   margin-bottom: 5px;
   color: ${theme.colors.white};
+  font-style: italic;
   @media ${device.tablet} {
     margin-top: 50px;
   }
@@ -52,7 +55,6 @@ export const Text = styled.p<{ margin?: string }>`
   margin: ${(props) => props.margin && props.margin};
   font-size: 15px;
   color: ${theme.colors.white};
-  font-style: italic;
 
   & a {
     color: ${theme.colors.white};

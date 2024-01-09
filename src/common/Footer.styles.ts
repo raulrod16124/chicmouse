@@ -13,6 +13,9 @@ export const FooterWrapper = styled.div`
     ${theme.colors.blueDark},
     ${theme.colors.blueDarken}
   );
+  @media ${device.laptop} {
+    max-width: 100vw;
+  }
 `;
 
 export const FooterContent = styled.div`

@@ -10,7 +10,7 @@ export const HomeWrapper = styled.div`
   align-items: center;
   justify-content: center;
   @media ${device.tablet} {
-    margin-top: 25px;
+    min-height: fit-content;
     align-items: flex-start;
   }
 `;
@@ -27,6 +27,7 @@ export const HomeContainer = styled.div`
     align-items: start;
     grid-template-columns: 100%;
     grid-template-rows: 40% 60%;
+    margin-bottom: 100px;
   }
 `;
 
@@ -39,6 +40,10 @@ export const HomeImageWrapper = styled.div`
     ${theme.colors.greenLight},
     ${theme.colors.greenDark}
   );
+  @media ${device.mobileL} {
+    width: 150px;
+    height: 150px;
+  }
 `;
 
 export const HomeImage = styled.img`
@@ -69,6 +74,7 @@ export const HomeText = styled.p`
     font-size: 20px;
   }
   @media ${device.mobileL} {
+    width: 90%;
     font-size: 15px;
   }
 `;

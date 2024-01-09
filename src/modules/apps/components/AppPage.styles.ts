@@ -65,7 +65,7 @@ export const SideInfoContent = styled.div`
   @media ${device.mobileL} {
     width: 90%;
     min-height: 200px;
-    margin: 0 auto;
+    margin: 300px auto 0 auto;
     justify-content: center;
   }
 `;
@@ -205,6 +205,7 @@ export const AppDescription = styled.div<{ margin?: string }>`
   }
 
   @media ${device.mobileL} {
+    padding: 50px 5px 100px 5px;
     &:last-of-type {
       margin-top: 0;
     }

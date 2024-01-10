@@ -9,7 +9,6 @@ export const AppPageWrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
   width: 1200px;
-  margin-top: 80px;
   margin-bottom: 100px;
 
   @media ${device.laptopM} {

@@ -9,7 +9,7 @@ export const ContactWrapper = styled.div`
   max-width: 1000px;
   display: flex;
   justify-content: space-between;
-  margin: 80px auto 0 auto;
+  margin: 0 auto;
   @media ${device.laptop} {
     margin: 0 auto 50px auto;
     flex-direction: column;

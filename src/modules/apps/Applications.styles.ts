@@ -6,10 +6,6 @@ export const AppsWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  @media ${device.tablet} {
-    margin-top: 50px;
-  }
 `;
 
 export const AppsList = styled.ul`

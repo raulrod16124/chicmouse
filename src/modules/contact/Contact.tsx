@@ -16,7 +16,7 @@ export const Contact = () => {
     <ContactWrapper data-testid="contact-page-id">
       <ImageContent>
         <ContactImage src={cheese} alt="teleoperator-mouse-image" />
-        <CheeseText>chicmouse.group@gmail.com</CheeseText>
+        <CheeseText>info@chicmouse.com</CheeseText>
       </ImageContent>
       {contactText(language)}
     </ContactWrapper>

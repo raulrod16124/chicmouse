@@ -5,9 +5,8 @@ import theme from "./../../theme.json";
 export const HomeWrapper = styled.div`
   position: relative;
   width: 100%;
-  min-height: 100vh;
   display: flex;
-  margin-top: 200px;
+  margin-top: 100px;
   justify-content: center;
   @media ${device.laptop} {
     margin-top: 0;
@@ -18,7 +17,7 @@ export const HomeWrapper = styled.div`
 export const HomeContainer = styled.div`
   width: 90%;
   max-width: 1200px;
-  height: 100%;
+  height: fit-content;
   display: grid;
   align-items: center;
   grid-template-columns: 60% 40%;

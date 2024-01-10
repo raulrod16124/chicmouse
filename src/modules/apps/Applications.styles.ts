@@ -7,7 +7,6 @@ export const AppsWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 100px;
-  min-height: 100vh;
   @media ${device.tablet} {
     margin-top: 50px;
   }

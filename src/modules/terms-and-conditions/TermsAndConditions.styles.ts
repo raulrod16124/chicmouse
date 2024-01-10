@@ -21,7 +21,7 @@ export const TermsAndConditionsContent = styled.div`
   margin: 100px auto;
 
   @media ${device.tablet} {
-    margin-top: 50px;
+    margin-top: 0;
   }
 `;
 

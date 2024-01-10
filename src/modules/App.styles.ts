@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { device } from "utils";
 
 export const Main = styled.div`
+  position: relative;
   width: 100%;
-  background-color: red;
-  overflow-x: hidden;
+  overflow: hidden;
 `;
 
 export const WebBackground = styled.img`

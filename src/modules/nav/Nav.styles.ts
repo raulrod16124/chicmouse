@@ -8,9 +8,8 @@ type TMenuItem = {
 };
 
 export const NavWrapper = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
-  z-index: 500;
 `;
 
 export const NavContainer = styled.div`

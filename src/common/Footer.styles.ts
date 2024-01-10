@@ -4,9 +4,7 @@ import { device } from "utils";
 import theme from "./../theme.json";
 
 export const FooterWrapper = styled.div`
-  position: absolute;
-  position: fixed;
-  bottom: 0;
+  position: relative;
   width: 100%;
   height: 50px;
   background: linear-gradient(
@@ -38,7 +36,7 @@ export const TextLinksWrapper = styled.div`
 
 export const TextLink = styled(Link)`
   font-size: 12px;
-  color: #fff;
+  color: ${theme.colors.white};
   text-decoration: none;
   @media ${device.mobileL} {
     font-size: 8px;
@@ -47,7 +45,7 @@ export const TextLink = styled(Link)`
 
 export const FooterText = styled.p`
   font-size: 12px;
-  color: #fff;
+  color: ${theme.colors.white};
   @media ${device.mobileL} {
     font-size: 8px;
   }

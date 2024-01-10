@@ -20,7 +20,7 @@ export const AppPageWrapper = styled.div`
   }
   @media ${device.tablet} {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 0;
     flex-direction: column;
   }
   @media ${device.mobileL} {

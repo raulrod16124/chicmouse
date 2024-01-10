@@ -7,9 +7,9 @@ export const AppsWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  min-height: 100vh;
   @media ${device.tablet} {
     margin-top: 50px;
-    overflow-x: hidden;
   }
 `;
 
@@ -22,8 +22,10 @@ export const AppsList = styled.ul`
   justify-content: center;
   margin-bottom: 50px;
   @media ${device.tablet} {
-    min-height: 100vh;
-    overflow-x: hidden;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 0;
   }
 `;
 
@@ -56,8 +58,8 @@ export const AppContent = styled.div<{
 
   @media ${device.tablet} {
     width: auto;
-    max-width: 90%;
-    margin-top: 0;
+    max-width: fit-content;
+    margin: 0 auto 50px auto;
   }
 `;
 
@@ -75,7 +77,7 @@ export const AppInfoContent = styled.div<{ opacity: number }>`
   width: 100%;
   opacity: ${(props) => props.opacity && props.opacity};
   @media ${device.mobileL} {
-    width: 120px;
+    width: 100%;
   }
 `;
 
@@ -84,8 +86,9 @@ export const AppTitle = styled.span`
   font-weight: 600;
   padding: 5px 10px;
   color: ${theme.colors.white};
-  @media ${device.mobileL} {
-    font-size: 15px;
+  @media ${device.laptop} {
+    padding: 5px 0;
+    width: 100%;
   }
 `;
 
@@ -95,6 +98,10 @@ export const AppWrappercontent = styled.div`
   align-items: flex-start;
   width: 100%;
   margin: 10px 0;
+  @media ${device.laptop} {
+    justify-content: flex-start;
+    margin: 0;
+  }
 `;
 
 export const AppTextContent = styled.div`
@@ -102,6 +109,10 @@ export const AppTextContent = styled.div`
   align-items: center;
   margin: 5px 0 5px -5px;
   padding: 0 10px;
+  @media ${device.laptop} {
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 export const AppText = styled.p`

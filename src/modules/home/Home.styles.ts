@@ -63,7 +63,7 @@ export const HomeText = styled.p`
   color: ${theme.colors.white};
 
   @media ${device.laptop} {
-    margin: 100px 0;
+    margin: 100px auto;
   }
   @media ${device.tablet} {
     font-size: 20px;

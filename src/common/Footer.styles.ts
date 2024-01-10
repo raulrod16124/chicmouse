@@ -4,7 +4,9 @@ import { device } from "utils";
 import theme from "./../theme.json";
 
 export const FooterWrapper = styled.div`
-  position: relative;
+  position: absolute;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   height: 50px;
   background: linear-gradient(

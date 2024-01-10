@@ -5,12 +5,11 @@ import theme from "./../../theme.json";
 export const ContactWrapper = styled.div`
   position: relative;
   width: 90%;
+  min-height: 100vh;
   max-width: 1000px;
-  min-height: 40vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 80px auto 100px auto;
+  margin: 80px auto 0 auto;
   @media ${device.laptop} {
     margin: 0 auto 50px auto;
     flex-direction: column;
@@ -38,7 +37,6 @@ export const TextContent = styled.div`
   width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin-left: 50px;
 
   @media ${device.laptop} {
@@ -69,6 +67,7 @@ export const CheeseText = styled.div`
   color: ${theme.colors.white};
 
   @media ${device.laptop} {
+    text-align: center;
     width: 100%;
     margin-top: 25px;
     margin-left: 0;

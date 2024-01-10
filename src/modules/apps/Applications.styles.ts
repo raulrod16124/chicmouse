@@ -23,7 +23,6 @@ export const AppsList = styled.ul`
   margin-bottom: 50px;
   @media ${device.tablet} {
     min-height: 100vh;
-    margin-top: 50px;
     overflow-x: hidden;
   }
 `;
@@ -58,6 +57,7 @@ export const AppContent = styled.div<{
   @media ${device.tablet} {
     width: auto;
     max-width: 90%;
+    margin-top: 0;
   }
 `;
 
@@ -110,8 +110,5 @@ export const AppText = styled.p`
   color: ${theme.colors.white};
   @media ${device.laptop} {
     font-size: 10px;
-  }
-  @media ${device.mobileL} {
-    font-size: 8px;
   }
 `;

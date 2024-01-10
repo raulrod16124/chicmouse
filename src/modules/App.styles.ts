@@ -3,10 +3,8 @@ import { device } from "utils";
 
 export const Main = styled.div`
   width: 100%;
-  height: calc(100vh - 100px);
-  @media ${device.laptop} {
-    max-width: 100vw;
-  }
+  background-color: red;
+  overflow-x: hidden;
 `;
 
 export const WebBackground = styled.img`
@@ -18,6 +16,5 @@ export const WebBackground = styled.img`
   background-size: 100% 100%;
   @media ${device.mobileL} {
     height: 100vh;
-    overflow-y: hidden;
   }
 `;

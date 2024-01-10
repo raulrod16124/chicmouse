@@ -87,8 +87,8 @@ export const Root = () => {
             }
           />
         </Routes>
+        <Footer />
       </BodyWrapper>
-      <Footer />
     </div>
   );
 };

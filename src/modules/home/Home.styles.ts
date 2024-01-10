@@ -6,7 +6,6 @@ export const HomeWrapper = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  margin-top: 100px;
   justify-content: center;
   @media ${device.laptop} {
     margin-top: 0;
@@ -62,7 +61,7 @@ export const HomeText = styled.p`
   color: ${theme.colors.white};
 
   @media ${device.laptop} {
-    margin: 100px auto;
+    margin: 60px auto;
   }
   @media ${device.tablet} {
     font-size: 20px;

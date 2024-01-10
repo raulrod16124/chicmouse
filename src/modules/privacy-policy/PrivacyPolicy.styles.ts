@@ -18,7 +18,7 @@ export const PrivacyPolicyContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 100px auto;
+  margin: 0 auto;
 
   @media ${device.tablet} {
     margin-top: 0;

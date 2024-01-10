@@ -8,12 +8,7 @@ export const AboutUsWrapper = styled.div`
   height: auto;
   display: flex;
   justify-content: center;
-  margin-top: 80px;
   margin-bottom: 100px;
-
-  @media ${device.laptop} {
-    margin-top: 0;
-  }
 `;
 
 export const AboutUsContent = styled.div`

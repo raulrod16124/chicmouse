@@ -3,7 +3,7 @@ import { device } from "utils";
 import theme from "./../../theme.json";
 
 export const AboutUsWrapper = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
   height: auto;
   display: flex;
@@ -12,7 +12,7 @@ export const AboutUsWrapper = styled.div`
   margin-bottom: 100px;
 
   @media ${device.laptop} {
-    margin-top: 50px;
+    margin-top: 0;
   }
 `;
 

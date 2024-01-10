@@ -12,6 +12,7 @@ export const ContactWrapper = styled.div`
   align-items: center;
   margin: 80px auto 100px auto;
   @media ${device.laptop} {
+    margin: 0 auto 50px auto;
     flex-direction: column;
   }
 `;

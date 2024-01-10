@@ -5,12 +5,12 @@ import theme from "./../../theme.json";
 export const HomeWrapper = styled.div`
   position: relative;
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
+  margin-top: 200px;
   justify-content: center;
-  @media ${device.tablet} {
-    min-height: fit-content;
+  @media ${device.laptop} {
+    margin-top: 0;
     align-items: flex-start;
   }
 `;
@@ -22,7 +22,6 @@ export const HomeContainer = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 60% 40%;
-  /* grid-template-rows: 100%; */
   @media ${device.laptop} {
     align-items: start;
     grid-template-columns: 100%;
@@ -40,10 +39,6 @@ export const HomeImageWrapper = styled.div`
     ${theme.colors.greenLight},
     ${theme.colors.greenDark}
   );
-  @media ${device.mobileL} {
-    width: 150px;
-    height: 150px;
-  }
 `;
 
 export const HomeImage = styled.img`
@@ -68,7 +63,7 @@ export const HomeText = styled.p`
   color: ${theme.colors.white};
 
   @media ${device.laptop} {
-    margin: 50px 0;
+    margin: 100px 0;
   }
   @media ${device.tablet} {
     font-size: 20px;

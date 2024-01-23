@@ -5,7 +5,7 @@ import theme from "./../../theme.json";
 export const ContactWrapper = styled.div`
   position: relative;
   width: 90%;
-  min-height: 100vh;
+  min-height: 100%;
   max-width: 1000px;
   display: flex;
   justify-content: space-between;

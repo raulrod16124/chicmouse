@@ -5,10 +5,9 @@ import theme from "./../../theme.json";
 export const AboutUsWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  padding-bottom: 50px;
 `;
 
 export const AboutUsContent = styled.div`

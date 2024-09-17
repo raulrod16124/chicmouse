@@ -6,7 +6,7 @@ import matchupImage3 from "../assets/matchupImage_3.png";
 import matchupImage4 from "../assets/matchupImage_4.png";
 import imageNotFound from "../assets/image_not_found.png";
 
-const { VITE_MATCHUP_APP_URL } = import.meta.env;
+// const { VITE_MATCHUP_APP_URL } = import.meta.env;
 
 export const menu: MenuItem[] = [
   {
@@ -65,7 +65,8 @@ export const AppPages: IAppPage[] = [
     icon: matchupIcon,
     stars: 0.0,
     downloadsNumber: 0,
-    url: VITE_MATCHUP_APP_URL,
+    url: "https://play.google.com/store/apps/details?id=com.matchupcardgame2023",
+    // url: VITE_MATCHUP_APP_URL,
   },
   {
     name: "notReady",

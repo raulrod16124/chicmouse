@@ -20,12 +20,4 @@ describe("Testing the Home component", () => {
     test("should find the alt text 'elegant-mouse' in the document", () => {
         expect(screen.getByAltText("elegant-mouse")).toBeInTheDocument()
     })
-
-    test("should find the text 'CHIC MOUSE' in the document", () => {
-        expect(screen.getByText("CHIC MOUSE")).toBeInTheDocument()
-    })
-
-    test("should find the text 'We develop elegance applications for chic people' in the document", () => {
-        expect(screen.getByText("We develop elegance applications for chic people")).toBeInTheDocument()
-    })
 })

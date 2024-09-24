@@ -10,6 +10,8 @@ type TMenuItem = {
 export const NavWrapper = styled.div`
   position: relative;
   width: 100%;
+  max-width: 1270px;
+  margin: 0 auto;
 `;
 
 export const NavContainer = styled.div`

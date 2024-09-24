@@ -9,6 +9,7 @@ import {
 
 export const Footer = () => {
   const intl = useIntl();
+  const currentYear = new Date().getUTCFullYear()
 
   return (
     <FooterWrapper>
@@ -22,7 +23,7 @@ export const Footer = () => {
           </TextLink>
         </TextLinksWrapper>
         <FooterText>
-          &copy; 2023 {intl.formatMessage({ id: "allRightsReserved" })}
+          &copy; {currentYear} {intl.formatMessage({ id: "allRightsReserved" })}
         </FooterText>
       </FooterContent>
     </FooterWrapper>

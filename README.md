@@ -31,7 +31,7 @@
 ### 🌐 Features
 
 - **Comprehensive Showcase**: Displays detailed information for each Chicmouse application.
-- **Terms & Conditions**: Access and review the terms and policies for each application created under the ChicMouse brand.
+- **Terms & Conditions**: Access and review the terms and policies for each application created under the Chicmouse brand.
 - **Dynamic Updates**: The platform stays current, reflecting any updates or new applications added by our team.
 - **Responsive Design**: Optimized for desktop, tablet, and mobile experiences.
 

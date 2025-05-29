@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://chicmouse.com/">
+  <a href="https://chicmouse-16124.web.app/">
     <img src="https://github.com/raulrod16124/chicmouse/blob/main/src/assets/chicmouseCharacter.png" alt="chicmouse" style="width: 150px;"/>
   </a>
   <h1>Chicmouse - Showcase Platform</h1>
@@ -40,6 +40,7 @@
 ### 🛠 Installation Guide
 
 #### Prerequisites
+
 To run this project locally, ensure that you have [Node.js](https://nodejs.org/) installed.
 
 1. **Clone the Repository**
@@ -50,15 +51,17 @@ To run this project locally, ensure that you have [Node.js](https://nodejs.org/)
    ```
 
 2. **Install dependencies**
-   
+
    ```bash
    npm install
    ```
+
 3. **Start the Metro bundler**
-   
+
    ```bash
    npx react-native start
    ```
+
 4. **Run the app**
    - For IOS (requires Xcode):
    ```bash
@@ -68,6 +71,7 @@ To run this project locally, ensure that you have [Node.js](https://nodejs.org/)
    ```bash
    npx react-native run-android
    ```
+
 ---
 
 ### 🌈 Design & Collaboration

@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://chicmouse-16124.web.app/">
+  <a href="https://chicmouse.com/">
     <img src="https://github.com/raulrod16124/chicmouse/blob/main/src/assets/chicmouseCharacter.png" alt="chicmouse" style="width: 150px;"/>
   </a>
   <h1>Chicmouse - Showcase Platform</h1>

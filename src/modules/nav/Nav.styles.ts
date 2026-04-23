@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
-import { device } from "utils";
-import styled from "styled-components";
-import { colors } from "tokens/colors";
+import {Link} from 'react-router-dom';
+import {device} from 'utils';
+import styled from 'styled-components';
+import {colors} from 'tokens/colors';
+import {typography, transitions} from 'tokens';
 
 type TMenuItem = {
   selected: boolean;
@@ -38,7 +39,7 @@ export const NavContainer = styled.div`
   & ::after {
     position: absolute;
     bottom: 0;
-    content: "";
+    content: '';
     width: 100%;
     height: 1px;
     background-color: white;
@@ -78,17 +79,18 @@ export const MenuItemContent = styled(Link)<TMenuItem>`
   text-decoration: none;
   border-radius: 5px;
   background-color: transparent;
-  border-bottom: ${(props) => props.selected && `2px solid ${colors.accentYellow}`};
+  border-bottom: ${props =>
+    props.selected && `2px solid ${colors.accentYellow}`};
   color: ${colors.textPrimary};
-  font-weight: ${(props) => props.selected && 600};
-  font-size: 15px;
+  font-weight: ${props => props.selected && 600};
+  font-size: ${typography.body.fontSize};
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: color ${transitions.base};
   margin: 0 10px;
   padding: 0 10px;
 
   &:hover {
-    color: ${(props) => !props.selected && colors.accentYellow};
+    color: ${props => !props.selected && colors.accentYellow};
   }
 
   @media ${device.laptop} {

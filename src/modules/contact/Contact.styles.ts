@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import { device } from "utils";
-import { colors } from "tokens/colors";
+import styled from 'styled-components';
+import {device} from 'utils';
+import {colors} from 'tokens/colors';
+import {typography, transitions} from 'tokens';
 
 export const ContactWrapper = styled.div`
   position: relative;
@@ -50,7 +51,7 @@ export const TextContent = styled.div`
 export const Text = styled.div`
   width: 100%;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: ${typography.fontSize.lg};
   color: ${colors.textPrimary};
 
   @media ${device.laptop} {
@@ -63,10 +64,10 @@ export const Text = styled.div`
 export const CheeseText = styled.a`
   width: 100%;
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: ${typography.body.fontSize};
   color: ${colors.accentBlue};
   text-decoration: none;
-  transition: color 0.15s ease;
+  transition: color ${transitions.fast};
 
   &:hover {
     color: ${colors.textPrimary};

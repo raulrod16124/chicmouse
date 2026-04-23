@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { device } from "utils";
-import { colors } from "tokens/colors";
+import {Link} from 'react-router-dom';
+import styled from 'styled-components';
+import {device} from 'utils';
+import {colors} from 'tokens/colors';
+import {typography, transitions} from 'tokens';
 
 export const FooterWrapper = styled.div`
-  position: fixed;
-  bottom: 0;
   width: 100%;
   height: 50px;
   background-color: ${colors.bgSecondary};
   border-top: 1px solid ${colors.surface};
-  z-index: 10;
   @media ${device.laptop} {
     max-width: 100vw;
   }
@@ -35,22 +33,22 @@ export const TextLinksWrapper = styled.div`
 `;
 
 export const TextLink = styled(Link)`
-  font-size: 12px;
+  font-size: ${typography.caption.fontSize};
   color: ${colors.textSecondary};
   text-decoration: none;
-  transition: color 0.15s ease;
+  transition: color ${transitions.fast};
   &:hover {
     color: ${colors.textPrimary};
   }
   @media ${device.mobileL} {
-    font-size: 11px;
+    font-size: ${typography.fontSize.xs};
   }
 `;
 
 export const FooterText = styled.p`
-  font-size: 12px;
+  font-size: ${typography.caption.fontSize};
   color: ${colors.textSecondary};
   @media ${device.mobileL} {
-    font-size: 11px;
+    font-size: ${typography.fontSize.xs};
   }
 `;

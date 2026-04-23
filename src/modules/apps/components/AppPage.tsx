@@ -1,6 +1,6 @@
-import { useNavigate, useParams } from "react-router-dom";
-import { AppInfo, IAppPage } from "types";
-import { AppPages } from "utils";
+import {useNavigate, useParams} from 'react-router-dom';
+import {AppInfo, IAppPage} from 'types';
+import {AppPages} from 'utils';
 import {
   AppDescription,
   AppImage,
@@ -16,28 +16,28 @@ import {
   SideTextContent,
   TextLink,
   TextLinksWrapper,
-} from "./AppPage.styles";
-import { ClipLoader } from "react-spinners";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from './AppPage.styles';
+import {ClipLoader} from 'react-spinners';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faArrowLeft,
   faDownload,
   faStar,
-} from "@fortawesome/free-solid-svg-icons";
-import { useIntl } from "react-intl";
-import { Button } from "common/Button";
-import { useWindowSize } from "hooks/useWindowSize";
-import { colors } from "tokens/colors";
-import { appDescriptions } from "../utils/appDescriptions";
-import { useContext } from "react";
-import { LanguageContext } from "context/LanguageContext";
+} from '@fortawesome/free-solid-svg-icons';
+import {useIntl} from 'react-intl';
+import {Button} from 'common/Button';
+import {useWindowSize} from 'hooks/useWindowSize';
+import {colors} from 'tokens/colors';
+import {appDescriptions} from '../utils/appDescriptions';
+import {useContext} from 'react';
+import {LanguageContext} from 'context/LanguageContext';
 
 export default function AppPage() {
   const intl = useIntl();
   const navigate = useNavigate();
-  const { id: appName } = useParams();
-  const { smallScreenDetected, windowWidth } = useWindowSize();
-  const { language } = useContext(LanguageContext);
+  const {id: appName} = useParams();
+  const {smallScreenDetected, windowWidth} = useWindowSize();
+  const {language} = useContext(LanguageContext);
 
   const appData = AppPages.filter((app: IAppPage) => app.name === appName)[0];
 
@@ -73,21 +73,21 @@ export default function AppPage() {
         <SideTextContent>
           <AppTitle>{appData.name.toUpperCase()}</AppTitle>
           <AppTextContent>
-            <AppText margin={smallScreenDetected ? "5px" : "25px 0"}>
+            <AppText margin={smallScreenDetected ? '5px' : '25px 0'}>
               {appData.stars}
               <FontAwesomeIcon
                 icon={faStar}
-                size={"2xs"}
-                style={{ marginLeft: "5px" }}
+                size={'2xs'}
+                style={{marginLeft: '5px'}}
                 color={colors.accentYellow}
               />
             </AppText>
-            <AppText margin={smallScreenDetected ? "5px" : "25px 0"}>
+            <AppText margin={smallScreenDetected ? '5px' : '25px 0'}>
               {appData.downloadsNumber}
               <FontAwesomeIcon
                 icon={faDownload}
-                size={"2xs"}
-                style={{ marginLeft: "5px" }}
+                size={'2xs'}
+                style={{marginLeft: '5px'}}
               />
             </AppText>
           </AppTextContent>
@@ -96,24 +96,23 @@ export default function AppPage() {
             isExternalLink={true}
             externalUrl={
               appData.url ||
-              "https://play.google.com/store/games?hl=es_419&gl=US"
+              'https://play.google.com/store/games?hl=es_419&gl=US'
             }
-            content={intl.formatMessage({ id: "download" })}
-            disabled={appData.name === "notReady"}
+            content={intl.formatMessage({id: 'download'})}
+            variant="primary"
+            disabled={appData.name === 'notReady'}
             width={smallScreenDetected ? mobileSize[0] : 180}
             height={smallScreenDetected ? mobileSize[1] : 50}
             align="center"
-            background={colors.accentYellow}
-            color={colors.lightTextPrimary}
             fontSize={14}
-            margin={smallScreenDetected ? "10px" : "25px 0"}
+            margin={smallScreenDetected ? '10px' : '25px 0'}
           />
           <TextLinksWrapper>
             <TextLink to={`/applications/${appName}/privacy-policy`}>
-              {intl.formatMessage({ id: "privacyPolicy" })}
+              {intl.formatMessage({id: 'privacyPolicy'})}
             </TextLink>
             <TextLink to={`/applications/${appName}/terms-and-conditions`}>
-              {intl.formatMessage({ id: "termsAndConditions" })}
+              {intl.formatMessage({id: 'termsAndConditions'})}
             </TextLink>
           </TextLinksWrapper>
         </SideTextContent>
@@ -125,9 +124,8 @@ export default function AppPage() {
           })}
         </ImagesContent>
         <AppDescription
-          margin={smallScreenDetected ? "50px 0 25px 0" : "50px 0 100px 0"}
-        >
-          {appDescriptions(appName, language)}
+          margin={smallScreenDetected ? '50px 0 25px 0' : '50px 0 100px 0'}>
+          {appDescriptions(appName ?? '', language)}
         </AppDescription>
       </BodyInfoContent>
     </AppPageWrapper>

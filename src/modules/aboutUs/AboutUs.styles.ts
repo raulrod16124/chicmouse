@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import { device } from "utils";
-import { colors } from "tokens/colors";
+import styled from 'styled-components';
+import {device} from 'utils';
+import {colors} from 'tokens/colors';
+import {typography} from 'tokens';
 
 export const AboutUsWrapper = styled.div`
   position: relative;
@@ -55,10 +56,10 @@ export const CharacterTitle = styled.p<{
   padding?: string;
   textalign?: string;
 }>`
-  padding: ${(props) => props.padding && props.padding};
-  text-align: ${(props) => props.textalign && props.textalign};
-  font-size: 20px;
-  font-weight: 600;
+  padding: ${props => props.padding && props.padding};
+  text-align: ${props => props.textalign && props.textalign};
+  font-size: ${typography.h3.fontSize};
+  font-weight: ${typography.fontWeight.semibold};
   font-style: italic;
   color: ${colors.textPrimary};
 
@@ -71,7 +72,7 @@ export const CharacterTitle = styled.p<{
 
 export const CharacterText = styled.p`
   padding: 20px 100px 0 20px;
-  font-size: 18px;
+  font-size: ${typography.fontSize.lg};
   color: ${colors.textSecondary};
 
   @media ${device.laptop} {

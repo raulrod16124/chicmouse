@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import { device } from "utils";
-import { colors } from "tokens/colors";
+import styled from 'styled-components';
+import {device} from 'utils';
+import {colors} from 'tokens/colors';
+import {typography, transitions} from 'tokens';
 
 export const HomeWrapper = styled.div`
   position: relative;
@@ -39,32 +40,32 @@ export const HomeImageWrapper = styled.div`
 export const HomeImage = styled.img`
   width: 100%;
   height: 100%;
-  transition: all 0.3s ease-out;
+  transition: all ${transitions.base};
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 `;
 
 export const HomeTitle = styled.h1`
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: ${typography.h1.fontSize};
+  font-weight: ${typography.h1.fontWeight};
+  line-height: ${typography.h1.lineHeight};
   color: ${colors.textPrimary};
   margin-bottom: 24px;
 
   @media ${device.laptop} {
-    font-size: 28px;
+    font-size: ${typography.h2.fontSize};
     margin-bottom: 16px;
   }
   @media ${device.tablet} {
-    font-size: 24px;
+    font-size: ${typography.fontSize['2xl']};
   }
   @media ${device.mobileL} {
-    font-size: 20px;
+    font-size: ${typography.fontSize.xl};
   }
 `;
 
 export const HomeText = styled.p`
-  font-size: 25px;
+  font-size: ${typography.fontSize['2xl']};
   font-style: italic;
   margin: 0 50px;
   color: ${colors.textPrimary};

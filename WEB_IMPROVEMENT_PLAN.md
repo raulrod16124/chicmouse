@@ -141,12 +141,12 @@ src/
 
 ### 2.1 — Design tokens completos
 
-- [ ] Crear `src/tokens/spacing.ts` con escala de espaciado (`4, 8, 12, 16, 24, 32, 48, 64, 80, 120px`)
-- [ ] Crear `src/tokens/typography.ts` con la jerarquía de la guía (tamaños, pesos, line-heights)
-- [ ] Crear `src/tokens/radius.ts` (`sm: 6px`, `md: 12px`, `lg: 20px`, `full: 9999px`)
-- [ ] Crear `src/tokens/transitions.ts` (`fast: 150ms ease`, `base: 250ms ease`, `slow: 400ms ease`)
-- [ ] Crear `src/tokens/index.ts` que reexporte todos los tokens
-- [ ] Reemplazar todos los valores hardcodeados en archivos `.styles.ts` por referencias a tokens
+- [x] Crear `src/tokens/spacing.ts` con escala de espaciado (`4, 8, 12, 16, 24, 32, 48, 64, 80, 120px`)
+- [x] Crear `src/tokens/typography.ts` con la jerarquía de la guía (tamaños, pesos, line-heights)
+- [x] Crear `src/tokens/radius.ts` (`sm: 6px`, `md: 12px`, `lg: 20px`, `full: 9999px`)
+- [x] Crear `src/tokens/transitions.ts` (`fast: 150ms ease`, `base: 250ms ease`, `slow: 400ms ease`)
+- [x] Crear `src/tokens/index.ts` que reexporte todos los tokens
+- [x] Reemplazar todos los valores hardcodeados en archivos `.styles.ts` por referencias a tokens
 
 **Resultado esperado:** Ningún valor de color, spacing, radio o duración aparece hardcodeado en ningún `.styles.ts`. Todo viene de `tokens/`.
 
@@ -154,13 +154,13 @@ src/
 
 ### 2.2 — Componente Button refactorizado
 
-- [ ] Redefinir `CustomButton` con variantes explícitas: `primary` | `secondary` | `ghost`
-- [ ] Variante `primary`: fondo `#FFC857`, texto `#0B132B`, `border-radius: 8px`, `padding: 12px 28px`, `font-weight: 600`
-- [ ] Variante `secondary`: `background: transparent`, `border: 1px solid #F5F5F5`, texto `#F5F5F5`
-- [ ] Hover: `translateY(-1px)` + cambio de color (eliminar hover por opacidad)
-- [ ] Active: `translateY(0)`
-- [ ] Tipar las props con una interfaz nombrada, sin `any`
-- [ ] Actualizar todos los usos del botón en el proyecto
+- [x] Redefinir `CustomButton` con variantes explícitas: `primary` | `secondary` | `ghost`
+- [x] Variante `primary`: fondo `#FFC857`, texto `#0B132B`, `border-radius: 8px`, `padding: 12px 28px`, `font-weight: 600`
+- [x] Variante `secondary`: `background: transparent`, `border: 1px solid #F5F5F5`, texto `#F5F5F5`
+- [x] Hover: `translateY(-1px)` + cambio de color (eliminar hover por opacidad)
+- [x] Active: `translateY(0)`
+- [x] Tipar las props con una interfaz nombrada, sin `any`
+- [x] Actualizar todos los usos del botón en el proyecto
 
 **Resultado esperado:** Todos los botones del proyecto usan el nuevo sistema. El hover da feedback de interacción, no de error.
 
@@ -168,12 +168,12 @@ src/
 
 ### 2.3 — Cards de Applications
 
-- [ ] Cambiar fondo de card de gradiente a plano `#1C2541`
-- [ ] Aplicar `border-radius: 12px`
-- [ ] Reducir sombra a `0 4px 16px rgba(0, 0, 0, 0.4)`
-- [ ] Añadir borde sutil: `border: 1px solid rgba(255, 255, 255, 0.06)`
-- [ ] Cambiar hover de `scale(1.1)` a `translateY(-4px)` con sombra aumentada
-- [ ] Transición con token `base: 250ms ease`
+- [x] Cambiar fondo de card de gradiente a plano `#1C2541`
+- [x] Aplicar `border-radius: 12px`
+- [x] Reducir sombra a `0 4px 16px rgba(0, 0, 0, 0.4)`
+- [x] Añadir borde sutil: `border: 1px solid rgba(255, 255, 255, 0.06)`
+- [x] Cambiar hover de `scale(1.1)` a `translateY(-4px)` con sombra aumentada
+- [x] Transición con token `base: 250ms ease`
 
 **Resultado esperado:** Las cards se ven limpias, modernas y coherentes con la guía.
 
@@ -181,10 +181,10 @@ src/
 
 ### 2.4 — Jerarquía tipográfica aplicada
 
-- [ ] Definir en `tokens/typography.ts` todos los tamaños y pesos
-- [ ] Revisar cada componente y aplicar el nivel correcto (H1, H2, H3, body, caption)
-- [ ] Eliminar `font-size` y `font-weight` hardcodeados de los `.styles.ts`
-- [ ] Verificar contraste de texto en todos los fondos (mínimo WCAG AA: 4.5:1 para body)
+- [x] Definir en `tokens/typography.ts` todos los tamaños y pesos
+- [x] Revisar cada componente y aplicar el nivel correcto (H1, H2, H3, body, caption)
+- [x] Eliminar `font-size` y `font-weight` hardcodeados de los `.styles.ts`
+- [x] Verificar contraste de texto en todos los fondos (mínimo WCAG AA: 4.5:1 para body)
 
 **Resultado esperado:** Clara jerarquía visual en todas las páginas. El contenido se escanea de arriba abajo sin ambigüedad.
 
@@ -192,11 +192,11 @@ src/
 
 ### 2.5 — Footer refactorizado
 
-- [ ] Sacar el footer de `position: fixed`
-- [ ] Colocarlo en el flujo normal del layout, al final del contenido
-- [ ] Eliminar el `padding-bottom: 100px` del `BodyWrapper` que existe como compensación
-- [ ] Aplicar fondo `#1C2541` (coherente con la guía)
-- [ ] Verificar que en páginas cortas el footer queda al final y no flota en medio
+- [x] Sacar el footer de `position: fixed`
+- [x] Colocarlo en el flujo normal del layout, al final del contenido
+- [x] Eliminar el `padding-bottom: 100px` del `BodyWrapper` que existe como compensación
+- [x] Aplicar fondo `#1C2541` (coherente con la guía)
+- [x] Verificar que en páginas cortas el footer queda al final y no flota en medio
 
 **Resultado esperado:** El footer ocupa su lugar natural en el layout. No tapa contenido.
 
@@ -204,9 +204,9 @@ src/
 
 ### 2.6 — Indicador activo del menú
 
-- [ ] Reemplazar `background-color: green` en el ítem activo por `border-bottom: 2px solid #FFC857`
-- [ ] Asegurarse de que el cambio aplica también en el menú responsive (`FloatItem`)
-- [ ] Eliminar los colores `greenLight` y `greenDark` del menú
+- [x] Reemplazar `background-color: green` en el ítem activo por `border-bottom: 2px solid #FFC857`
+- [x] Asegurarse de que el cambio aplica también en el menú responsive (`FloatItem`)
+- [x] Eliminar los colores `greenLight` y `greenDark` del menú
 
 **Resultado esperado:** El ítem activo se distingue con el acento amarillo, no con un color verde incongruente.
 
@@ -353,12 +353,12 @@ Antes de marcar cualquier fase como completada, verificar:
 
 ## Progreso general
 
-| Fase                          | Estado          | Ítems completados |
-| ----------------------------- | --------------- | ----------------- |
+| Fase                          | Estado           | Ítems completados |
+| ----------------------------- | ---------------- | ----------------- |
 | Fase 1 — Quick Wins           | `[x]` Completada | 5 / 5             |
-| Fase 2 — Refactor Visual      | `[ ]` Pendiente | 0 / 6             |
-| Fase 3 — Branding & Identidad | `[ ]` Pendiente | 0 / 5             |
-| Fase 4 — Experiencia Premium  | `[ ]` Pendiente | 0 / 5             |
+| Fase 2 — Refactor Visual      | `[x]` Completada | 6 / 6             |
+| Fase 3 — Branding & Identidad | `[ ]` Pendiente  | 0 / 5             |
+| Fase 4 — Experiencia Premium  | `[ ]` Pendiente  | 0 / 5             |
 
 ---
 

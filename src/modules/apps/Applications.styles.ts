@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import { device } from "utils";
-import { colors } from "tokens/colors";
+import styled from 'styled-components';
+import {device} from 'utils';
+import {colors} from 'tokens/colors';
+import {radius, transitions, typography} from 'tokens';
 
 export const AppsWrapper = styled.div`
   width: 100%;
@@ -34,22 +35,27 @@ export const AppContent = styled.div<{
   align-items: center;
   justify-content: space-between;
   height: fit-content;
-  padding: 15px;
+  padding: 16px;
   width: auto;
   min-width: 200px;
   max-width: 500px;
   background-color: ${colors.bgSecondary};
-  border: 1px solid ${colors.surface};
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: ${radius.md};
   margin: 20px;
-  transition: all 0.3s ease-out;
-  -webkit-box-shadow: 1px 9px 15px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 9px 15px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: 1px 9px 15px -6px rgba(0, 0, 0, 0.75);
-  cursor: ${(props) => props.cursor && props.cursor};
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition:
+    transform ${transitions.base},
+    box-shadow ${transitions.base};
+  cursor: ${props => props.cursor && props.cursor};
 
   &:hover {
-    transform: ${(props) => (props.hover === "active" ? "scale(1.1)" : "none")};
+    transform: ${props =>
+      props.hover === 'active' ? 'translateY(-4px)' : 'none'};
+    box-shadow: ${props =>
+      props.hover === 'active'
+        ? '0 8px 28px rgba(0, 0, 0, 0.55)'
+        : '0 4px 16px rgba(0, 0, 0, 0.4)'};
   }
 
   @media ${device.tablet} {
@@ -66,20 +72,20 @@ export const AppImage = styled.img`
   margin: auto 0;
 `;
 
-export const AppInfoContent = styled.div<{ opacity: number }>`
+export const AppInfoContent = styled.div<{opacity: number}>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  opacity: ${(props) => props.opacity && props.opacity};
+  opacity: ${props => props.opacity && props.opacity};
   @media ${device.mobileL} {
     width: 100%;
   }
 `;
 
 export const AppTitle = styled.span`
-  font-size: 20px;
-  font-weight: 600;
+  font-size: ${typography.h3.fontSize};
+  font-weight: ${typography.h3.fontWeight};
   padding: 5px 10px;
   color: ${colors.textPrimary};
   @media ${device.laptop} {

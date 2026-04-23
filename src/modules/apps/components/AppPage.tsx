@@ -42,7 +42,9 @@ export default function AppPage() {
   const appData = AppPages.filter((app: IAppPage) => app.name === appName)[0];
 
   const renderAppImages = (img: string) => {
-    return <AppImages key={img} src={img} alt="app-screenshot" loading="lazy" />;
+    return (
+      <AppImages key={img} src={img} alt="app-screenshot" loading="lazy" />
+    );
   };
 
   const mobileSize = windowWidth < 450 ? [100, 30] : [140, 35];

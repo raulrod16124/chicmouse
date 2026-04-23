@@ -7,8 +7,14 @@ import {Flag, FlagsWrapper} from './FarMenuItems.styles';
 export const FarMenuItems = memo(() => {
   const {language, changeMessages} = useContext(LanguageContext);
 
-  const switchToEs = useCallback(() => changeMessages('es-ES'), [changeMessages]);
-  const switchToEn = useCallback(() => changeMessages('en-GB'), [changeMessages]);
+  const switchToEs = useCallback(
+    () => changeMessages('es-ES'),
+    [changeMessages],
+  );
+  const switchToEn = useCallback(
+    () => changeMessages('en-GB'),
+    [changeMessages],
+  );
   const keyDownEs = useCallback(
     (e: React.KeyboardEvent) => e.key === 'Enter' && changeMessages('es-ES'),
     [changeMessages],

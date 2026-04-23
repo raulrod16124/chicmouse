@@ -29,7 +29,11 @@ export const Contact = () => {
     <ContactWrapper data-testid="contact-page-id">
       <motion.div {...animProps}>
         <ImageContent>
-          <ContactImage src={contactImage} alt="chicmouse-contact" loading="lazy" />
+          <ContactImage
+            src={contactImage}
+            alt="chicmouse-contact"
+            loading="lazy"
+          />
           <CheeseText href="mailto:info@chicmouse.com">
             info@chicmouse.com
           </CheeseText>

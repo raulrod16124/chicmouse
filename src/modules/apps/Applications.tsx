@@ -52,7 +52,9 @@ export const Applications = () => {
             name !== 'notReady' &&
             navigate(`/applications/${name.toLowerCase()}`)
           }>
-          {appReady && <AppImage src={icon} alt={`${name}-icon`} loading="lazy" />}
+          {appReady && (
+            <AppImage src={icon} alt={`${name}-icon`} loading="lazy" />
+          )}
 
           <AppInfoContent opacity={name === 'notReady' ? 0.5 : 1}>
             <AppTitle>{appName}</AppTitle>

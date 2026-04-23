@@ -1,27 +1,27 @@
-import { memo } from "react";
-import { Logo } from "./../../common/Logo";
-import { NavContainer, NavWrapper } from "./Nav.styles";
-import { FarMenuItems } from "./components/FarMenuItems";
-import { Menu } from "./components/Menu";
-import { ResponsiveMenu } from "./components/ResponsiveMenu";
-import { useWindowSize } from "hooks/useWindowSize";
+import {memo} from 'react';
+import {Logo} from './../../common/Logo';
+import {NavContainer, NavWrapper} from './Nav.styles';
+import {FarMenuItems} from './components/FarMenuItems';
+import {Menu} from './components/Menu';
+import {ResponsiveMenu} from './components/ResponsiveMenu';
+import {useWindowSize} from 'hooks/useWindowSize';
 
 export const Nav = memo(() => {
-  const { smallScreenDetected } = useWindowSize();
+  const {smallScreenDetected} = useWindowSize();
 
   const renderNavigation = (smallWindow: boolean) => {
     if (smallWindow) {
       return (
         <>
-          {" "}
-          <ResponsiveMenu /> <Logo />{" "}
+          {' '}
+          <ResponsiveMenu /> <Logo />{' '}
         </>
       );
     }
     return (
       <>
-        {" "}
-        <Logo /> <Menu />{" "}
+        {' '}
+        <Logo /> <Menu />{' '}
       </>
     );
   };

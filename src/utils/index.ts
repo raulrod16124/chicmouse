@@ -1,47 +1,47 @@
-import { IAppPage, MenuItem } from "types";
-import matchupIcon from "../assets/matchupIcon.webp";
-import matchupImage1 from "../assets/matchupImage_1.webp";
-import matchupImage2 from "../assets/matchupImage_2.webp";
-import matchupImage3 from "../assets/matchupImage_3.webp";
-import matchupImage4 from "../assets/matchupImage_4.webp";
-import imageNotFound from "../assets/image_not_found.webp";
+import {IAppPage, MenuItem} from 'types';
+import matchupIcon from '../assets/matchupIcon.webp';
+import matchupImage1 from '../assets/matchupImage_1.webp';
+import matchupImage2 from '../assets/matchupImage_2.webp';
+import matchupImage3 from '../assets/matchupImage_3.webp';
+import matchupImage4 from '../assets/matchupImage_4.webp';
+import imageNotFound from '../assets/image_not_found.webp';
 
 // const { VITE_MATCHUP_APP_URL } = import.meta.env;
 
 export const menu: MenuItem[] = [
   {
-    name: "home",
-    icon: "home",
-    path: "/home",
+    name: 'home',
+    icon: 'home',
+    path: '/home',
   },
   {
-    name: "applications",
-    icon: "app",
-    path: "/applications",
+    name: 'applications',
+    icon: 'app',
+    path: '/applications',
   },
   {
-    name: "aboutUs",
-    icon: "people",
-    path: "/about-us",
+    name: 'aboutUs',
+    icon: 'people',
+    path: '/about-us',
   },
   {
-    name: "contact",
-    icon: "contact",
-    path: "/contact",
+    name: 'contact',
+    icon: 'contact',
+    path: '/contact',
   },
 ];
 
 // Styles utils
 
 export const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  tablet: "768px",
-  laptop: "1024px",
-  laptopM: "1240px",
-  laptopL: "1440px",
-  desktop: "2560px",
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopM: '1240px',
+  laptopL: '1440px',
+  desktop: '2560px',
 };
 
 export const device = {
@@ -59,22 +59,22 @@ export const device = {
 // Apps information
 export const AppPages: IAppPage[] = [
   {
-    name: "matchup",
-    description: "matchupDescription",
+    name: 'matchup',
+    description: 'matchupDescription',
     images: [matchupImage1, matchupImage2, matchupImage3, matchupImage4],
     icon: matchupIcon,
     stars: 0.0,
     downloadsNumber: 0,
-    url: "https://play.google.com/store/apps/details?id=com.matchupcardgame2023",
+    url: 'https://play.google.com/store/apps/details?id=com.matchupcardgame2023',
     // url: VITE_MATCHUP_APP_URL,
   },
   {
-    name: "notReady",
-    description: "noDescription",
+    name: 'notReady',
+    description: 'noDescription',
     images: [],
-    icon: "notReady",
+    icon: 'notReady',
     stars: 0.0,
     downloadsNumber: 0,
-    url: "/",
+    url: '/',
   },
 ];

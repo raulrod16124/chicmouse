@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { device } from "utils";
-import theme from "./../../theme.json";
+import styled from 'styled-components';
+import {device} from 'utils';
+import {colors} from 'tokens/colors';
 
 export const TermsAndConditionsWrapper = styled.div`
   position: relative;
@@ -27,14 +27,14 @@ export const TermsAndConditionsContent = styled.div`
 
 export const TextTitle = styled.h2`
   margin-bottom: 30px;
-  color: ${theme.colors.white};
+  color: ${colors.textPrimary};
   font-style: italic;
 `;
 
 export const TextSubtitle = styled.h3`
   margin-top: 25px;
   margin-bottom: 5px;
-  color: ${theme.colors.white};
+  color: ${colors.textPrimary};
   font-style: italic;
   @media ${device.tablet} {
     margin-top: 50px;
@@ -44,28 +44,28 @@ export const TextSubtitle = styled.h3`
 export const TextSecondarySubtitle = styled.h5`
   margin-top: 25px;
   margin-bottom: 5px;
-  color: ${theme.colors.white};
+  color: ${colors.textPrimary};
   font-style: italic;
   @media ${device.tablet} {
     margin-top: 50px;
   }
 `;
 
-export const Text = styled.p<{ margin?: string }>`
-  margin: ${(props) => props.margin && props.margin};
+export const Text = styled.p<{margin?: string}>`
+  margin: ${props => props.margin && props.margin};
   font-size: 15px;
-  color: ${theme.colors.white};
+  color: ${colors.textPrimary};
 
   & a {
-    color: ${theme.colors.white};
+    color: ${colors.textPrimary};
   }
 `;
 
-export const TextList = styled.ul<{ margin?: string }>`
-  margin: ${(props) => props.margin && props.margin};
+export const TextList = styled.ul<{margin?: string}>`
+  margin: ${props => props.margin && props.margin};
 
   & li {
-    color: ${theme.colors.white};
+    color: ${colors.textPrimary};
   }
 
   &:last-of-type {

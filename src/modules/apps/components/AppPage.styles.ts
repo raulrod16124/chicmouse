@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import { device } from "utils";
-import styled from "styled-components";
-import theme from "./../../../theme.json";
+import {Link} from 'react-router-dom';
+import {device} from 'utils';
+import styled from 'styled-components';
+import {colors} from 'tokens/colors';
 
 export const AppPageWrapper = styled.div`
   position: relative;
@@ -104,11 +104,15 @@ export const TextLinksWrapper = styled.div`
 
 export const TextLink = styled(Link)`
   font-size: 12px;
-  color: ${theme.colors.white};
+  color: ${colors.accentBlue};
   text-decoration: none;
   padding: 10px 0;
+  transition: color 0.15s ease;
+  &:hover {
+    color: ${colors.textPrimary};
+  }
   @media ${device.mobileL} {
-    font-size: 8px;
+    font-size: 11px;
   }
 `;
 
@@ -157,7 +161,7 @@ export const AppTitle = styled.span`
   font-size: 30px;
   font-weight: 600;
   text-align: center;
-  color: ${theme.colors.white};
+  color: ${colors.textPrimary};
   @media ${device.laptop} {
     font-size: 25px;
     margin-top: 0;
@@ -175,12 +179,12 @@ export const AppTextContent = styled.div`
   margin: 0 auto;
 `;
 
-export const AppText = styled.p<{ fontSize?: string; margin?: string }>`
-  font-size: ${(props) => (props.fontSize ? props.fontSize : "20px")};
+export const AppText = styled.p<{fontSize?: string; margin?: string}>`
+  font-size: ${props => (props.fontSize ? props.fontSize : '20px')};
   font-style: italic;
   text-align: center;
-  margin: ${(props) => props.margin && props.margin};
-  color: ${theme.colors.white};
+  margin: ${props => props.margin && props.margin};
+  color: ${colors.textPrimary};
 
   @media ${device.laptop} {
     font-size: 15px;
@@ -190,11 +194,11 @@ export const AppText = styled.p<{ fontSize?: string; margin?: string }>`
   }
 `;
 
-export const AppDescription = styled.div<{ margin?: string }>`
+export const AppDescription = styled.div<{margin?: string}>`
   padding: 0 30px;
   margin-top: 25px;
-  margin: ${(props) => props.margin && props.margin};
-  color: ${theme.colors.white};
+  margin: ${props => props.margin && props.margin};
+  color: ${colors.textPrimary};
   height: max-content;
 
   @media ${device.laptop} {

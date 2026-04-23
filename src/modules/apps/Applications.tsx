@@ -18,7 +18,7 @@ import { useWindowSize } from "hooks/useWindowSize";
 import ClipLoader from "react-spinners/ClipLoader";
 import { Button } from "common/Button";
 import { useNavigate } from "react-router-dom";
-import theme from "../../theme.json";
+import { colors } from "tokens/colors";
 
 export const Applications = () => {
   const intl = useIntl();
@@ -59,7 +59,7 @@ export const Applications = () => {
               <FontAwesomeIcon
                 icon={faStar}
                 size={"2xs"}
-                color={theme.colors.greenLighter}
+              color={colors.accentYellow}
               />
             </AppTextContent>
             {!smallScreenDetected && (
@@ -68,8 +68,8 @@ export const Applications = () => {
                 disabled={name === "notReady"}
                 width={100}
                 align="flex-end"
-                background={theme.colors.greenDarken}
-                color={theme.colors.white}
+                background={colors.accentYellow}
+                color={colors.lightTextPrimary}
                 fontSize={14}
                 onClick={() => navigate(`/applications/${name.toLowerCase()}`)}
               />

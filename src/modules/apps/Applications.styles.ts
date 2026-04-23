@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "utils";
-import theme from "./../../theme.json";
+import { colors } from "tokens/colors";
 
 export const AppsWrapper = styled.div`
   width: 100%;
@@ -38,7 +38,8 @@ export const AppContent = styled.div<{
   width: auto;
   min-width: 200px;
   max-width: 500px;
-  background: linear-gradient(${theme.colors.blue}, ${theme.colors.blueDarken});
+  background-color: ${colors.bgSecondary};
+  border: 1px solid ${colors.surface};
   border-radius: 10px;
   margin: 20px;
   transition: all 0.3s ease-out;
@@ -80,7 +81,7 @@ export const AppTitle = styled.span`
   font-size: 20px;
   font-weight: 600;
   padding: 5px 10px;
-  color: ${theme.colors.white};
+  color: ${colors.textPrimary};
   @media ${device.laptop} {
     padding: 5px 0;
     width: 100%;
@@ -113,7 +114,7 @@ export const AppTextContent = styled.div`
 export const AppText = styled.p`
   font-size: 12px;
   margin: 0 5px;
-  color: ${theme.colors.white};
+  color: ${colors.textSecondary};
   @media ${device.laptop} {
     font-size: 10px;
   }

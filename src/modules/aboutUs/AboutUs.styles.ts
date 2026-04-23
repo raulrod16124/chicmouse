@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "utils";
-import theme from "./../../theme.json";
+import { colors } from "tokens/colors";
 
 export const AboutUsWrapper = styled.div`
   position: relative;
@@ -60,7 +60,7 @@ export const CharacterTitle = styled.p<{
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
-  color: ${theme.colors.white};
+  color: ${colors.textPrimary};
 
   @media ${device.laptop} {
     width: 90%;
@@ -72,7 +72,7 @@ export const CharacterTitle = styled.p<{
 export const CharacterText = styled.p`
   padding: 20px 100px 0 20px;
   font-size: 18px;
-  color: ${theme.colors.white};
+  color: ${colors.textSecondary};
 
   @media ${device.laptop} {
     font-size: 15px;

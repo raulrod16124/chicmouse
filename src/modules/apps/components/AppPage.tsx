@@ -27,7 +27,7 @@ import {
 import { useIntl } from "react-intl";
 import { Button } from "common/Button";
 import { useWindowSize } from "hooks/useWindowSize";
-import theme from "./../../../theme.json";
+import { colors } from "tokens/colors";
 import { appDescriptions } from "../utils/appDescriptions";
 import { useContext } from "react";
 import { LanguageContext } from "context/LanguageContext";
@@ -50,7 +50,7 @@ export default function AppPage() {
   if (!appData) {
     return (
       <ClipLoader
-        color={theme.colors.greenDark}
+        color={colors.accentBlue}
         loading={!appData}
         size={50}
         aria-label="Loading Spinner"
@@ -65,7 +65,7 @@ export default function AppPage() {
         <FontAwesomeIcon
           icon={faArrowLeft}
           size={"2x"}
-          color={theme.colors.blue}
+          color={colors.accentBlue}
         />
       </BackArrowButton> */}
       <SideInfoContent>
@@ -79,7 +79,7 @@ export default function AppPage() {
                 icon={faStar}
                 size={"2xs"}
                 style={{ marginLeft: "5px" }}
-                color={theme.colors.greenLighter}
+                color={colors.accentYellow}
               />
             </AppText>
             <AppText margin={smallScreenDetected ? "5px" : "25px 0"}>
@@ -103,8 +103,8 @@ export default function AppPage() {
             width={smallScreenDetected ? mobileSize[0] : 180}
             height={smallScreenDetected ? mobileSize[1] : 50}
             align="center"
-            background={theme.colors.greenDarken}
-            color={theme.colors.white}
+            background={colors.accentYellow}
+            color={colors.lightTextPrimary}
             fontSize={14}
             margin={smallScreenDetected ? "10px" : "25px 0"}
           />

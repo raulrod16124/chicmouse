@@ -22,13 +22,17 @@ export const Home = () => {
           <HomeImageWrapper>
             <HomeImage src={chicmouseImage} alt="elegant-mouse" />
           </HomeImageWrapper>
+          <HomeTitle>{intl.formatMessage({ id: "homeTitle" })}</HomeTitle>
           <HomeText>{intl.formatMessage({ id: "homeText" })}</HomeText>
         </>
       );
     }
     return (
       <>
-        <HomeText>{intl.formatMessage({ id: "homeText" })}</HomeText>
+        <div>
+          <HomeTitle>{intl.formatMessage({ id: "homeTitle" })}</HomeTitle>
+          <HomeText>{intl.formatMessage({ id: "homeText" })}</HomeText>
+        </div>
         <HomeImageWrapper>
           <HomeImage src={chicmouseImage} alt="elegant-mouse" />
         </HomeImageWrapper>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "utils";
-import theme from "./../../theme.json";
+import { colors } from "tokens/colors";
 
 export const ContactWrapper = styled.div`
   position: relative;
@@ -51,7 +51,7 @@ export const Text = styled.div`
   width: 100%;
   margin-bottom: 20px;
   font-size: 18px;
-  color: ${theme.colors.white};
+  color: ${colors.textPrimary};
 
   @media ${device.laptop} {
     width: 100%;
@@ -60,11 +60,18 @@ export const Text = styled.div`
   }
 `;
 
-export const CheeseText = styled.div`
+export const CheeseText = styled.a`
   width: 100%;
   margin-bottom: 20px;
   font-size: 15px;
-  color: ${theme.colors.white};
+  color: ${colors.accentBlue};
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: ${colors.textPrimary};
+    text-decoration: underline;
+  }
 
   @media ${device.laptop} {
     text-align: center;

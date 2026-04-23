@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "utils";
-import theme from "./../../theme.json";
+import { colors } from "tokens/colors";
 
 export const HomeWrapper = styled.div`
   position: relative;
@@ -33,10 +33,7 @@ export const HomeImageWrapper = styled.div`
   height: 250px;
   border-radius: 50%;
   margin: 0 auto;
-  background: linear-gradient(
-    ${theme.colors.greenLight},
-    ${theme.colors.greenDark}
-  );
+  background-color: ${colors.surface};
 `;
 
 export const HomeImage = styled.img`
@@ -48,9 +45,21 @@ export const HomeImage = styled.img`
 `;
 
 export const HomeTitle = styled.h1`
-  font-weight: 900;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: ${colors.textPrimary};
+  margin-bottom: 24px;
+
+  @media ${device.laptop} {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
   @media ${device.tablet} {
-    font-size: 25px;
+    font-size: 24px;
+  }
+  @media ${device.mobileL} {
+    font-size: 20px;
   }
 `;
 
@@ -58,7 +67,7 @@ export const HomeText = styled.p`
   font-size: 25px;
   font-style: italic;
   margin: 0 50px;
-  color: ${theme.colors.white};
+  color: ${colors.textPrimary};
 
   @media ${device.laptop} {
     margin: 60px auto;

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { device } from "utils";
 import styled from "styled-components";
-import theme from "./../../theme.json";
+import { colors } from "tokens/colors";
 
 type TMenuItem = {
   selected: boolean;
@@ -77,34 +77,35 @@ export const MenuItemContent = styled(Link)<TMenuItem>`
   justify-content: center;
   text-decoration: none;
   border-radius: 5px;
-  background-color: ${(props) => props.selected && theme.colors.green};
-  color: ${theme.colors.white};
+  background-color: transparent;
+  border-bottom: ${(props) => props.selected && `2px solid ${colors.accentYellow}`};
+  color: ${colors.textPrimary};
   font-weight: ${(props) => props.selected && 600};
   font-size: 15px;
   cursor: pointer;
-  transition: all 0.5s ease-out;
+  transition: all 0.25s ease;
   margin: 0 10px;
   padding: 0 10px;
 
   &:hover {
-    background: ${(props) => !props.selected && theme.colors.greenDark};
+    color: ${(props) => !props.selected && colors.accentYellow};
   }
 
   @media ${device.laptop} {
-    font-size: 12px;
+    font-size: 13px;
     padding: 0 10px;
     width: 80px;
   }
 
   @media ${device.tablet} {
-    font-size: 10px;
-    padding: 0 10px;
-    width: 60px;
+    font-size: 13px;
+    padding: 0 8px;
+    width: 70px;
   }
 
   @media ${device.mobileL} {
-    font-size: 8px;
-    padding: 0 5px;
-    width: 60px;
+    font-size: 13px;
+    padding: 0 6px;
+    width: 65px;
   }
 `;

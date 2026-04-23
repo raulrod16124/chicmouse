@@ -1,49 +1,59 @@
-import { useIntl } from "react-intl";
+import {useIntl} from 'react-intl';
 import {
+  HeroContent,
   HomeContainer,
   HomeImage,
   HomeImageWrapper,
-  HomeText,
+  HomeSubtext,
+  HomeTitleAccent,
   HomeTitle,
   HomeWrapper,
-} from "./Home.styles";
-import { useWindowSize } from "hooks/useWindowSize";
-import chicmouseImage from "assets/chicmouseImage.png";
-import "animate.css";
+} from './Home.styles';
+import {useWindowSize} from 'hooks/useWindowSize';
+import chicmouseImage from 'assets/chicmouseImage.png';
+import {Button} from 'common/Button';
+import {useNavigate} from 'react-router-dom';
 
 export const Home = () => {
   const intl = useIntl();
-  const { smallScreenDetected } = useWindowSize();
+  const navigate = useNavigate();
+  const {smallScreenDetected} = useWindowSize();
 
-  const renderHomeContent = (smallWindow: boolean) => {
-    if (smallWindow) {
-      return (
-        <>
-          <HomeImageWrapper>
-            <HomeImage src={chicmouseImage} alt="elegant-mouse" />
-          </HomeImageWrapper>
-          <HomeTitle>{intl.formatMessage({ id: "homeTitle" })}</HomeTitle>
-          <HomeText>{intl.formatMessage({ id: "homeText" })}</HomeText>
-        </>
-      );
-    }
-    return (
-      <>
-        <div>
-          <HomeTitle>{intl.formatMessage({ id: "homeTitle" })}</HomeTitle>
-          <HomeText>{intl.formatMessage({ id: "homeText" })}</HomeText>
-        </div>
-        <HomeImageWrapper>
-          <HomeImage src={chicmouseImage} alt="elegant-mouse" />
-        </HomeImageWrapper>
-      </>
-    );
-  };
+  const heroText = (
+    <HeroContent>
+      <div>
+        <HomeTitleAccent />
+        <HomeTitle>{intl.formatMessage({id: 'homeTitle'})}</HomeTitle>
+      </div>
+      <HomeSubtext>{intl.formatMessage({id: 'homeText'})}</HomeSubtext>
+      <Button
+        content={intl.formatMessage({id: 'seeOurGames'})}
+        variant="primary"
+        onClick={() => navigate('/applications')}
+      />
+    </HeroContent>
+  );
+
+  const heroImage = (
+    <HomeImageWrapper>
+      <HomeImage src={chicmouseImage} alt="elegant-mouse" />
+    </HomeImageWrapper>
+  );
 
   return (
     <HomeWrapper data-testid="home-page-id">
-      <HomeContainer className="animate__animated animate__zoomIn animate__delay-0.01s">
-        {renderHomeContent(smallScreenDetected)}
+      <HomeContainer>
+        {smallScreenDetected ? (
+          <>
+            {heroImage}
+            {heroText}
+          </>
+        ) : (
+          <>
+            {heroText}
+            {heroImage}
+          </>
+        )}
       </HomeContainer>
     </HomeWrapper>
   );

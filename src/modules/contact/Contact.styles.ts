@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {device} from 'utils';
 import {colors} from 'tokens/colors';
-import {typography, transitions} from 'tokens';
+import {typography, transitions, radius, spacing} from 'tokens';
 
 export const ContactWrapper = styled.div`
   position: relative;
@@ -24,13 +24,14 @@ export const ImageContent = styled.div`
 `;
 
 export const ContactImage = styled.img`
-  align-self: center;
-  width: 400;
-  height: 200px;
+  width: 200px;
+  height: auto;
+  border-radius: ${radius.md};
+  object-fit: contain;
+  margin-bottom: ${spacing[4]};
 
   @media ${device.laptop} {
-    width: 250px;
-    height: 200px;
+    width: 160px;
   }
 `;
 

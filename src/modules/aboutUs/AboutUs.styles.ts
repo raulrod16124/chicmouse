@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {device} from 'utils';
 import {colors} from 'tokens/colors';
-import {typography} from 'tokens';
+import {typography, radius, transitions} from 'tokens';
 
 export const AboutUsWrapper = styled.div`
   position: relative;
@@ -35,10 +35,36 @@ export const CharacterInfoWrapper = styled.div`
 export const CharacterImage = styled.img`
   width: 250px;
   height: auto;
+  border-radius: ${radius.md};
+  object-fit: cover;
   @media ${device.laptop} {
-    width: 250px;
-    height: auto;
-    margin-bottom: 50px;
+    width: 200px;
+    margin-bottom: 32px;
+  }
+`;
+
+export const CharacterAvatar = styled.div<{accentColor?: string}>`
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${colors.bgSecondary};
+  border: 3px solid ${props => props.accentColor ?? colors.accentYellow};
+  transition: border-color ${transitions.base};
+  font-size: ${typography.fontSize['4xl']};
+  font-weight: ${typography.fontWeight.bold};
+  color: ${props => props.accentColor ?? colors.accentYellow};
+  user-select: none;
+  letter-spacing: -1px;
+
+  @media ${device.laptop} {
+    width: 120px;
+    height: 120px;
+    font-size: ${typography.fontSize['3xl']};
+    margin-bottom: 24px;
   }
 `;
 

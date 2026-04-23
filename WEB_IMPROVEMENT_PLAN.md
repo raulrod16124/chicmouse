@@ -219,13 +219,13 @@ src/
 
 ### 3.1 — Rediseñar la Home
 
-- [ ] Estructurar la Home con las siguientes secciones:
+- [x] Estructurar la Home con las siguientes secciones:
   - **Hero:** Headline (H1) + subheadline + CTA primario ("Ver nuestros juegos")
   - **Featured App:** Card destacada con la app principal (Matchup)
   - **Studio tagline:** 1–2 líneas sobre la filosofía del estudio
-- [ ] El CTA debe usar la variante `primary` del nuevo `Button`
-- [ ] El hero debe ocupar al menos el 80% del viewport en desktop
-- [ ] En mobile, el hero debe ser legible sin scroll horizontal
+- [x] El CTA debe usar la variante `primary` del nuevo `Button`
+- [x] El hero debe ocupar al menos el 80% del viewport en desktop
+- [x] En mobile, el hero debe ser legible sin scroll horizontal
 
 **Resultado esperado:** Un visitante nuevo entiende qué hace ChicMouse Studio en menos de 5 segundos.
 
@@ -233,11 +233,11 @@ src/
 
 ### 3.2 — Refactorizar AboutUs
 
-- [ ] Reemplazar `programmer.png` y `designer.png` (personajes cartoon) por alternativas coherentes con la marca:
+- [x] Reemplazar `programmer.png` y `designer.png` (personajes cartoon) por alternativas coherentes con la marca:
   - Fotografías reales (preferido)
   - Avatares geométricos vectoriales en la paleta de marca
-- [ ] Eliminar cualquier elemento de estilo cartoon de la sección de marca
-- [ ] Mantener el contenido textual, actualizar solo los assets visuales
+- [x] Eliminar cualquier elemento de estilo cartoon de la sección de marca
+- [x] Mantener el contenido textual, actualizar solo los assets visuales
 
 **Resultado esperado:** AboutUs transmite profesionalidad. Sin personajes de juego en la sección de marca.
 
@@ -245,10 +245,10 @@ src/
 
 ### 3.3 — Refactorizar Contact
 
-- [ ] Eliminar `cheese.png`
-- [ ] Usar el logo del estudio o un icono limpio como elemento visual principal
-- [ ] Añadir estructura de información de contacto: email, redes sociales (si aplica)
-- [ ] El email debe ser el componente `<a href="mailto:">` estilado correctamente
+- [x] Eliminar `cheese.png`
+- [x] Usar el logo del estudio o un icono limpio como elemento visual principal
+- [x] Añadir estructura de información de contacto: email, redes sociales (si aplica)
+- [x] El email debe ser el componente `<a href="mailto:">` estilado correctamente
 
 **Resultado esperado:** La página de contacto da confianza y sensación de profesionalidad.
 
@@ -256,11 +256,11 @@ src/
 
 ### 3.4 — Reforzar el acento amarillo como marca
 
-- [ ] `#FFC857` debe aparecer de forma consistente en:
+- [x] `#FFC857` debe aparecer de forma consistente en:
   - Indicador de ítem activo del menú
   - Botón CTA principal
   - Al menos un detalle decorativo en el hero (punto, subrayado, separador)
-- [ ] Verificar que `#FFC857` no aparece como color de fondo en superficies grandes
+- [x] Verificar que `#FFC857` no aparece como color de fondo en superficies grandes
 
 **Resultado esperado:** El amarillo es reconocible como elemento de identidad del estudio.
 
@@ -268,9 +268,9 @@ src/
 
 ### 3.5 — Selector de idioma
 
-- [ ] Revisar si el uso de flags de país es el mecanismo correcto (considerar labels `ES` / `EN`)
-- [ ] Añadir estado activo visible con acento amarillo al idioma seleccionado
-- [ ] Asegurarse de que el selector es accesible (aria-label, foco con teclado)
+- [x] Revisar si el uso de flags de país es el mecanismo correcto (considerar labels `ES` / `EN`)
+- [x] Añadir estado activo visible con acento amarillo al idioma seleccionado
+- [x] Asegurarse de que el selector es accesible (aria-label, foco con teclado)
 
 **Resultado esperado:** El usuario sabe en todo momento qué idioma está activo.
 
@@ -357,7 +357,7 @@ Antes de marcar cualquier fase como completada, verificar:
 | ----------------------------- | ---------------- | ----------------- |
 | Fase 1 — Quick Wins           | `[x]` Completada | 5 / 5             |
 | Fase 2 — Refactor Visual      | `[x]` Completada | 6 / 6             |
-| Fase 3 — Branding & Identidad | `[ ]` Pendiente  | 0 / 5             |
+| Fase 3 — Branding & Identidad | `[x]` Completada | 5 / 5             |
 | Fase 4 — Experiencia Premium  | `[ ]` Pendiente  | 0 / 5             |
 
 ---

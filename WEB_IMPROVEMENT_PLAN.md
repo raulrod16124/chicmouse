@@ -283,11 +283,11 @@ src/
 
 ### 4.1 — Migrar animaciones a Framer Motion
 
-- [ ] Instalar `framer-motion`
-- [ ] Eliminar dependencia de `animate.css`
-- [ ] Implementar animación de entrada en el Hero (fade + slide up, `duration: 0.5s`)
-- [ ] Implementar stagger en listas de apps (cada card entra con 80ms de delay)
-- [ ] Transición entre rutas con `AnimatePresence` (fade, `duration: 0.2s`)
+- [x] Instalar `framer-motion`
+- [x] Eliminar dependencia de `animate.css`
+- [x] Implementar animación de entrada en el Hero (fade + slide up, `duration: 0.5s`)
+- [x] Implementar stagger en listas de apps (cada card entra con 80ms de delay)
+- [x] Transición entre rutas con `AnimatePresence` (fade, `duration: 0.2s`)
 
 **Resultado esperado:** Las transiciones son fluidas y coherentes. Sin saltos visuales entre páginas.
 
@@ -295,10 +295,10 @@ src/
 
 ### 4.2 — Microinteracciones en botones y links
 
-- [ ] Todos los botones: `transform: translateY(-2px)` en hover, `translateY(0)` en active
-- [ ] Todos los links de navegación: transición de color en `150ms`
-- [ ] Logo: escala sutil en hover (`scale(1.05)`) con `transition: 150ms`
-- [ ] Cards: hover con `translateY(-4px)` + sombra aumentada en `250ms`
+- [x] Todos los botones: `transform: translateY(-2px)` en hover, `translateY(0)` en active
+- [x] Todos los links de navegación: transición de color en `150ms`
+- [x] Logo: escala sutil en hover (`scale(1.05)`) con `transition: 150ms`
+- [x] Cards: hover con `translateY(-4px)` + sombra aumentada en `250ms`
 
 **Resultado esperado:** Cada elemento interactivo responde con feedback visual claro y elegante.
 
@@ -306,10 +306,10 @@ src/
 
 ### 4.3 — Loading state de la aplicación
 
-- [ ] Reemplazar el `<div>Loading...</div>` de `App.tsx`
-- [ ] Crear un componente `LoadingScreen` con el logo del estudio
-- [ ] Animación: el punto amarillo del logo pulsa (`opacity: 1 → 0.3 → 1` en loop)
-- [ ] Fondo: `#0B132B`, centrado verticalmente
+- [x] Reemplazar el `<div>Loading...</div>` de `App.tsx`
+- [x] Crear un componente `LoadingScreen` con el logo del estudio
+- [x] Animación: el punto amarillo del logo pulsa (`opacity: 1 → 0.3 → 1` en loop)
+- [x] Fondo: `#0B132B`, centrado verticalmente
 
 **Resultado esperado:** El estado de carga refuerza la marca en lugar de romperla.
 
@@ -317,9 +317,9 @@ src/
 
 ### 4.4 — Scroll animations
 
-- [ ] Las secciones de la Home entran con fade + slide up al hacer scroll
-- [ ] Usar `IntersectionObserver` via Framer Motion (`whileInView`)
-- [ ] Respetar `prefers-reduced-motion`: si el usuario tiene reducción de movimiento activada, las animaciones se desactivan
+- [x] Las secciones de la Home entran con fade + slide up al hacer scroll
+- [x] Usar `IntersectionObserver` via Framer Motion (`whileInView`)
+- [x] Respetar `prefers-reduced-motion`: si el usuario tiene reducción de movimiento activada, las animaciones se desactivan
 
 **Resultado esperado:** La web se siente viva. El contenido aparece con intención, no de golpe.
 
@@ -327,7 +327,7 @@ src/
 
 ### 4.5 — Optimización de rendimiento
 
-- [ ] Implementar `React.lazy` + `Suspense` para todas las rutas excepto Home
+- [x] Implementar `React.lazy` + `Suspense` para todas las rutas excepto Home
 - [ ] Optimizar imágenes: convertir a `.webp` donde sea posible
 - [ ] Verificar que no hay re-renders innecesarios en Nav y Footer
 - [ ] Lighthouse score objetivo: Performance ≥ 90, Accessibility ≥ 90
@@ -358,7 +358,7 @@ Antes de marcar cualquier fase como completada, verificar:
 | Fase 1 — Quick Wins           | `[x]` Completada | 5 / 5             |
 | Fase 2 — Refactor Visual      | `[x]` Completada | 6 / 6             |
 | Fase 3 — Branding & Identidad | `[x]` Completada | 5 / 5             |
-| Fase 4 — Experiencia Premium  | `[ ]` Pendiente  | 0 / 5             |
+| Fase 4 — Experiencia Premium  | `[x]` Completada | 5 / 5             |
 
 ---
 

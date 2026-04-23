@@ -328,9 +328,9 @@ src/
 ### 4.5 — Optimización de rendimiento
 
 - [x] Implementar `React.lazy` + `Suspense` para todas las rutas excepto Home
-- [ ] Optimizar imágenes: convertir a `.webp` donde sea posible
-- [ ] Verificar que no hay re-renders innecesarios en Nav y Footer
-- [ ] Lighthouse score objetivo: Performance ≥ 90, Accessibility ≥ 90
+- [x] Optimizar imágenes: convertir a `.webp` donde sea posible
+- [x] Verificar que no hay re-renders innecesarios en Nav y Footer
+- [x] Lighthouse score objetivo: Performance ≥ 90, Accessibility ≥ 90
 
 **Resultado esperado:** La web carga rápido y sin jank visual.
 

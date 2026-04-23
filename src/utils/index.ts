@@ -1,10 +1,10 @@
 import { IAppPage, MenuItem } from "types";
-import matchupIcon from "../assets/matchupIcon.png";
-import matchupImage1 from "../assets/matchupImage_1.png";
-import matchupImage2 from "../assets/matchupImage_2.png";
-import matchupImage3 from "../assets/matchupImage_3.png";
-import matchupImage4 from "../assets/matchupImage_4.png";
-import imageNotFound from "../assets/image_not_found.png";
+import matchupIcon from "../assets/matchupIcon.webp";
+import matchupImage1 from "../assets/matchupImage_1.webp";
+import matchupImage2 from "../assets/matchupImage_2.webp";
+import matchupImage3 from "../assets/matchupImage_3.webp";
+import matchupImage4 from "../assets/matchupImage_4.webp";
+import imageNotFound from "../assets/image_not_found.webp";
 
 // const { VITE_MATCHUP_APP_URL } = import.meta.env;
 

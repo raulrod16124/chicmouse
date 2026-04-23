@@ -4,7 +4,7 @@ import {
   ImageContent,
   CheeseText,
 } from './Contact.styles';
-import contactImage from 'assets/mouseTeleoperatorImage.png';
+import contactImage from 'assets/mouseTeleoperatorImage.webp';
 import {useContext} from 'react';
 import {LanguageContext} from 'context/LanguageContext';
 import {contactText} from './utils/contactText';
@@ -29,7 +29,7 @@ export const Contact = () => {
     <ContactWrapper data-testid="contact-page-id">
       <motion.div {...animProps}>
         <ImageContent>
-          <ContactImage src={contactImage} alt="chicmouse-contact" />
+          <ContactImage src={contactImage} alt="chicmouse-contact" loading="lazy" />
           <CheeseText href="mailto:info@chicmouse.com">
             info@chicmouse.com
           </CheeseText>

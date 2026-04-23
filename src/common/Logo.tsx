@@ -1,5 +1,5 @@
-import logo from "assets/logo.png";
-import Acronym from "assets/cm.png";
+import logo from "assets/logo.webp";
+import Acronym from "assets/cm.webp";
 import { LogoImg, LogoLink, LogoWrapper } from "./Logo.styles";
 
 export const Logo = () => {

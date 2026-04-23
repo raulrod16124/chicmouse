@@ -10,7 +10,7 @@ import {
   HomeWrapper,
 } from './Home.styles';
 import {useWindowSize} from 'hooks/useWindowSize';
-import chicmouseImage from 'assets/chicmouseImage.png';
+import chicmouseImage from 'assets/chicmouseImage.webp';
 import {Button} from 'common/Button';
 import {useNavigate} from 'react-router-dom';
 import {motion} from 'framer-motion';
@@ -50,7 +50,7 @@ export const Home = () => {
       animate="visible"
       transition={{delay: 0.15}}>
       <HomeImageWrapper>
-        <HomeImage src={chicmouseImage} alt="elegant-mouse" />
+        <HomeImage src={chicmouseImage} alt="elegant-mouse" loading="eager" />
       </HomeImageWrapper>
     </motion.div>
   );

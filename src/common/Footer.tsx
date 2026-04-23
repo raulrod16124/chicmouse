@@ -1,3 +1,4 @@
+import { memo, useMemo } from "react";
 import { useIntl } from "react-intl";
 import {
   FooterContent,
@@ -7,9 +8,9 @@ import {
   TextLinksWrapper,
 } from "./Footer.styles";
 
-export const Footer = () => {
+export const Footer = memo(() => {
   const intl = useIntl();
-  const currentYear = new Date().getUTCFullYear()
+  const currentYear = useMemo(() => new Date().getUTCFullYear(), [])
 
   return (
     <FooterWrapper>
@@ -28,4 +29,6 @@ export const Footer = () => {
       </FooterContent>
     </FooterWrapper>
   );
-};
+});
+
+Footer.displayName = 'Footer';

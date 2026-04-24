@@ -2,7 +2,11 @@
   background-color: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }

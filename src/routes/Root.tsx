@@ -2,25 +2,16 @@ import {ErrorPage} from 'common/ErrorPage';
 import {Footer} from 'common/Footer';
 import {LoadingScreen} from 'common/LoadingScreen';
 import {LanguageContext} from 'context/LanguageContext';
-import {Home} from 'modules/home/Home';
 import {Nav} from 'modules/nav/Nav';
+import {SinglePage} from 'pages/SinglePage';
 import React, {Suspense, useContext} from 'react';
-import {Route, Routes, useLocation} from 'react-router-dom';
+import {Outlet, Route, Routes, useLocation} from 'react-router-dom';
 import {BodyWrapper, PageContent} from './Root.styles';
 import {AnimatePresence, motion} from 'framer-motion';
 import {pageTransition} from 'animations/variants';
 import {useReducedMotion} from 'hooks/useReducedMotion';
 
-const AboutUs = React.lazy(() =>
-  import('modules/aboutUs/AboutUs').then(m => ({default: m.AboutUs})),
-);
-const Applications = React.lazy(() =>
-  import('modules/apps/Applications').then(m => ({default: m.Applications})),
-);
 const AppPage = React.lazy(() => import('modules/apps/components/AppPage'));
-const Contact = React.lazy(() =>
-  import('modules/contact/Contact').then(m => ({default: m.Contact})),
-);
 const MatchupPrivacyPolicyEN = React.lazy(() =>
   import('modules/privacy-policy/MatchupPrivacyPolicyEN').then(m => ({
     default: m.MatchupPrivacyPolicyEN,
@@ -62,95 +53,85 @@ const TermsAndConditionsES = React.lazy(() =>
   })),
 );
 
-const pages = [
-  '',
-  'home',
-  'applications',
-  'about-us',
-  'contact',
-  'privacy-policy',
-  'terms-and-conditions',
-];
-
-export const Root = () => {
+/** Shared layout wrapper for all secondary (non-home) pages. */
+const SecondaryLayout = () => {
   const {pathname} = useLocation();
-  const {language} = useContext(LanguageContext);
   const reducedMotion = useReducedMotion();
 
-  const wrongPathname = !pages.includes(pathname.split('/')[1]);
+  return (
+    <BodyWrapper>
+      <PageContent>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={pathname}
+            variants={reducedMotion ? undefined : pageTransition}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            style={{width: '100%'}}>
+            <Suspense fallback={<LoadingScreen />}>
+              <Outlet />
+            </Suspense>
+          </motion.div>
+        </AnimatePresence>
+      </PageContent>
+      <Footer />
+    </BodyWrapper>
+  );
+};
 
-  if (wrongPathname) {
-    return <ErrorPage />;
-  }
+export const Root = () => {
+  const {language} = useContext(LanguageContext);
 
   return (
-    <div>
+    <>
       <Nav />
-      <BodyWrapper>
-        <PageContent>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={pathname}
-              variants={reducedMotion ? undefined : pageTransition}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              style={{width: '100%'}}>
-              <Suspense fallback={<LoadingScreen />}>
-                <Routes location={{pathname}} key={pathname}>
-                  <Route path={'/'} element={<Home />} />
-                  <Route path={'/home'} element={<Home />} />
-                  <Route path={'/applications'} element={<Applications />} />
-                  <Route path={'applications/:id'} element={<AppPage />} />
-                  <Route
-                    path={'applications/:id/privacy-policy'}
-                    element={
-                      language === 'es-ES' ? (
-                        <MatchupPrivacyPolicyES />
-                      ) : (
-                        <MatchupPrivacyPolicyEN />
-                      )
-                    }
-                  />
-                  <Route
-                    path={'applications/:id/terms-and-conditions'}
-                    element={
-                      language === 'es-ES' ? (
-                        <MatchupTermsAndConditionsES />
-                      ) : (
-                        <MatchupTermsAndConditionsEN />
-                      )
-                    }
-                  />
-                  <Route path="/about-us" element={<AboutUs />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route
-                    path="/privacy-policy"
-                    element={
-                      language === 'es-ES' ? (
-                        <PrivacyPolicyES />
-                      ) : (
-                        <PrivacyPolicyEN />
-                      )
-                    }
-                  />
-                  <Route
-                    path="/terms-and-conditions"
-                    element={
-                      language === 'es-ES' ? (
-                        <TermsAndConditionsES />
-                      ) : (
-                        <TermsAndConditionsEN />
-                      )
-                    }
-                  />
-                </Routes>
-              </Suspense>
-            </motion.div>
-          </AnimatePresence>
-        </PageContent>
-        <Footer />
-      </BodyWrapper>
-    </div>
+      <Routes>
+        {/* Main single-page layout */}
+        <Route path="/" element={<SinglePage />} />
+
+        {/* Secondary pages — legal / app detail */}
+        <Route element={<SecondaryLayout />}>
+          <Route path="applications/:id" element={<AppPage />} />
+          <Route
+            path="applications/:id/privacy-policy"
+            element={
+              language === 'es-ES' ? (
+                <MatchupPrivacyPolicyES />
+              ) : (
+                <MatchupPrivacyPolicyEN />
+              )
+            }
+          />
+          <Route
+            path="applications/:id/terms-and-conditions"
+            element={
+              language === 'es-ES' ? (
+                <MatchupTermsAndConditionsES />
+              ) : (
+                <MatchupTermsAndConditionsEN />
+              )
+            }
+          />
+          <Route
+            path="privacy-policy"
+            element={
+              language === 'es-ES' ? <PrivacyPolicyES /> : <PrivacyPolicyEN />
+            }
+          />
+          <Route
+            path="terms-and-conditions"
+            element={
+              language === 'es-ES' ? (
+                <TermsAndConditionsES />
+              ) : (
+                <TermsAndConditionsEN />
+              )
+            }
+          />
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 };

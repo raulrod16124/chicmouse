@@ -9,5 +9,5 @@ export const BodyWrapper = styled.div`
 
 export const PageContent = styled.div`
   flex: 1;
-  padding-top: 100px;
+  padding-top: 64px;
 `;

@@ -1,19 +1,5 @@
 export type SectionId = 'hero' | 'games' | 'studio' | 'team' | 'contact';
 
-export type MenuItem = {
-  name: string;
-  icon: string;
-  path: string;
-};
-
-export type AppInfo = {
-  name: string;
-  icon: string;
-  stars: number;
-  downloadsNumber: number;
-  url: string;
-};
-
 export interface IAppPage {
   name: string;
   description: string;

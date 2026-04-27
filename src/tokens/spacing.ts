@@ -17,5 +17,13 @@ export const spacing = {
   30: '120px',
 } as const;
 
+export const spacing_dvh = {
+  1: '2dvh',
+  2: '4dvh',
+  3: '8dvh',
+  4: '16dvh',
+  6: '24dvh',
+} as const;
+
 export type SpacingToken = typeof spacing;
 export type SpacingKey = keyof SpacingToken;

@@ -67,6 +67,7 @@ To run this project locally, ensure that you have [Node.js](https://nodejs.org/)
    ```bash
    npx react-native run-ios
    ```
+
    - For Android (requires Android Studio or a connected Android device):
    ```bash
    npx react-native run-android
@@ -96,4 +97,4 @@ We leverage continuous integration and deployment to maintain the quality and ef
 
 Have questions or feedback about ChicMouse Apps? Reach out to our team!
 
-Email: info@chicmouse.com
+Email: admin@chicmouse.com

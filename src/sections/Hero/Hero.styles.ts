@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
 import {colors} from 'tokens/colors';
-import {spacing} from 'tokens/spacing';
+import {spacing, spacing_dvh} from 'tokens/spacing';
 import {typography} from 'tokens/typography';
 import {transitions} from 'tokens/transitions';
 import {device} from 'utils';
@@ -11,13 +11,12 @@ export const HeroSection = styled.section`
   background-color: ${colors.bgPrimary};
   display: flex;
   align-items: center;
-  padding-top: 64px; /* Nav height */
 `;
 
 export const HeroInner = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: ${spacing[20]} ${spacing[6]};
+  padding: ${spacing[12]} ${spacing[6]};
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -26,8 +25,8 @@ export const HeroInner = styled.div`
 
   @media ${device.laptop} {
     grid-template-columns: 1fr;
-    gap: ${spacing[10]};
-    padding: ${spacing[16]} ${spacing[5]};
+    gap: ${spacing[12]};
+    padding: ${spacing_dvh[4]} ${spacing[4]};
     text-align: center;
   }
 `;
@@ -35,7 +34,7 @@ export const HeroInner = styled.div`
 export const HeroText = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  gap: ${spacing[5]};
+  gap: ${spacing[4]};
 `;
 
 export const HeroEyebrow = styled.p`
@@ -44,6 +43,13 @@ export const HeroEyebrow = styled.p`
   letter-spacing: 0.15em;
   color: ${colors.accentYellow};
   text-transform: uppercase;
+  padding-bottom: ${spacing_dvh[1]};
+  border-bottom: 4px solid ${colors.accentYellow};
+  width: 90%;
+
+  @media ${device.laptop} {
+    width: 100%;
+  }
 `;
 
 export const HeroHeadline = styled.h1`
@@ -129,20 +135,27 @@ export const HeroImageWrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
 
   @media ${device.laptop} {
+    margin-top: ${spacing_dvh[2]};
     max-height: 300px;
   }
 `;
 
 export const HeroImage = styled.img`
   width: 100%;
-  max-width: 520px;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   border-radius: 16px;
-
-  @media ${device.laptop} {
-    max-width: 360px;
-  }
+  mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 50%,
+    black 55%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 50%,
+    black 55%,
+    transparent 100%
+  );
 `;

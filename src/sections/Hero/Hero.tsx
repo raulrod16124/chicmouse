@@ -3,7 +3,7 @@ import {useIntl} from 'react-intl';
 import {motion} from 'framer-motion';
 import {fadeUp, fadeIn} from 'animations/variants';
 import {useReducedMotion} from 'hooks/useReducedMotion';
-import chicmouseImage from 'assets/chicmouseImage.webp';
+import chicmouseImage from 'assets/mouse_hero.webp';
 import type {SectionId} from 'types';
 import {
   HeroSection,

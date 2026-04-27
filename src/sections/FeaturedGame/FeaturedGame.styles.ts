@@ -9,10 +9,10 @@ import {device} from 'utils';
 
 export const FeaturedGameSection = styled.section`
   background-color: ${colors.bgSecondary};
-  padding: ${spacing[24]} ${spacing[6]};
+  padding: ${spacing[20]} ${spacing[6]};
 
   @media ${device.tablet} {
-    padding: ${spacing[16]} ${spacing[5]};
+    padding: ${spacing[16]} ${spacing[4]};
   }
 `;
 
@@ -27,30 +27,53 @@ export const SectionEyebrow = styled.p`
   letter-spacing: 0.15em;
   color: ${colors.accentYellow};
   text-transform: uppercase;
-  margin-bottom: ${spacing[4]};
+  margin-bottom: ${spacing[12]};
 `;
+
+/* ── Two-column layout ─────────────────────────────────── */
 
 export const GameCard = styled(motion.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: ${spacing[12]};
+  gap: ${spacing[16]};
   align-items: center;
-  background-color: ${colors.surface};
-  border-radius: ${radius.lg};
-  padding: ${spacing[10]};
-  border: 1px solid rgba(255, 255, 255, 0.06);
 
   @media ${device.laptop} {
     grid-template-columns: 1fr;
-    gap: ${spacing[8]};
-    padding: ${spacing[8]};
+    gap: ${spacing[12]};
   }
 `;
+
+/* ── Left: product spotlight ───────────────────────────── */
+
+export const ProductSpotlightWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media ${device.laptop} {
+    order: 2;
+  }
+`;
+
+export const ProductSpotlightImage = styled.img`
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.5));
+`;
+
+/* ── Right: game info ──────────────────────────────────── */
 
 export const GameInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${spacing[4]};
+
+  @media ${device.laptop} {
+    order: 1;
+  }
 `;
 
 export const GameHeader = styled.div`
@@ -60,34 +83,27 @@ export const GameHeader = styled.div`
 `;
 
 export const GameIcon = styled.img`
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   border-radius: ${radius.md};
   object-fit: cover;
   flex-shrink: 0;
-`;
-
-export const GameTitleBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${spacing[1]};
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 `;
 
 export const GameName = styled.h2`
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   color: ${colors.textPrimary};
   text-transform: capitalize;
+  line-height: 1.1;
 `;
 
-export const GamePlatformBadge = styled.span`
-  font-size: 12px;
-  font-weight: 600;
-  color: ${colors.textSecondary};
-  background-color: rgba(255, 255, 255, 0.06);
-  padding: 2px 8px;
-  border-radius: ${radius.sm};
-  display: inline-block;
+export const GameTagline = styled.p`
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  color: ${colors.textPrimary};
+  line-height: 1.3;
 `;
 
 export const GameDescription = styled.p`
@@ -96,48 +112,80 @@ export const GameDescription = styled.p`
   color: ${colors.textSecondary};
 `;
 
-export const GameCta = styled.a`
+/* ── Store badges ──────────────────────────────────────── */
+
+export const StoreBadges = styled.div`
+  display: flex;
+  gap: ${spacing[3]};
+  flex-wrap: wrap;
+`;
+
+export const StoreBadge = styled.a`
   display: inline-flex;
-  align-items: center;
-  gap: ${spacing[2]};
-  height: 44px;
-  padding: 0 ${spacing[5]};
-  border-radius: 8px;
-  background-color: ${colors.accentYellow};
-  color: ${colors.bgPrimary};
-  font-size: 14px;
-  font-weight: 600;
+  flex-direction: column;
+  gap: 1px;
+  padding: 9px 18px;
+  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: ${radius.md};
   text-decoration: none;
-  width: fit-content;
+  min-width: 138px;
   transition:
-    opacity ${transitions.fast},
+    border-color ${transitions.fast},
     transform ${transitions.fast};
 
   &:hover {
-    opacity: 0.88;
-    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-2px);
   }
 
   &:focus-visible {
-    outline: 2px solid ${colors.accentYellow};
+    outline: 2px solid ${colors.accentBlue};
     outline-offset: 3px;
   }
 `;
 
-export const GameScreenshots = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: ${spacing[3]};
-
-  @media ${device.mobileL} {
-    grid-template-columns: repeat(2, 1fr);
-  }
+export const StoreBadgeLabel = styled.span`
+  font-size: 10px;
+  font-weight: 400;
+  color: ${colors.textSecondary};
+  letter-spacing: 0.02em;
+  line-height: 1;
 `;
 
-export const Screenshot = styled.img`
-  width: 100%;
-  aspect-ratio: 9/16;
-  object-fit: cover;
-  border-radius: ${radius.md};
-  border: 1px solid rgba(255, 255, 255, 0.08);
+export const StoreBadgeName = styled.span`
+  font-size: 15px;
+  font-weight: 700;
+  color: ${colors.textPrimary};
+  line-height: 1.2;
+`;
+
+/* ── CTA ───────────────────────────────────────────────── */
+
+export const GameCta = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: ${spacing[2]};
+  height: 48px;
+  padding: 0 ${spacing[6]};
+  border-radius: 10px;
+  background-color: ${colors.accentBlue};
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  width: fit-content;
+  transition:
+    filter ${transitions.fast},
+    transform ${transitions.fast};
+
+  &:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${colors.accentBlue};
+    outline-offset: 3px;
+  }
 `;

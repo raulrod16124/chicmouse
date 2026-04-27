@@ -24,7 +24,7 @@ export const NavBar = styled.header<INavScrolledProps>`
   z-index: 100;
   height: 64px;
   background-color: ${colors.bgPrimary};
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition:
     border-color ${transitions.base},
     backdrop-filter ${transitions.base};
@@ -32,7 +32,6 @@ export const NavBar = styled.header<INavScrolledProps>`
   ${({$scrolled}) =>
     $scrolled &&
     css`
-      border-bottom-color: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(12px);
       background-color: rgba(11, 19, 43, 0.85);
     `}
@@ -53,12 +52,18 @@ export const NavLogoLink = styled.a`
   align-items: center;
   flex-shrink: 0;
   cursor: pointer;
+  text-decoration: none;
 
   img {
     width: 44px;
-    height: 22px;
+    height: 44px;
     object-fit: contain;
     transition: transform ${transitions.fast};
+
+    @media ${device.laptop} {
+      width: 40px;
+      height: 40px;
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -82,7 +87,7 @@ export const NavLink = styled.a<INavLinkProps>`
   height: 36px;
   padding: 0 14px;
   font-size: ${typography.body.fontSize};
-  font-weight: 500;
+  font-weight: ${({$active}) => ($active ? 600 : 400)};
   text-decoration: none;
   border-radius: 6px;
   cursor: pointer;
@@ -90,9 +95,7 @@ export const NavLink = styled.a<INavLinkProps>`
   border-bottom: 2px solid transparent;
 
   color: ${({$active}) =>
-    $active ? colors.textPrimary : colors.textSecondary};
-  border-bottom-color: ${({$active}) =>
-    $active ? colors.accentYellow : 'transparent'};
+    $active ? colors.accentYellow : colors.textSecondary};
 
   &:hover {
     color: ${colors.textPrimary};
@@ -243,11 +246,9 @@ export const DrawerNavLink = styled.a<INavLinkProps>`
     color ${transitions.fast};
 
   color: ${({$active}) =>
-    $active ? colors.textPrimary : colors.textSecondary};
+    $active ? colors.accentYellow : colors.textSecondary};
   background-color: ${({$active}) =>
     $active ? 'rgba(255, 200, 87, 0.08)' : 'transparent'};
-  border-left: 3px solid
-    ${({$active}) => ($active ? colors.accentYellow : 'transparent')};
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.04);

@@ -1,4 +1,5 @@
-import {memo, useState, useCallback, useContext} from 'react';
+import {memo, useState, useCallback, useContext, useEffect} from 'react';
+import {useNavigate, useLocation} from 'react-router-dom';
 import {useIntl} from 'react-intl';
 import {Menu, X} from 'lucide-react';
 import {LanguageContext} from 'context/LanguageContext';
@@ -32,7 +33,7 @@ interface INavItem {
 
 const DISPLAY_NAV_ITEMS: INavItem[] = [
   {id: 'hero', labelKey: 'home'},
-  {id: 'games', labelKey: 'applications'},
+  {id: 'games', labelKey: 'games'},
   {id: 'studio', labelKey: 'aboutUs'},
   {id: 'contact', labelKey: 'contact'},
 ];
@@ -48,28 +49,54 @@ export const Nav = memo(() => {
   const scrolled = useScrolled();
   const activeSection = useActiveSection();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const navigate = useNavigate();
+  const {pathname} = useLocation();
+  const isHome = pathname === '/';
 
   const openDrawer = useCallback(() => setDrawerOpen(true), []);
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
 
+  // Close drawer with Escape key
+  useEffect(() => {
+    if (!drawerOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeDrawer();
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [drawerOpen, closeDrawer]);
+
   const handleNavClick = useCallback(
     (id: SectionId) => {
-      scrollToSection(id);
+      if (isHome) {
+        scrollToSection(id);
+      } else {
+        navigate(id === 'hero' ? '/' : `/#${id}`);
+      }
       closeDrawer();
     },
-    [closeDrawer],
+    [isHome, navigate, closeDrawer],
   );
 
-  const handleLogoClick = useCallback(() => scrollToSection('hero'), []);
+  const handleLogoClick = useCallback(
+    (e: React.MouseEvent) => {
+      if (isHome) {
+        e.preventDefault();
+        scrollToSection('hero');
+      }
+    },
+    [isHome],
+  );
 
   return (
     <>
       <NavBar $scrolled={scrolled}>
         <NavInner>
           <NavLogoLink
+            href="/"
             onClick={handleLogoClick}
             aria-label="ChicMouse Studio — go to top">
-            <img src={logoImg} alt="ChicMouse Studio" width={44} height={22} />
+            <img src={logoImg} alt="ChicMouse Studio" width={44} height={44} />
           </NavLogoLink>
 
           <NavLinks>
@@ -122,7 +149,7 @@ export const Nav = memo(() => {
                 src={logoImg}
                 alt="ChicMouse Studio"
                 width={44}
-                height={22}
+                height={44}
               />
               <DrawerCloseButton onClick={closeDrawer} aria-label="Close menu">
                 <X size={22} />
@@ -143,16 +170,6 @@ export const Nav = memo(() => {
 
             <DrawerLangToggle>
               <LangButton
-                $active={!language?.startsWith('es')}
-                onClick={() => {
-                  changeMessages('en-US');
-                  closeDrawer();
-                }}
-                aria-label="Switch to English">
-                EN
-              </LangButton>
-              <LangSeparator>/</LangSeparator>
-              <LangButton
                 $active={language?.startsWith('es')}
                 onClick={() => {
                   changeMessages('es-ES');
@@ -160,6 +177,16 @@ export const Nav = memo(() => {
                 }}
                 aria-label="Cambiar a Español">
                 ES
+              </LangButton>
+              <LangSeparator>/</LangSeparator>
+              <LangButton
+                $active={!language?.startsWith('es')}
+                onClick={() => {
+                  changeMessages('en-US');
+                  closeDrawer();
+                }}
+                aria-label="Switch to English">
+                EN
               </LangButton>
             </DrawerLangToggle>
           </DrawerPanel>

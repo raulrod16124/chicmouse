@@ -11,15 +11,15 @@ import {AnimatePresence, motion} from 'framer-motion';
 import {pageTransition} from 'animations/variants';
 import {useReducedMotion} from 'hooks/useReducedMotion';
 
-const AppPage = React.lazy(() => import('modules/apps/components/AppPage'));
-const MatchupPrivacyPolicyEN = React.lazy(() =>
-  import('modules/privacy-policy/MatchupPrivacyPolicyEN').then(m => ({
-    default: m.MatchupPrivacyPolicyEN,
+const GamePage = React.lazy(() => import('pages/GamePage/GamePage'));
+const StellarMergePrivacyPolicyEN = React.lazy(() =>
+  import('modules/privacy-policy/StellarMergePrivacyPolicyEN').then(m => ({
+    default: m.StellarMergePrivacyPolicyEN,
   })),
 );
-const MatchupPrivacyPolicyES = React.lazy(() =>
-  import('modules/privacy-policy/MatchupPrivacyPolicyES').then(m => ({
-    default: m.MatchupPrivacyPolicyES,
+const StellarMergePrivacyPolicyES = React.lazy(() =>
+  import('modules/privacy-policy/StellarMergePrivacyPolicyES').then(m => ({
+    default: m.StellarMergePrivacyPolicyES,
   })),
 );
 const PrivacyPolicyEN = React.lazy(() =>
@@ -32,14 +32,14 @@ const PrivacyPolicyES = React.lazy(() =>
     default: m.PrivacyPolicyES,
   })),
 );
-const MatchupTermsAndConditionsEN = React.lazy(() =>
-  import('modules/terms-and-conditions/MatchupTermsAndConditionsEN').then(
-    m => ({default: m.MatchupTermsAndConditionsEN}),
+const StellarMergeTermsAndConditionsEN = React.lazy(() =>
+  import('modules/terms-and-conditions/StellarMergeTermsAndConditionsEN').then(
+    m => ({default: m.StellarMergeTermsAndConditionsEN}),
   ),
 );
-const MatchupTermsAndConditionsES = React.lazy(() =>
-  import('modules/terms-and-conditions/MatchupTermsAndConditionsES').then(
-    m => ({default: m.MatchupTermsAndConditionsES}),
+const StellarMergeTermsAndConditionsES = React.lazy(() =>
+  import('modules/terms-and-conditions/StellarMergeTermsAndConditionsES').then(
+    m => ({default: m.StellarMergeTermsAndConditionsES}),
   ),
 );
 const TermsAndConditionsEN = React.lazy(() =>
@@ -92,14 +92,14 @@ export const Root = () => {
 
         {/* Secondary pages — legal / app detail */}
         <Route element={<SecondaryLayout />}>
-          <Route path="applications/:id" element={<AppPage />} />
+          <Route path="applications/:id" element={<GamePage />} />
           <Route
             path="applications/:id/privacy-policy"
             element={
               language === 'es-ES' ? (
-                <MatchupPrivacyPolicyES />
+                <StellarMergePrivacyPolicyES />
               ) : (
-                <MatchupPrivacyPolicyEN />
+                <StellarMergePrivacyPolicyEN />
               )
             }
           />
@@ -107,9 +107,9 @@ export const Root = () => {
             path="applications/:id/terms-and-conditions"
             element={
               language === 'es-ES' ? (
-                <MatchupTermsAndConditionsES />
+                <StellarMergeTermsAndConditionsES />
               ) : (
-                <MatchupTermsAndConditionsEN />
+                <StellarMergeTermsAndConditionsEN />
               )
             }
           />

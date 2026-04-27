@@ -1,6 +1,6 @@
 import {useState, useCallback} from 'react';
 import {useIntl} from 'react-intl';
-import {Send} from 'lucide-react';
+import {Send, Mail, MapPin} from 'lucide-react';
 import {motion} from 'framer-motion';
 import {fadeUp} from 'animations/variants';
 import {useReducedMotion} from 'hooks/useReducedMotion';
@@ -9,10 +9,18 @@ import {
   ContactSection,
   ContactInner,
   ContactHeadingBlock,
+  ContactEyebrow,
   ContactHeading,
+  ContactTagline,
   ContactSubText,
+  ContactInfoList,
+  ContactInfoItem,
+  ContactInfoIcon,
   ContactEmail,
+  ContactFormCard,
   ContactForm,
+  ContactFieldGroup,
+  ContactLabel,
   ContactInput,
   ContactTextarea,
   ContactSubmit,
@@ -28,9 +36,9 @@ export const ContactStrip = () => {
   const reducedMotion = useReducedMotion();
 
   const [form, setForm] = useState<IContactForm>(EMPTY_FORM);
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>(
-    'idle',
-  );
+  const [status, setStatus] = useState<
+    'idle' | 'sending' | 'sent' | 'error' | 'validation'
+  >('idle');
 
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -43,6 +51,10 @@ export const ContactStrip = () => {
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
+      if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+        setStatus('validation');
+        return;
+      }
       setStatus('sending');
       try {
         const res = await fetch(CONTACT_ENDPOINT, {
@@ -64,76 +76,131 @@ export const ContactStrip = () => {
     [form],
   );
 
-  const animProps = reducedMotion
+  const headingAnimProps = reducedMotion
     ? {}
     : {
         variants: fadeUp,
         initial: 'hidden' as const,
         whileInView: 'visible' as const,
-        viewport: {once: true, margin: '-60px'},
+        viewport: {once: true, margin: '-60px'} as const,
+      };
+
+  const formAnimProps = reducedMotion
+    ? {}
+    : {
+        variants: fadeUp,
+        initial: 'hidden' as const,
+        whileInView: 'visible' as const,
+        transition: {delay: 0.15},
+        viewport: {once: true, margin: '-60px'} as const,
       };
 
   return (
     <ContactSection id="contact">
-      <ContactInner {...animProps}>
-        <ContactHeadingBlock>
+      <ContactInner>
+        {/* Left — heading + info */}
+        <ContactHeadingBlock as={motion.div} {...headingAnimProps}>
+          <ContactEyebrow>
+            {intl.formatMessage({id: 'contactEyebrow'})}
+          </ContactEyebrow>
           <ContactHeading>
             {intl.formatMessage({id: 'contactHeading'})}
           </ContactHeading>
+          <ContactTagline>
+            {intl.formatMessage({id: 'contactTagline'})}
+          </ContactTagline>
           <ContactSubText>
-            {intl.formatMessage({id: 'contactUsText'})}
+            {intl.formatMessage({id: 'contactBodyText'})}
           </ContactSubText>
-          <ContactEmail href="mailto:info@chicmouse.com">
-            info@chicmouse.com
-          </ContactEmail>
+
+          <ContactInfoList>
+            <ContactInfoItem>
+              <ContactInfoIcon>
+                <Mail size={18} />
+              </ContactInfoIcon>
+              <ContactEmail href="mailto:admin@chicmouse.com">
+                admin@chicmouse.com
+              </ContactEmail>
+            </ContactInfoItem>
+            <ContactInfoItem>
+              <ContactInfoIcon>
+                <MapPin size={18} />
+              </ContactInfoIcon>
+              Spain · Remote worldwide
+            </ContactInfoItem>
+          </ContactInfoList>
         </ContactHeadingBlock>
 
-        <ContactForm onSubmit={handleSubmit} noValidate>
-          <ContactInput
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            placeholder={intl.formatMessage({id: 'enterAName'})}
-            required
-            maxLength={100}
-            autoComplete="name"
-          />
-          <ContactInput
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder={intl.formatMessage({id: 'enterAnEmail'})}
-            required
-            maxLength={254}
-            autoComplete="email"
-          />
-          <ContactTextarea
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            placeholder={intl.formatMessage({id: 'enterAMessage'})}
-            required
-            maxLength={2000}
-          />
+        {/* Right — form card */}
+        <motion.div {...formAnimProps}>
+          <ContactFormCard>
+            <ContactForm onSubmit={handleSubmit} noValidate>
+              <ContactFieldGroup>
+                <ContactLabel>
+                  {intl.formatMessage({id: 'enterAName'})}
+                  <ContactInput
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    placeholder={intl.formatMessage({id: 'namePlaceholder'})}
+                    required
+                    maxLength={100}
+                    autoComplete="name"
+                  />
+                </ContactLabel>
+                <ContactLabel>
+                  {intl.formatMessage({id: 'enterAnEmail'})}
+                  <ContactInput
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder={intl.formatMessage({id: 'emailPlaceholder'})}
+                    required
+                    maxLength={254}
+                    autoComplete="email"
+                  />
+                </ContactLabel>
+              </ContactFieldGroup>
 
-          {status === 'sent' && (
-            <ContactFeedback>
-              {intl.formatMessage({id: 'messageSent'})}
-            </ContactFeedback>
-          )}
-          {status === 'error' && (
-            <ContactFeedback $isError>
-              {intl.formatMessage({id: 'somethingWrong'})}
-            </ContactFeedback>
-          )}
+              <ContactLabel>
+                {intl.formatMessage({id: 'enterAMessage'})}
+                <ContactTextarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder={intl.formatMessage({id: 'messagePlaceholder'})}
+                  required
+                  maxLength={2000}
+                />
+              </ContactLabel>
 
-          <ContactSubmit type="submit" disabled={status === 'sending'}>
-            {status === 'sending' ? '...' : intl.formatMessage({id: 'send'})}
-            {status !== 'sending' && <Send size={14} style={{marginLeft: 6}} />}
-          </ContactSubmit>
-        </ContactForm>
+              {status === 'validation' && (
+                <ContactFeedback $isError>
+                  {intl.formatMessage({id: 'missingFields'})}
+                </ContactFeedback>
+              )}
+              {status === 'sent' && (
+                <ContactFeedback>
+                  {intl.formatMessage({id: 'messageSent'})}
+                </ContactFeedback>
+              )}
+              {status === 'error' && (
+                <ContactFeedback $isError>
+                  {intl.formatMessage({id: 'somethingWrong'})}
+                </ContactFeedback>
+              )}
+
+              <ContactSubmit type="submit" disabled={status === 'sending'}>
+                {status === 'sending'
+                  ? '...'
+                  : intl.formatMessage({id: 'send'})}
+                {status !== 'sending' && <Send size={15} />}
+              </ContactSubmit>
+            </ContactForm>
+          </ContactFormCard>
+        </motion.div>
       </ContactInner>
     </ContactSection>
   );

@@ -6,7 +6,7 @@ import {
   ErrorPageWrapper,
   RedirectButton,
 } from './ErrorPage.styles';
-import mouseConfusedImage from 'assets/mouseConfusedImage.webp';
+import mouseConfusedImage from 'assets/mouse_hero.webp';
 
 export const ErrorPage = () => {
   const intl = useIntl();

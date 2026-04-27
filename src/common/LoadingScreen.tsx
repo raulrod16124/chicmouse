@@ -1,4 +1,4 @@
-import logoAcronym from 'assets/cm.webp';
+import logoAcronym from 'assets/logo.webp';
 import {
   LoadingDot,
   LoadingDotsWrapper,

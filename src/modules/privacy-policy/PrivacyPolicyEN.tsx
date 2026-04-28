@@ -1,123 +1,368 @@
 import {
+  Clock,
+  Cookie,
+  Database,
+  Globe,
+  Link2,
+  Lock,
+  RefreshCw,
+  Scale,
+  Settings,
+  Shield,
+  ShieldCheck,
+  Target,
+  UserCheck,
+  Users,
+} from 'lucide-react';
+import {
+  PolicyDivider,
+  PolicyDividerLabel,
+  PolicyHero,
+  PolicyHeroEyebrow,
+  PolicyHeroIconWrapper,
+  PolicyHeroMeta,
+  PolicyHeroTitle,
+  PolicyIntro,
+  PolicySection,
+  PolicySectionHeader,
+  PolicySectionIcon,
   PrivacyPolicyContent,
   PrivacyPolicyWrapper,
   Text,
   TextList,
+  TextSecondarySubtitle,
   TextSubtitle,
-  TextTitle,
 } from './PrivacyPolicy.styles';
 
 export const PrivacyPolicyEN = () => {
   return (
     <PrivacyPolicyWrapper data-testid="privacy-policy-en-page-id">
+      <PolicyHero>
+        <PolicyHeroIconWrapper>
+          <Shield size={32} />
+        </PolicyHeroIconWrapper>
+        <PolicyHeroEyebrow>ChicMouse Studio &middot; Legal</PolicyHeroEyebrow>
+        <PolicyHeroTitle>Privacy Policy</PolicyHeroTitle>
+        <PolicyHeroMeta>Last updated: April 28, 2026</PolicyHeroMeta>
+      </PolicyHero>
+
       <PrivacyPolicyContent>
-        <TextTitle>Privacy Policy</TextTitle>
-        <Text>
-          The chicmouse.com website is owned by chicmouse, which is a data
-          controller of your personal data. We have adopted this Privacy Policy,
-          which determines how we process information collected by
-          chicmouse.com, which also provides the reasons why we must collect
-          certain personal data about you. Therefore, you should read this
-          Privacy Policy before using the chicmouse.com website. We take care of
-          your personal data and we are committed to guaranteeing its
-          confidentiality and security.
-        </Text>
-        <TextSubtitle>Personal information we collect:</TextSubtitle>
-        <Text>
-          When you visit chicmouse.com, we automatically collect certain
-          information about your device, including information about your web
-          browser, IP address, time zone, and some of the cookies installed on
-          your device. In addition, as you browse, we collect information about
-          the individual web pages or products you view, which websites or
-          search terms referred you to the web, and how you interact. We refer
-          to this automatically collected information as "Device Information."
-          In addition, we may collect the personal data you provide to us
-          (including, but not limited to, first name, last name, address,
-          payment information, etc.) during registration in order to fulfill the
-          agreement.
-        </Text>
-        <TextSubtitle>Why do we process your data?</TextSubtitle>
-        <Text>
-          Our highest priority is the security of customer data, and as such we
-          may process only minimal user data, only to the extent absolutely
-          necessary to maintain the website. The information collected
-          automatically is used only to identify potential cases of abuse and to
-          establish statistical information about the use of the website. This
-          statistical information is not aggregated in such a way as to identify
-          any particular user of the system. You can visit the website without
-          telling us who you are or revealing any information by which someone
-          can identify you as a specific person. However, if you wish to use
-          some of the features of the website, or wish to receive our newsletter
-          or provide other details by filling out a form, you may provide us
-          with personal data, such as your email, first name, last name, city of
-          residence, organization and number of phone. You can choose not to
-          provide your personal data, but you may not be able to take advantage
-          of some of the features of the Website. For example, you will not be
-          able to receive our newsletter or contact us directly from the
-          website. Users who are not sure what information is required can
-          contact us at admin@chicmouse.com.
-        </Text>
-        <TextSubtitle>Your rights:</TextSubtitle>
-        <Text>
-          If you are a European resident, you have the following rights related
-          to your personal data:
-        </Text>
-        <TextList margin="25px 0">
-          <Text>The right to be informed.</Text>
-          <Text>The right of access.</Text>
-          <Text>The right to rectification.</Text>
-          <Text>The right to delete.</Text>
-          <Text>The right to restrict processing.</Text>
-          <Text>The right to data portability.</Text>
-          <Text>The right to object.</Text>
+        <PolicyIntro>
           <Text>
-            Rights in relation to automated decision-making and profiling.
+            This Privacy Policy describes how ChicMouse Studio collects, uses,
+            and protects your personal data when you visit{' '}
+            <a
+              href="https://chicmouse.com/"
+              rel="external nofollow noopener"
+              target="_blank">
+              https://chicmouse.com/
+            </a>
+            . Please read it carefully before using our website.
           </Text>
-        </TextList>
-        <Text>
-          If you wish to exercise this right, please contact us through the
-          contact information below. In addition, if you are a European
-          resident, we note that we are processing your information to fulfill
-          contracts we might have with you (for example, if you place an order
-          through the web), or otherwise to pursue our legitimate business
-          interests listed above. Also, please note that your information may be
-          transferred outside of Europe, including to Canada and the United
-          States.
-        </Text>
-        <TextSubtitle>Links to other websites:</TextSubtitle>
-        <Text>
-          Our website may contain links to other websites that are not owned or
-          controlled by us. Please be aware that we are not responsible for such
-          websites or the privacy practices of third parties. We recommend that
-          you be aware when you leave our website and read the privacy
-          statements of each website that may collect personal information.
-        </Text>
-        <TextSubtitle>Security of the information:</TextSubtitle>
-        <Text>
-          We secure the information you provide on computer servers in a
-          controlled and secure environment, protected from unauthorized access,
-          use or disclosure. We maintain reasonable administrative, technical
-          and physical security measures to protect against unauthorized access,
-          use, modification and disclosure of personal data under its control
-          and custody. However, data transmission over the Internet or wireless
-          networks cannot be guaranteed.
-        </Text>
-        <TextSubtitle>Legal disclosure:</TextSubtitle>
-        <Text>
-          We will disclose any information we collect, use, or receive if
-          required or permitted by law, such as to comply with a subpoena or
-          similar legal process, and when we believe in good faith that
-          disclosure is necessary to protect our rights, protect your safety or
-          the safety of others, investigate fraud, or respond to a government
-          request.
-        </Text>
-        <TextSubtitle>Contact information:</TextSubtitle>
-        <Text margin="0 0 100px 0 ">
-          If you wish to contact us to understand more about this Policy or wish
-          to communicate with us regarding any matter regarding individual
-          rights and your personal information, you may email us at
-          admin@chicmouse.com
-        </Text>
+        </PolicyIntro>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <UserCheck size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>1. Data Controller</TextSubtitle>
+          </PolicySectionHeader>
+          <TextList>
+            <li>
+              <Text>
+                <strong>Owner:</strong> ChicMouse Studio
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Activity:</strong> Mobile game development
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Email:</strong> admin@chicmouse.com
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Website:</strong> https://chicmouse.com/
+              </Text>
+            </li>
+          </TextList>
+          <Text>
+            ChicMouse Studio is an independent project managed by an individual
+            developer.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Database size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>2. Personal Data Collected</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>This Website may collect the following personal data:</Text>
+          <TextList>
+            <li>
+              <Text>Email address (via the contact form)</Text>
+            </li>
+            <li>
+              <Text>
+                Information voluntarily included in the message sent by the user
+              </Text>
+            </li>
+          </TextList>
+          <Text>
+            No additional data is collected, and no user profiles are created.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Target size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>3. Purpose of Processing</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>Data is used exclusively to:</Text>
+          <TextList>
+            <li>
+              <Text>Respond to queries submitted by the user</Text>
+            </li>
+            <li>
+              <Text>Maintain direct communication related to the request</Text>
+            </li>
+          </TextList>
+          <TextSecondarySubtitle>
+            Data will NOT be used for
+          </TextSecondarySubtitle>
+          <TextList>
+            <li>
+              <Text>Commercial purposes</Text>
+            </li>
+            <li>
+              <Text>Sending advertising</Text>
+            </li>
+            <li>
+              <Text>Profiling</Text>
+            </li>
+          </TextList>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Scale size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>4. Legal Basis</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            The legal basis for processing your data is the user&apos;s consent
+            when submitting the contact form.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Clock size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>5. Data Retention</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>Data will be retained only for as long as necessary to:</Text>
+          <TextList>
+            <li>
+              <Text>Respond to the request</Text>
+            </li>
+            <li>
+              <Text>Maintain the resulting communication</Text>
+            </li>
+          </TextList>
+          <Text>
+            Afterwards, data may be deleted or stored securely if there is a
+            legal obligation to do so.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Users size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>6. Data Recipients</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>Data is not shared with third parties.</Text>
+          <Text>
+            However, it may be processed by technical service providers required
+            for the operation of the service (e.g. email provider), under their
+            respective privacy policies.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <ShieldCheck size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>7. User Rights</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>You may exercise the following rights:</Text>
+          <TextList>
+            <li>
+              <Text>Access to your personal data</Text>
+            </li>
+            <li>
+              <Text>Rectification of inaccurate data</Text>
+            </li>
+            <li>
+              <Text>Erasure of your data</Text>
+            </li>
+            <li>
+              <Text>Restriction of processing</Text>
+            </li>
+            <li>
+              <Text>Objection to processing</Text>
+            </li>
+          </TextList>
+          <Text>
+            To exercise these rights, please contact us at:{' '}
+            <a href="mailto:admin@chicmouse.com">admin@chicmouse.com</a>
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Lock size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>8. Data Security</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Reasonable technical and organisational measures are adopted to
+            protect personal data against unauthorised access, loss, or
+            alteration.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Link2 size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>9. Links to Third Parties</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            This Website may contain links to external sites. ChicMouse Studio
+            is not responsible for their privacy policies.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <RefreshCw size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>10. Modifications</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            This Privacy Policy may be updated at any time. Changes will be
+            published on this same page.
+          </Text>
+        </PolicySection>
+
+        <PolicyDivider>
+          <PolicyDividerLabel>Cookie Policy</PolicyDividerLabel>
+        </PolicyDivider>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Cookie size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>1. What Are Cookies?</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Cookies are small files stored on the user&apos;s device when
+            visiting a website that help improve the browsing experience.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Settings size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>2. Types of Cookies Used</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            This Website uses only technical cookies necessary for its
+            operation. Specifically:
+          </Text>
+          <TextSecondarySubtitle>Technical cookies</TextSecondarySubtitle>
+          <TextList>
+            <li>
+              <Text>Enable the correct functioning of the website</Text>
+            </li>
+            <li>
+              <Text>Do not collect personally identifiable information</Text>
+            </li>
+            <li>
+              <Text>Not used for advertising purposes</Text>
+            </li>
+          </TextList>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Globe size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>3. Use of Google Fonts</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>This Website uses fonts from Google Fonts.</Text>
+          <Text>
+            If fonts are loaded from Google&apos;s servers, a connection with
+            those servers may occur, which involves processing the user&apos;s
+            IP address. This processing is subject to Google&apos;s privacy
+            policy:{' '}
+            <a
+              href="https://policies.google.com/privacy"
+              rel="external nofollow noopener"
+              target="_blank">
+              https://policies.google.com/privacy
+            </a>
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Lock size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>4. Cookie Management</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            As this Website only uses technically necessary cookies, prior
+            consent is not required under applicable regulations. The user may,
+            however, configure their browser to block or delete cookies at any
+            time.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <RefreshCw size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>5. Modifications</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            This Cookie Policy may be updated at any time. Changes will be
+            published on this same page.
+          </Text>
+        </PolicySection>
       </PrivacyPolicyContent>
     </PrivacyPolicyWrapper>
   );

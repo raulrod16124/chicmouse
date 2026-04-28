@@ -15,7 +15,11 @@ export const PrivacyPolicyWrapper = styled.div`
 /* ── Hero ──────────────────────────────────────────────── */
 
 export const PolicyHero = styled.div`
-  background: linear-gradient(135deg, ${colors.bgSecondary} 0%, ${colors.surface} 100%);
+  background: linear-gradient(
+    135deg,
+    ${colors.bgSecondary} 0%,
+    ${colors.surface} 100%
+  );
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   padding: ${spacing[12]} ${spacing[6]} ${spacing[8]};
   display: flex;
@@ -194,4 +198,34 @@ export const TextList = styled.ul<{margin?: string}>`
     font-size: 15px;
     line-height: 1.75;
   }
+`;
+
+/* ── Section divider (between Privacy Policy & Cookie Policy) ── */
+
+export const PolicyDivider = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${spacing[4]};
+  padding: ${spacing[2]} 0;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+`;
+
+export const PolicyDividerLabel = styled.span`
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: ${colors.accentBlue};
+  background: rgba(58, 134, 255, 0.08);
+  border: 1px solid rgba(58, 134, 255, 0.2);
+  border-radius: ${radius.full};
+  padding: 5px ${spacing[3]};
+  white-space: nowrap;
 `;

@@ -1,128 +1,390 @@
 import {
+  Clock,
+  Cookie,
+  Database,
+  Globe,
+  Link2,
+  Lock,
+  RefreshCw,
+  Scale,
+  Settings,
+  Shield,
+  ShieldCheck,
+  Target,
+  UserCheck,
+  Users,
+} from 'lucide-react';
+import {
+  PolicyDivider,
+  PolicyDividerLabel,
+  PolicyHero,
+  PolicyHeroEyebrow,
+  PolicyHeroIconWrapper,
+  PolicyHeroMeta,
+  PolicyHeroTitle,
+  PolicyIntro,
+  PolicySection,
+  PolicySectionHeader,
+  PolicySectionIcon,
   PrivacyPolicyContent,
   PrivacyPolicyWrapper,
   Text,
   TextList,
+  TextSecondarySubtitle,
   TextSubtitle,
-  TextTitle,
 } from './PrivacyPolicy.styles';
 
 export const PrivacyPolicyES = () => {
   return (
     <PrivacyPolicyWrapper data-testid="privacy-policy-es-page-id">
+      <PolicyHero>
+        <PolicyHeroIconWrapper>
+          <Shield size={32} />
+        </PolicyHeroIconWrapper>
+        <PolicyHeroEyebrow>ChicMouse Studio &middot; Legal</PolicyHeroEyebrow>
+        <PolicyHeroTitle>Pol&iacute;tica de privacidad</PolicyHeroTitle>
+        <PolicyHeroMeta>
+          &Uacute;ltima actualizaci&oacute;n: 28 de abril de 2026
+        </PolicyHeroMeta>
+      </PolicyHero>
+
       <PrivacyPolicyContent>
-        <TextTitle>Política de privacidad</TextTitle>
-        <Text>
-          El sitio web chicmouse.com es propiedad de chicmouse, que es un
-          controlador de datos de tus datos personales. Hemos adoptado esta
-          Política de privacidad, que determina cómo procesamos la información
-          recopilada por chicmouse.com, que también proporciona las razones por
-          las que debemos recopilar ciertos datos personales sobre ti. Por lo
-          tanto, debes leer esta Política de privacidad antes de usar el sitio
-          web de chicmouse.com. Cuidamos tus datos personales y nos
-          comprometemos a garantizar su confidencialidad y seguridad.
-        </Text>
-        <TextSubtitle>Información personal que recopilamos:</TextSubtitle>
-        <Text>
-          Cuando visitas chicmouse.com, recopilamos automáticamente cierta
-          información sobre tu dispositivo, incluida información sobre tu
-          navegador web, dirección IP, zona horaria y algunas de las cookies
-          instaladas en tu dispositivo. Además, a medida que navegas,
-          recopilamos información sobre las páginas web individuales o los
-          productos que ves, qué sitios web o términos de búsqueda te remitieron
-          a la web y cómo interactúas. Nos referimos a esta información
-          recopilada automáticamente como "Información del dispositivo". Además,
-          podemos recopilar los datos personales que nos proporcionas
-          (incluidos, entre otros, nombre, apellido, dirección, información de
-          pago, etc.) durante el registro para poder cumplir con el acuerdo.
-        </Text>
-        <TextSubtitle>¿Por qué procesamos tus datos?</TextSubtitle>
-        <Text>
-          Nuestra máxima prioridad es la seguridad de los datos del cliente y,
-          como tal, podemos procesar solo los datos mínimos del usuario, solo en
-          la medida en que sea absolutamente necesario para mantener el sitio
-          web. La información recopilada automáticamente se utiliza solo para
-          identificar casos potenciales de abuso y establecer información
-          estadística sobre el uso del sitio web. Esta información estadística
-          no se agrega de tal manera que identifique a ningún usuario en
-          particular del sistema. Puedes visitar la web sin decirnos quién eres
-          ni revelar ninguna información por la cual alguien pueda identificarte
-          como una persona específica. Sin embargo, si deseas utilizar algunas
-          de las funciones del sitio web, o deseas recibir nuestro boletín
-          informativo o proporcionar otros detalles al completar un formulario,
-          puedes proporcionarnos datos personales, como tu correo electrónico,
-          nombre, apellido, ciudad de residencia, organización y número de
-          teléfono. Puedes optar por no proporcionar tus datos personales, pero
-          es posible que no puedas aprovechar algunas de las funciones del sitio
-          web. Por ejemplo, no podrás recibir nuestro boletín ni contactarnos
-          directamente desde el sitio web. Los usuarios que no estén seguros de
-          qué información es obligatoria pueden ponerse en contacto con nosotros
-          a través de admin@chicmouse.com.
-        </Text>
-        <TextSubtitle>Tus derechos:</TextSubtitle>
-        <Text>
-          Si eres residente europeo, tienes los siguientes derechos relacionados
-          con tus datos personales:
-        </Text>
-        <TextList margin="25px 0">
-          <Text>El derecho a ser informado.</Text>
-          <Text>El derecho de acceso.</Text>
-          <Text>El derecho a la rectificación.</Text>
-          <Text>El derecho a borrar.</Text>
-          <Text>El derecho a restringir el procesamiento.</Text>
-          <Text>El derecho a la portabilidad de datos.</Text>
-          <Text>El derecho a oponerte.</Text>
+        <PolicyIntro>
           <Text>
-            Derechos en relación con la toma de decisiones automatizada y la
-            elaboración de perfiles.
+            Esta Pol&iacute;tica de Privacidad describe c&oacute;mo ChicMouse
+            Studio recopila, utiliza y protege tus datos personales cuando
+            visitas{' '}
+            <a
+              href="https://chicmouse.com/"
+              rel="external nofollow noopener"
+              target="_blank">
+              https://chicmouse.com/
+            </a>
+            . L&eacute;ela atentamente antes de utilizar nuestro sitio web.
           </Text>
-        </TextList>
-        <Text>
-          Si deseas ejercer este derecho, comunícate con nosotros a través de la
-          información de contacto a continuación. Además, si eres residente
-          europeo, destacamos que estamos procesando tu información para cumplir
-          con los contratos que podríamos tener contigo (por ejemplo, si
-          realizas un pedido a través de la web), o de otra manera para seguir
-          nuestros intereses comerciales legítimos enumerados anteriormente.
-          Además, ten en cuenta que tu información puede transferirse fuera de
-          Europa, incluidos Canadá y Estados Unidos.
-        </Text>
-        <TextSubtitle>Enlaces a otros sitios web:</TextSubtitle>
-        <Text>
-          Nuestra web puede contener enlaces a otros sitios web que no son de
-          nuestra propiedad ni están controlados por nosotros. Ten en cuenta que
-          no somos responsables de dichos sitios web ni de las prácticas de
-          privacidad de terceros. Te recomendamos que estés atento cuando
-          abandones nuestro sitio web y leas las declaraciones de privacidad de
-          cada web que pueda recopilar información personal.
-        </Text>
-        <TextSubtitle>Seguridad de la información:</TextSubtitle>
-        <Text>
-          Aseguramos la información que proporcionas en servidores informáticos
-          en un entorno controlado y seguro, protegido del acceso, uso o
-          divulgación no autorizados. Mantenemos medidas de seguridad
-          administrativas, técnicas y físicas razonables para proteger contra el
-          acceso no autorizado, el uso, la modificación y la divulgación de
-          datos personales bajo su control y custodia. Sin embargo, no se puede
-          garantizar la transmisión de datos a través de Internet o redes
-          inalámbricas.
-        </Text>
-        <TextSubtitle>Divulgación legal:</TextSubtitle>
-        <Text>
-          Divulgaremos cualquier información que recopilemos, usemos o recibamos
-          si así lo requiere o lo permite la ley, como para cumplir con una
-          citación o un proceso legal similar, y cuando creemos de buena fe que
-          la divulgación es necesaria para proteger nuestros derechos, proteger
-          tu seguridad o la seguridad de los demás, investigar el fraude o
-          responder a una solicitud del gobierno.
-        </Text>
-        <TextSubtitle>Información de contacto:</TextSubtitle>
-        <Text margin="0 0 100px 0 ">
-          Si deseas comunicarte con nosotros para comprender más sobre esta
-          Política o deseas comunicarte con nosotros en relación con cualquier
-          asunto sobre los derechos individuales y tu información personal,
-          puedes enviarnos un correo electrónico a admin@chicmouse.com.
-        </Text>
+        </PolicyIntro>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <UserCheck size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>1. Responsable del tratamiento</TextSubtitle>
+          </PolicySectionHeader>
+          <TextList>
+            <li>
+              <Text>
+                <strong>Titular:</strong> ChicMouse Studio
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Actividad:</strong> Desarrollo de juegos m&oacute;viles
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Correo electr&oacute;nico:</strong> admin@chicmouse.com
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Sitio web:</strong> https://chicmouse.com/
+              </Text>
+            </li>
+          </TextList>
+          <Text>
+            ChicMouse Studio es un proyecto independiente gestionado por un
+            desarrollador individual.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Database size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>2. Datos personales que se recopilan</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Este Sitio Web puede recopilar los siguientes datos personales:
+          </Text>
+          <TextList>
+            <li>
+              <Text>
+                Direcci&oacute;n de correo electr&oacute;nico (a trav&eacute;s
+                del formulario de contacto)
+              </Text>
+            </li>
+            <li>
+              <Text>
+                Informaci&oacute;n incluida voluntariamente en el mensaje
+                enviado por el usuario
+              </Text>
+            </li>
+          </TextList>
+          <Text>
+            No se recopilan datos adicionales ni se crean perfiles de usuario.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Target size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>3. Finalidad del tratamiento</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>Los datos se utilizan exclusivamente para:</Text>
+          <TextList>
+            <li>
+              <Text>Responder consultas enviadas por el usuario</Text>
+            </li>
+            <li>
+              <Text>
+                Mantener comunicaci&oacute;n directa relacionada con la
+                solicitud
+              </Text>
+            </li>
+          </TextList>
+          <TextSecondarySubtitle>
+            No se utilizar&aacute;n los datos para
+          </TextSecondarySubtitle>
+          <TextList>
+            <li>
+              <Text>Fines comerciales</Text>
+            </li>
+            <li>
+              <Text>Env&iacute;o de publicidad</Text>
+            </li>
+            <li>
+              <Text>Elaboraci&oacute;n de perfiles</Text>
+            </li>
+          </TextList>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Scale size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>4. Legitimaci&oacute;n</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            La base legal para el tratamiento de los datos es el consentimiento
+            del usuario al enviar el formulario de contacto.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Clock size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>5. Conservaci&oacute;n de los datos</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Los datos ser&aacute;n conservados &uacute;nicamente durante el
+            tiempo necesario para:
+          </Text>
+          <TextList>
+            <li>
+              <Text>Responder la solicitud</Text>
+            </li>
+            <li>
+              <Text>Mantener la comunicaci&oacute;n derivada</Text>
+            </li>
+          </TextList>
+          <Text>
+            Posteriormente podr&aacute;n ser eliminados o almacenados de forma
+            segura si existe obligaci&oacute;n legal.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Users size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>6. Destinatarios de los datos</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>Los datos no se ceden a terceros.</Text>
+          <Text>
+            No obstante, pueden ser procesados por proveedores t&eacute;cnicos
+            necesarios para el funcionamiento del servicio (por ejemplo,
+            proveedor de correo electr&oacute;nico), bajo sus respectivas
+            pol&iacute;ticas de privacidad.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <ShieldCheck size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>7. Derechos del usuario</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>El usuario puede ejercer los siguientes derechos:</Text>
+          <TextList>
+            <li>
+              <Text>Acceso a sus datos personales</Text>
+            </li>
+            <li>
+              <Text>Rectificaci&oacute;n de datos inexactos</Text>
+            </li>
+            <li>
+              <Text>Supresi&oacute;n de sus datos</Text>
+            </li>
+            <li>
+              <Text>Limitaci&oacute;n del tratamiento</Text>
+            </li>
+            <li>
+              <Text>Oposici&oacute;n al tratamiento</Text>
+            </li>
+          </TextList>
+          <Text>
+            Para ejercer estos derechos, puede contactar en:{' '}
+            <a href="mailto:admin@chicmouse.com">admin@chicmouse.com</a>
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Lock size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>8. Seguridad de los datos</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Se adoptan medidas t&eacute;cnicas y organizativas razonables para
+            proteger los datos personales frente a accesos no autorizados,
+            p&eacute;rdida o alteraci&oacute;n.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Link2 size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>9. Enlaces a terceros</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Este Sitio Web puede contener enlaces a sitios externos. ChicMouse
+            Studio no se responsabiliza de sus pol&iacute;ticas de privacidad.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <RefreshCw size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>10. Modificaciones</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Esta Pol&iacute;tica de Privacidad puede actualizarse en cualquier
+            momento. Los cambios ser&aacute;n publicados en esta misma
+            p&aacute;gina.
+          </Text>
+        </PolicySection>
+
+        <PolicyDivider>
+          <PolicyDividerLabel>Pol&iacute;tica de cookies</PolicyDividerLabel>
+        </PolicyDivider>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Cookie size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>1. &iquest;Qu&eacute; son las cookies?</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Las cookies son peque&ntilde;os archivos que se almacenan en el
+            dispositivo del usuario al visitar un sitio web y que permiten
+            mejorar la experiencia de navegaci&oacute;n.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Settings size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>2. Tipos de cookies utilizadas</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Este Sitio Web utiliza &uacute;nicamente cookies t&eacute;cnicas
+            necesarias para su funcionamiento. En concreto:
+          </Text>
+          <TextSecondarySubtitle>Cookies t&eacute;cnicas</TextSecondarySubtitle>
+          <TextList>
+            <li>
+              <Text>Permiten el correcto funcionamiento del sitio web</Text>
+            </li>
+            <li>
+              <Text>
+                No recopilan informaci&oacute;n personal identificable
+              </Text>
+            </li>
+            <li>
+              <Text>No se utilizan con fines publicitarios</Text>
+            </li>
+          </TextList>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Globe size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>3. Uso de Google Fonts</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>Este Sitio Web utiliza fuentes de Google Fonts.</Text>
+          <Text>
+            Si las fuentes se cargan desde servidores de Google, puede
+            producirse una conexi&oacute;n con dichos servidores, lo que implica
+            el tratamiento de la direcci&oacute;n IP del usuario. Este
+            tratamiento est&aacute; sujeto a la pol&iacute;tica de privacidad de
+            Google:{' '}
+            <a
+              href="https://policies.google.com/privacy"
+              rel="external nofollow noopener"
+              target="_blank">
+              https://policies.google.com/privacy
+            </a>
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Lock size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>4. Gesti&oacute;n de cookies</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Dado que este Sitio Web solo utiliza cookies t&eacute;cnicas
+            necesarias, no se requiere consentimiento previo seg&uacute;n la
+            normativa aplicable. El usuario puede, en cualquier caso, configurar
+            su navegador para bloquear o eliminar cookies.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <RefreshCw size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>5. Modificaciones</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            La presente Pol&iacute;tica de Cookies puede actualizarse en
+            cualquier momento. Los cambios ser&aacute;n publicados en esta misma
+            p&aacute;gina.
+          </Text>
+        </PolicySection>
       </PrivacyPolicyContent>
     </PrivacyPolicyWrapper>
   );

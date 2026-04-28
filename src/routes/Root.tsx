@@ -1,3 +1,4 @@
+import {CookieBanner} from 'common/CookieBanner/CookieBanner';
 import {ErrorPage} from 'common/ErrorPage';
 import {Footer} from 'common/Footer';
 import {LoadingScreen} from 'common/LoadingScreen';
@@ -85,6 +86,7 @@ export const Root = () => {
 
   return (
     <>
+      <CookieBanner />
       <Nav />
       <Routes>
         {/* Main single-page layout */}

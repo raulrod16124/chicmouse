@@ -127,7 +127,7 @@ src/
 
 ### 1.5 — Email de contacto funcional
 
-- [x] Cambiar el `<div>` con el email en `Contact.tsx` por `<a href="mailto:info@chicmouse.com">`
+- [x] Cambiar el `<div>` con el email en `Contact.tsx` por `<a href="mailto:admin@chicmouse.com">`
 - [x] Aplicar el estilo de link definido en la guía (`color: #3A86FF`, hover más brillante)
 
 **Resultado esperado:** El email es clicable y abre el cliente de correo del usuario.

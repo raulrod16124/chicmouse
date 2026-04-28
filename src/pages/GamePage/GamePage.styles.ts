@@ -196,7 +196,6 @@ export const GameHeroImageWrapper = styled(motion.div)`
 
   @media ${device.laptop} {
     order: -1;
-    max-height: 340px;
   }
 `;
 
@@ -297,7 +296,7 @@ export const FeatureGrid = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     grid-template-columns: 1fr;
   }
 `;

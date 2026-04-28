@@ -74,7 +74,7 @@ export const PillarGrid = styled(motion.div)`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     grid-template-columns: 1fr;
   }
 `;

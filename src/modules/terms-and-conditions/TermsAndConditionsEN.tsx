@@ -6,7 +6,7 @@ import {
   TextSubtitle,
   TextTitle,
   TextList,
-} from "./TermsAndConditions.styles";
+} from './TermsAndConditions.styles';
 
 export const TermsAndConditionsEN = () => {
   return (
@@ -79,12 +79,11 @@ export const TermsAndConditionsEN = () => {
           </li>
           <li>
             <Text>
-              <strong>Website</strong> refers to chicmouse, accessible from{" "}
+              <strong>Website</strong> refers to chicmouse, accessible from{' '}
               <a
                 href="https://chicmouse.com/"
                 rel="external nofollow noopener"
-                target="_blank"
-              >
+                target="_blank">
                 https://chicmouse.com/
               </a>
             </Text>
@@ -292,17 +291,16 @@ export const TermsAndConditionsEN = () => {
         </Text>
         <TextList>
           <li>
-            <Text>By email: chicmouse.group@gmail.com</Text>
+            <Text>By email: admin@chicmouse.com</Text>
           </li>
           <li>
             <Text>
-              By visiting this page on our website:{" "}
+              By visiting this page on our website:{' '}
               <a
-                href="https://chicmouse.com/contact"
+                href="https://chicmouse.com/"
                 rel="external nofollow noopener"
-                target="_blank"
-              >
-                https://chicmouse.com/contact
+                target="_blank">
+                https://chicmouse.com/
               </a>
             </Text>
           </li>

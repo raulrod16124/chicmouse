@@ -6,14 +6,14 @@ import {
   TextSubtitle,
   TextTitle,
   TextList,
-} from "./TermsAndConditions.styles";
+} from './TermsAndConditions.styles';
 
 export const TermsAndConditionsES = () => {
   return (
     <TermsAndConditionsWrapper data-testid="terms-and-conditions-es-page-id">
       <TermsAndConditionsContent>
         <TextTitle>Términos y condiciones</TextTitle>
-        <Text>Última actualización: 03 de enero de 2024</Text>
+        <Text>Última actualización: 28 de abril de 2026</Text>
         <Text>
           Lea atentamente estos términos y condiciones antes de utilizar Nuestro
           Servicio.
@@ -81,12 +81,11 @@ export const TermsAndConditionsES = () => {
           </li>
           <li>
             <Text>
-              <strong>Sitio web</strong> se refiere a chicmouse, accesible desde{" "}
+              <strong>Sitio web</strong> se refiere a chicmouse, accesible desde{' '}
               <a
                 href="https://chicmouse.com/"
                 rel="external nofollow noopener"
-                target="_blank"
-              >
+                target="_blank">
                 https://chicmouse.com/
               </a>
             </Text>
@@ -304,15 +303,14 @@ export const TermsAndConditionsES = () => {
           contactarnos:
         </Text>
         <TextList>
-          <Text>Por correo electrónico: chicmouse.group@gmail.com</Text>
+          <Text>Por correo electrónico: admin@chicmouse.com</Text>
           <Text>
-            Visitando esta página en nuestro sitio web:{" "}
+            Visitando esta página en nuestro sitio web:{' '}
             <a
-              href="https://chicmouse.com/contact"
+              href="https://chicmouse.com/"
               rel="external nofollow noopener"
-              target="_blank"
-            >
-              https://chicmouse.com/contact
+              target="_blank">
+              https://chicmouse.com/
             </a>
           </Text>
         </TextList>

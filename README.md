@@ -58,5 +58,5 @@ The platform is designed with a dark, modern aesthetic and supports both English
 
 Have questions, feedback, or a collaboration idea?
 
-- **Website**: [chicmouse.com/contact](https://chicmouse.com/contact)
-- **Email**: chicmouse.group@gmail.com
+- **Website**: [chicmouse.com/contact](https://chicmouse.com/)
+- **Email**: admin@chicmouse.com

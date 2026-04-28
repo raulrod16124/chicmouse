@@ -138,8 +138,8 @@ export const HeroImageWrapper = styled(motion.div)`
   margin-top: auto;
 
   @media ${device.laptop} {
+    display: block;
     margin-top: ${spacing_dvh[2]};
-    max-height: 300px;
   }
 `;
 

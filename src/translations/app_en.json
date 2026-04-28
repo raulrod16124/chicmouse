@@ -87,5 +87,10 @@
   "stellarMergeFeature2Title": "Deep Progression",
   "stellarMergeFeature2Body": "Dozens of unique celestial bodies to unlock. Every session builds toward something bigger, with meaningful milestones and rewards along the way.",
   "stellarMergeFeature3Title": "Calm by Design",
-  "stellarMergeFeature3Body": "No timers, no intrusive ads. Stellar Merge is designed to be a focused, relaxing experience — play entirely at your own pace."
+  "stellarMergeFeature3Body": "No timers, no intrusive ads. Stellar Merge is designed to be a focused, relaxing experience — play entirely at your own pace.",
+  "cookieBannerTitle": "We use cookies",
+  "cookieBannerDescription": "We use Google Fonts (external CDN) to display text on this site. Your contact form data is never stored on your device.",
+  "cookieBannerAccept": "Accept all",
+  "cookieBannerReject": "Only necessary",
+  "cookieBannerPolicy": "Privacy Policy"
 }

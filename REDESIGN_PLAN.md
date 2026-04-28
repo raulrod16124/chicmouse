@@ -10,17 +10,18 @@
 
 La imagen de referencia muestra una web de **7 secciones verticales** en una sola URL (`/`):
 
-| # | Sección | Fondo | Contenido clave |
-|---|---------|-------|-----------------|
-| 1 | **Nav** | `#0B132B` sticky | Logo CM · Links de sección · ES/EN toggle |
-| 2 | **Hero** | `#0B132B` | H1 + CTA + Ilustración geométrica del ratón |
-| 3 | **Featured Game** | `#1C2541` | Card de Matchup + screenshots + badges |
-| 4 | **Studio Statement** | `#0B132B` | Headline + 2 columnas de texto |
-| 5 | **Team Glimpse** | `#1C2541` | 2 tarjetas de equipo con avatares de iniciales |
-| 6 | **Contact Strip** | `#0B132B` | Email clicable en grande |
-| 7 | **Footer** | `#0B132B` | Links legales + copyright |
+| #   | Sección              | Fondo            | Contenido clave                                |
+| --- | -------------------- | ---------------- | ---------------------------------------------- |
+| 1   | **Nav**              | `#0B132B` sticky | Logo CM · Links de sección · ES/EN toggle      |
+| 2   | **Hero**             | `#0B132B`        | H1 + CTA + Ilustración geométrica del ratón    |
+| 3   | **Featured Game**    | `#1C2541`        | Card de Matchup + screenshots + badges         |
+| 4   | **Studio Statement** | `#0B132B`        | Headline + 2 columnas de texto                 |
+| 5   | **Team Glimpse**     | `#1C2541`        | 2 tarjetas de equipo con avatares de iniciales |
+| 6   | **Contact Strip**    | `#0B132B`        | Email clicable en grande                       |
+| 7   | **Footer**           | `#0B132B`        | Links legales + copyright                      |
 
 **Rutas que se mantienen como páginas independientes** (no colapsan en el scroll):
+
 - `/applications/:id` — Página de detalle de cada juego
 - `/privacy-policy` — Política de privacidad
 - `/terms-and-conditions` — Términos y condiciones
@@ -32,6 +33,7 @@ La imagen de referencia muestra una web de **7 secciones verticales** en una sol
 ## 2. Delta arquitectónico
 
 ### Estado actual
+
 ```
 / → Home (page)
 /applications → Applications (page)
@@ -43,6 +45,7 @@ La imagen de referencia muestra una web de **7 secciones verticales** en una sol
 ```
 
 ### Estado objetivo
+
 ```
 / → SinglePage (scroll-driven, 7 secciones en una URL)
   ├── #hero
@@ -57,12 +60,14 @@ La imagen de referencia muestra una web de **7 secciones verticales** en una sol
 ```
 
 ### Módulos eliminados
+
 - `modules/aboutUs/` → contenido migrado a `sections/TeamGlimpse/`
 - `modules/contact/` → contenido migrado a `sections/ContactStrip/`
 - `modules/apps/Applications.*` → contenido migrado a `sections/FeaturedGame/`
 - `modules/home/` → reemplazado por `sections/Hero/`
 
 ### Módulos que se mantienen íntegros
+
 - `modules/apps/components/AppPage.*`
 - `modules/privacy-policy/`
 - `modules/terms-and-conditions/`
@@ -153,6 +158,7 @@ const href = isHome ? `#${sectionId}` : `/#${sectionId}`;
 ```
 
 ### CSS global para scroll suave
+
 ```css
 html {
   scroll-behavior: smooth;
@@ -160,6 +166,7 @@ html {
 ```
 
 ### Nuevo Root.tsx simplificado
+
 ```
 / → <SinglePage />
 /applications/:id → <AppPage />
@@ -170,6 +177,7 @@ html {
 ```
 
 ### Nuevo type `SectionId`
+
 ```ts
 // types/index.ts
 export type SectionId = 'hero' | 'games' | 'studio' | 'team' | 'contact';
@@ -186,15 +194,18 @@ export type SectionId = 'hero' | 'games' | 'studio' | 'team' | 'contact';
 **Archivo:** `modules/nav/Nav.tsx` (refactorizado)
 
 **Comportamiento:**
+
 - `position: sticky; top: 0; z-index: 100`
 - Altura: `64px`
 - Fondo: `#0B132B` con `border-bottom: 1px solid rgba(255,255,255,0.06)` al hacer scroll (`scrollY > 10`)
 - Blur backdrop: `backdrop-filter: blur(12px)` cuando hay scroll
 
 **Layout desktop (≥1024px):**
+
 ```
 [CM logo] ←──── flex gap ────→ [Home · Games · Studio · Contact] [ES / EN]
 ```
+
 - Logo: `cm.webp` 40×20px, link a `/`
 - Links de sección: `font-size: 14px, font-weight: 500`, color `#C9D1D9`
   - Link activo (basado en `IntersectionObserver`): `color: #F5F5F5`, `border-bottom: 2px solid #FFC857`
@@ -202,19 +213,22 @@ export type SectionId = 'hero' | 'games' | 'studio' | 'team' | 'contact';
 - Language toggle: texto `ES` / `EN`, separador `/`, activo en `#FFC857`
 
 **Layout mobile (<1024px):**
+
 ```
 [CM logo] [☰ Menu icon — Lucide `Menu`]
 ```
+
 - Al pulsar: abre `MobileDrawer` (panel que entra desde la derecha, fondo `#1C2541`)
 - Dentro del drawer: links de sección + language toggle
 - Cerrar: Lucide `X` en la esquina
 
 **Props interface:**
+
 ```ts
 interface INavLink {
   label: string;
   sectionId: SectionId | null; // null = home (scroll to top)
-  externalPath?: string;       // para cuando se está en otra ruta
+  externalPath?: string; // para cuando se está en otra ruta
 }
 ```
 
@@ -228,6 +242,7 @@ interface INavLink {
 **ID de sección:** `id="hero"`
 
 **Layout desktop (≥1024px):** 2 columnas, `max-width: 1200px`, centrado
+
 ```
 [Col 55%]                          [Col 45%]
  ── label "INDIE GAME STUDIO"       hero-illustration.webp
@@ -239,11 +254,13 @@ interface INavLink {
 **Layout tablet (768–1023px):** 2 columnas estrechas, ilustración más pequeña (300px)
 
 **Layout mobile (<768px):** columna única
+
 - Ilustración arriba (200px, centrada)
 - Texto debajo
 - CTA ocupa ancho completo
 
 **Elementos:**
+
 - **Eyebrow label:** `"INDIE GAME STUDIO"` — uppercase, `font-size: 11px`, `letter-spacing: 0.12em`, `color: #C9D1D9`
 - **Accent bar:** barra amarilla `4px × 48px`, `border-radius: 2px`, encima del eyebrow
 - **H1:** `"We build mobile experiences worth playing."` — `font-size: 40px` desktop / `28px` mobile, `font-weight: 700`, `line-height: 1.15`, `color: #F5F5F5`
@@ -263,6 +280,7 @@ interface INavLink {
 **Fondo:** `#1C2541`
 
 **Layout desktop:** contenido en `max-width: 1200px`
+
 ```
 [Eyebrow: "OUR LATEST GAME"]
 [App icon 80px] [Nombre H2] [Tagline body]
@@ -271,11 +289,13 @@ interface INavLink {
 ```
 
 **Layout mobile:**
+
 - Header (icon + nombre) mantiene fila
 - Screenshots: scroll horizontal (`overflow-x: scroll`, `snap-type: x mandatory`)
 - Badges: apiladas verticalmente o en fila si caben
 
 **Props interface:**
+
 ```ts
 interface IFeaturedGameProps {
   name: string;
@@ -289,6 +309,7 @@ interface IFeaturedGameProps {
 ```
 
 **Elementos:**
+
 - **Eyebrow label:** `"OUR LATEST GAME"` con `border-bottom: 2px solid #FFC857` debajo
 - **App icon:** 80×80px, `border-radius: 18px` (estilo app store)
 - **Game name:** `font-size: 28px`, `font-weight: 600`
@@ -309,6 +330,7 @@ interface IFeaturedGameProps {
 **Fondo:** `#0B132B`
 
 **Layout desktop:** centrado, `max-width: 800px`
+
 ```
 [Thin yellow bar 4×40px]
 [Eyebrow: "STUDIO STATEMENT"]
@@ -319,6 +341,7 @@ interface IFeaturedGameProps {
 **Layout mobile:** todo centrado, cols apiladas
 
 **Elementos:**
+
 - **Accent bar:** `4px × 40px`, `background: #FFC857`, `border-radius: 2px`, centrada
 - **Eyebrow:** uppercase, `11px`, `0.12em` letter-spacing, `#C9D1D9`
 - **H2:** `font-size: 32px` desktop / `24px` mobile, `font-weight: 700`, `text-align: center`
@@ -340,6 +363,7 @@ interface IFeaturedGameProps {
 **Layout mobile:** tarjetas apiladas
 
 **Cada tarjeta:**
+
 ```
 [Avatar grande de iniciales]  [Nombre H3]
                                [Rol — caption]
@@ -347,11 +371,13 @@ interface IFeaturedGameProps {
 ```
 
 **Avatar de iniciales:**
+
 - Div `96px × 96px`, fondo `transparent`, borde `3px solid accentColor`
 - Texto de iniciales: `font-size: 32px`, `font-weight: 700`, `color: accentColor`
 - TP → `accentColor: #FFC857` / TD → `accentColor: #3A86FF`
 
 **Props interface:**
+
 ```ts
 interface ITeamMember {
   initials: string;
@@ -363,6 +389,7 @@ interface ITeamMember {
 ```
 
 **Datos:**
+
 - TP: Tomas Petit · Creative Director · `"Combining art and design to create immersive worlds."`
 - TD: Tanya Davis · Lead Developer · `"Building robust and fluid gameplay mechanics."`
 
@@ -375,13 +402,15 @@ interface ITeamMember {
 **Fondo:** `#0B132B`
 
 **Layout:** centrado, `max-width: 600px`
+
 ```
 [Lucide `Mail` 24px icon]
 [H3: "Want to get in touch?"]
-[mailto link: info@chicmouse.com]
+[mailto link: admin@chicmouse.com]
 ```
 
 **Elementos:**
+
 - Icon `Mail` de lucide-react, `color: #C9D1D9`, `size: 24`
 - H3: `font-size: 22px`, `font-weight: 600`, `color: #F5F5F5`
 - Email link: `font-size: 22px` desktop / `18px` mobile, `color: #3A86FF`, hover: `color: #6FA8FF`
@@ -399,6 +428,7 @@ interface ITeamMember {
 **Border:** `border-top: 1px solid rgba(255,255,255,0.06)`
 
 **Layout desktop:** fila única centrada
+
 ```
 [Privacy Policy]  ·  [Terms & Conditions]          © 2025 ChicMouse Studio. All rights reserved.
 ```
@@ -406,6 +436,7 @@ interface ITeamMember {
 **Layout mobile:** apilado verticalmente, centrado
 
 **Elementos:**
+
 - Links: `font-size: 12px`, `color: #C9D1D9`, hover: `color: #F5F5F5`
 - Copyright: `font-size: 12px`, `color: #C9D1D9`
 - `padding: 24px 0`
@@ -416,14 +447,14 @@ interface ITeamMember {
 
 ### 6.1 — Assets existentes (mantener sin cambios)
 
-| Asset | Uso en nuevo diseño |
-|-------|---------------------|
-| `cm.webp` | Logo en Nav |
-| `matchupIcon.webp` | Featured Game — icono del juego |
-| `matchupImage_1.webp` | Featured Game — screenshot 1 |
-| `matchupImage_2.webp` | Featured Game — screenshot 2 |
-| `matchupImage_3.webp` | Featured Game — screenshot 3 |
-| `matchupImage_4.webp` | Featured Game — screenshot 4 |
+| Asset                 | Uso en nuevo diseño             |
+| --------------------- | ------------------------------- |
+| `cm.webp`             | Logo en Nav                     |
+| `matchupIcon.webp`    | Featured Game — icono del juego |
+| `matchupImage_1.webp` | Featured Game — screenshot 1    |
+| `matchupImage_2.webp` | Featured Game — screenshot 2    |
+| `matchupImage_3.webp` | Featured Game — screenshot 3    |
+| `matchupImage_4.webp` | Featured Game — screenshot 4    |
 
 ### 6.2 — Assets nuevos a generar
 
@@ -439,15 +470,15 @@ interface ITeamMember {
 **🎨 PROMPT para generación AI (Midjourney / DALL-E 3 / Stitch):**
 
 ```
-Flat 2D vector illustration. Abstract geometric stylized mouse silhouette 
-constructed entirely from bold curved line strokes — NO fills, NO gradients, 
+Flat 2D vector illustration. Abstract geometric stylized mouse silhouette
+constructed entirely from bold curved line strokes — NO fills, NO gradients,
 NO shadows, NO textures, NO gradients, NO cartoon elements.
 
-Style: premium minimal, geometric, like a studio logo expanded into a 
+Style: premium minimal, geometric, like a studio logo expanded into a
 hero illustration. Think Lusion.co or Linear.app illustration aesthetic.
 
 Construction:
-- A large sweeping C-shaped arc forming the mouse body and head, 
+- A large sweeping C-shaped arc forming the mouse body and head,
   rendered as a thick stroke (weight ~14px equivalent) in warm yellow #FFC857
 - A smaller half-circle arc suggesting an ear, also in #FFC857
 - A long sinuous S-curve suggesting the mouse tail, in electric blue #3A86FF
@@ -455,9 +486,9 @@ Construction:
 - An additional inner arc or partial circle in #F5F5F5 for depth
 - Optionally, a subtle partial arc in blue behind the main yellow shape
 
-Composition: roughly centered in a square canvas, the shapes flow 
-counterclockwise. The letter C and M are subtly embedded in the mouse 
-silhouette — it should feel like you can read "CM" and see a mouse at 
+Composition: roughly centered in a square canvas, the shapes flow
+counterclockwise. The letter C and M are subtly embedded in the mouse
+silhouette — it should feel like you can read "CM" and see a mouse at
 the same time.
 
 Background: transparent or solid #0B132B (dark navy)
@@ -473,9 +504,9 @@ Output: flat vector, suitable for web hero section.
 
 ```
 Create a minimalist SVG illustration of a stylized geometric mouse.
-Use only thick strokes (no fills) in three colors: #FFC857 (yellow), 
-#3A86FF (blue), #F5F5F5 (white). 
-The mouse should be abstracted into 3–5 curved arcs/circles. 
+Use only thick strokes (no fills) in three colors: #FFC857 (yellow),
+#3A86FF (blue), #F5F5F5 (white).
+The mouse should be abstracted into 3–5 curved arcs/circles.
 No cartoon features. No outlines or borders around shapes.
 The composition should suggest the letters C and M embedded in the mouse form.
 600×600 viewBox, transparent background.
@@ -505,7 +536,11 @@ The composition should suggest the letters C and M embedded in the mouse form.
 **Recomendación:** implementar como CSS `radial-gradient` — no requiere imagen:
 
 ```css
-background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+background-image: radial-gradient(
+  circle,
+  rgba(255, 255, 255, 0.04) 1px,
+  transparent 1px
+);
 background-size: 24px 24px;
 ```
 
@@ -515,20 +550,21 @@ background-size: 24px 24px;
 
 Instalar: `yarn add lucide-react`
 
-| Icono Lucide | Componente | Uso exacto |
-|---|---|---|
-| `Menu` | `Nav / MobileDrawer` | Hamburger — abrir menú mobile |
-| `X` | `Nav / MobileDrawer` | Cerrar menú mobile |
-| `ArrowRight` | `Hero`, `FeaturedGame` | CTA secundario "About the studio →", "Learn more →" |
-| `Mail` | `ContactStrip` | Icono decorativo antes del H3 |
-| `ExternalLink` | `ContactStrip`, `FeaturedGame` | Links externos (stores, email) |
-| `Star` | `FeaturedGame` (opcional) | Rating de la app si se muestra |
-| `Smartphone` | `FeaturedGame` (opcional) | Label "Mobile game" |
+| Icono Lucide   | Componente                     | Uso exacto                                          |
+| -------------- | ------------------------------ | --------------------------------------------------- |
+| `Menu`         | `Nav / MobileDrawer`           | Hamburger — abrir menú mobile                       |
+| `X`            | `Nav / MobileDrawer`           | Cerrar menú mobile                                  |
+| `ArrowRight`   | `Hero`, `FeaturedGame`         | CTA secundario "About the studio →", "Learn more →" |
+| `Mail`         | `ContactStrip`                 | Icono decorativo antes del H3                       |
+| `ExternalLink` | `ContactStrip`, `FeaturedGame` | Links externos (stores, email)                      |
+| `Star`         | `FeaturedGame` (opcional)      | Rating de la app si se muestra                      |
+| `Smartphone`   | `FeaturedGame` (opcional)      | Label "Mobile game"                                 |
 
 **Uso estándar en el codebase:**
+
 ```tsx
-import { ArrowRight } from 'lucide-react';
-<ArrowRight size={16} color={colors.accentBlue} />
+import {ArrowRight} from 'lucide-react';
+<ArrowRight size={16} color={colors.accentBlue} />;
 ```
 
 **Regla de consistencia:** todos los iconos en `size={16}` para inline, `size={24}` para decorativos standalone. Stroke width por defecto (2px). Color siempre desde tokens.
@@ -539,27 +575,28 @@ import { ArrowRight } from 'lucide-react';
 
 Usar los breakpoints existentes en `utils/index.ts`:
 
-| Nombre | Valor | Uso |
-|--------|-------|-----|
-| `mobileS` | 320px | Edge case — verificar sin romper |
-| `mobileM` | 375px | **Target mobile principal** |
-| `tablet` | 768px | **Punto de quiebre col 1→2** |
-| `laptop` | 1024px | **Nav colapsa a hamburger aquí** |
-| `laptopL` | 1440px | Max-width container |
+| Nombre    | Valor  | Uso                              |
+| --------- | ------ | -------------------------------- |
+| `mobileS` | 320px  | Edge case — verificar sin romper |
+| `mobileM` | 375px  | **Target mobile principal**      |
+| `tablet`  | 768px  | **Punto de quiebre col 1→2**     |
+| `laptop`  | 1024px | **Nav colapsa a hamburger aquí** |
+| `laptopL` | 1440px | Max-width container              |
 
 ### Tabla de comportamiento por sección
 
-| Sección | <768px | 768–1023px | ≥1024px |
-|---------|--------|------------|---------|
-| **Nav** | Logo + hamburger; links en drawer | Logo + hamburger | Logo + links inline + ES/EN |
-| **Hero** | 1 col: ilustración encima (200px) + texto | 2 col: 50/50, ilustración 280px | 2 col: 55/45, ilustración 420px |
-| **Featured Game** | Header fila; screenshots scroll-h; badges apiladas | Header fila; screenshots scroll-h (más anchas) | Todo horizontal, 4 screenshots visibles |
-| **Studio Statement** | 1 col: todo centrado y apilado | 1 col centrado | 2 col: texto partido en columnas |
-| **Team Glimpse** | 1 col: tarjetas apiladas ancho completo | 2 col: tarjetas en fila | 2 col: tarjetas en fila, max 900px |
-| **Contact Strip** | Centrado, email font-size 18px | Centrado, email font-size 20px | Centrado, email font-size 24px |
-| **Footer** | Apilado centrado | 2 col: links izq, copyright der | 1 fila: links + copyright |
+| Sección              | <768px                                             | 768–1023px                                     | ≥1024px                                 |
+| -------------------- | -------------------------------------------------- | ---------------------------------------------- | --------------------------------------- |
+| **Nav**              | Logo + hamburger; links en drawer                  | Logo + hamburger                               | Logo + links inline + ES/EN             |
+| **Hero**             | 1 col: ilustración encima (200px) + texto          | 2 col: 50/50, ilustración 280px                | 2 col: 55/45, ilustración 420px         |
+| **Featured Game**    | Header fila; screenshots scroll-h; badges apiladas | Header fila; screenshots scroll-h (más anchas) | Todo horizontal, 4 screenshots visibles |
+| **Studio Statement** | 1 col: todo centrado y apilado                     | 1 col centrado                                 | 2 col: texto partido en columnas        |
+| **Team Glimpse**     | 1 col: tarjetas apiladas ancho completo            | 2 col: tarjetas en fila                        | 2 col: tarjetas en fila, max 900px      |
+| **Contact Strip**    | Centrado, email font-size 18px                     | Centrado, email font-size 20px                 | Centrado, email font-size 24px          |
+| **Footer**           | Apilado centrado                                   | 2 col: links izq, copyright der                | 1 fila: links + copyright               |
 
 ### Reglas globales de responsive
+
 - `min-height: 44px` en todos los elementos táctiles
 - No horizontal overflow en ningún breakpoint
 - `padding-inline: 20px` en mobile como margen lateral mínimo
@@ -571,6 +608,7 @@ Usar los breakpoints existentes en `utils/index.ts`:
 ## 9. Nuevas claves de traducción necesarias
 
 ### `app_en.json` — añadir:
+
 ```json
 {
   "heroEyebrow": "INDIE GAME STUDIO",
@@ -600,6 +638,7 @@ Usar los breakpoints existentes en `utils/index.ts`:
 ## 10. Fases de implementación
 
 ### Fase A — Infraestructura base
+
 - [ ] `yarn add lucide-react`
 - [ ] Añadir `scroll-behavior: smooth` en `src/index.css`
 - [ ] Añadir `SectionId` type en `types/index.ts`
@@ -608,6 +647,7 @@ Usar los breakpoints existentes en `utils/index.ts`:
 - [ ] Añadir todas las claves de traducción en `app_en.json` y `app_es.json`
 
 ### Fase B — Nav refactorizado
+
 - [ ] Actualizar `modules/nav/Nav.tsx`: links de sección con anchor href
 - [ ] Crear `modules/nav/components/MobileDrawer.tsx` con Lucide `Menu` / `X`
 - [ ] Lógica de link activo basada en `IntersectionObserver` (hook `useActiveSection`)
@@ -615,6 +655,7 @@ Usar los breakpoints existentes en `utils/index.ts`:
 - [ ] Verificar comportamiento en 375px, 768px, 1440px
 
 ### Fase C — Sección Hero
+
 - [ ] Crear `sections/Hero/Hero.tsx` y `Hero.styles.ts`
 - [ ] Implementar layout 2-col con grid CSS
 - [ ] Placeholder para ilustración (color block #1C2541 de 420px) hasta tener el asset
@@ -622,6 +663,7 @@ Usar los breakpoints existentes en `utils/index.ts`:
 - [ ] Animación de entrada con `fadeUp` (ya definido en `animations/variants.ts`)
 
 ### Fase D — Sección Featured Game
+
 - [ ] Crear `sections/FeaturedGame/FeaturedGame.tsx` y `.styles.ts`
 - [ ] Scroll horizontal de screenshots en mobile con `scroll-snap`
 - [ ] Descargar y añadir `badge-appstore.svg` y `badge-googleplay.svg`
@@ -629,31 +671,37 @@ Usar los breakpoints existentes en `utils/index.ts`:
 - [ ] `whileInView` animation (scroll reveal)
 
 ### Fase E — Sección Studio Statement
+
 - [ ] Crear `sections/StudioStatement/StudioStatement.tsx` y `.styles.ts`
 - [ ] Layout 2-col en desktop / 1-col en mobile
 - [ ] Accent bar amarilla (CSS puro — no imagen)
 
 ### Fase F — Sección Team Glimpse
+
 - [ ] Crear `sections/TeamGlimpse/TeamGlimpse.tsx` y `.styles.ts`
 - [ ] Migrar lógica de avatares de iniciales desde `modules/aboutUs/`
 - [ ] Cards en fila desktop / apiladas mobile
 - [ ] `whileInView` animation con stagger entre tarjetas
 
 ### Fase G — Sección Contact Strip
+
 - [ ] Crear `sections/ContactStrip/ContactStrip.tsx` y `.styles.ts`
 - [ ] Lucide `Mail` icon
-- [ ] Link `mailto:info@chicmouse.com` estilado como texto grande
+- [ ] Link `mailto:admin@chicmouse.com` estilado como texto grande
 
 ### Fase H — Footer simplificado
+
 - [ ] Refactorizar `common/Footer.tsx` al nuevo diseño minimal
 - [ ] Layout responsive 1-fila / apilado
 
 ### Fase I — Assets hero
+
 - [ ] Generar `hero-illustration.webp` con el prompt de §6.2
 - [ ] Integrar en `sections/Hero/`
 - [ ] Verificar que se ve bien en los 3 breakpoints principales
 
 ### Fase J — Limpieza
+
 - [ ] Eliminar `modules/aboutUs/` (contenido ya migrado a TeamGlimpse)
 - [ ] Eliminar `modules/contact/` (contenido ya migrado a ContactStrip)
 - [ ] Eliminar `modules/apps/Applications.*` (ya no existe como página)

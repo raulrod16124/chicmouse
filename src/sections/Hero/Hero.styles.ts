@@ -48,7 +48,8 @@ export const HeroEyebrow = styled.p`
   width: 90%;
 
   @media ${device.laptop} {
-    width: 100%;
+    width: 90%;
+    align-self: center;
   }
 `;
 
@@ -83,8 +84,8 @@ export const HeroCtas = styled.div`
 
 export const HeroCtaPrimary = styled.button`
   height: 48px;
-  padding: 0 ${spacing[6]};
   border-radius: 8px;
+  padding: 0 ${spacing[6]};
   border: none;
   cursor: pointer;
   font-size: 15px;
@@ -103,6 +104,11 @@ export const HeroCtaPrimary = styled.button`
   &:focus-visible {
     outline: 2px solid ${colors.accentYellow};
     outline-offset: 3px;
+  }
+
+  @media ${device.laptop} {
+    padding: 0 ${spacing[2]};
+    font-size: 14px;
   }
 `;
 
@@ -128,6 +134,10 @@ export const HeroCtaSecondary = styled.button`
   &:focus-visible {
     outline: 2px solid ${colors.accentYellow};
     outline-offset: 3px;
+  }
+  @media ${device.laptop} {
+    padding: ${spacing[4]} ${spacing[3]};
+    font-size: 14px;
   }
 `;
 

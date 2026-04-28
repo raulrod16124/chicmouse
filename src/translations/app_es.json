@@ -87,10 +87,12 @@
   "stellarMergeFeature2Title": "Progresión profunda",
   "stellarMergeFeature2Body": "Decenas de cuerpos celestes únicos para desbloquear. Cada sesión construye algo más grande, con hitos y recompensas significativas en el camino.",
   "cookieBannerTitle": "Usamos cookies",
-  "cookieBannerDescription": "Utilizamos Google Fonts (CDN externa) para mostrar texto en este sitio. Los datos del formulario de contacto nunca se almacenan en tu dispositivo.",
+  "cookieBannerDescription": "Utilizamos Google Fonts (CDN externa) para mostrar texto en este sitio. Al enviar el formulario de contacto, tu nombre y correo electrónico se remiten a nuestra bandeja de entrada — no se almacenan en tu dispositivo.",
   "cookieBannerAccept": "Aceptar todo",
   "cookieBannerReject": "Solo las necesarias",
   "cookieBannerPolicy": "Política de privacidad",
   "stellarMergeFeature3Title": "Calmado por diseño",
-  "stellarMergeFeature3Body": "Sin temporizadores ni anuncios intrusivos. Stellar Merge está diseñado para ser una experiencia relajante y enfocada — juega completamente a tu ritmo."
+  "stellarMergeFeature3Body": "Sin temporizadores ni anuncios intrusivos. Stellar Merge está diseñado para ser una experiencia relajante y enfocada — juega completamente a tu ritmo.",
+  "privacyConsentLabel": "He leído y acepto la <a>Política de Privacidad</a>",
+  "privacyConsentRequired": "Debes aceptar la Política de Privacidad para enviar tu mensaje."
 }

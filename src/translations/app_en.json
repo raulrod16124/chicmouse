@@ -89,8 +89,10 @@
   "stellarMergeFeature3Title": "Calm by Design",
   "stellarMergeFeature3Body": "No timers, no intrusive ads. Stellar Merge is designed to be a focused, relaxing experience — play entirely at your own pace.",
   "cookieBannerTitle": "We use cookies",
-  "cookieBannerDescription": "We use Google Fonts (external CDN) to display text on this site. Your contact form data is never stored on your device.",
+  "cookieBannerDescription": "We use Google Fonts (external CDN) to display text on this site. When you submit the contact form your name and email are sent to our inbox — they are not stored on your device.",
   "cookieBannerAccept": "Accept all",
   "cookieBannerReject": "Only necessary",
-  "cookieBannerPolicy": "Privacy Policy"
+  "cookieBannerPolicy": "Privacy Policy",
+  "privacyConsentLabel": "I have read and accept the <a>Privacy Policy</a>",
+  "privacyConsentRequired": "You must accept the Privacy Policy to send your message."
 }

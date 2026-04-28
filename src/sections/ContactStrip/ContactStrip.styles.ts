@@ -239,3 +239,63 @@ export const ContactFeedback = styled.p<{$isError?: boolean}>`
     ${({$isError}) =>
       $isError ? 'rgba(255,107,107,0.25)' : 'rgba(107,203,119,0.25)'};
 `;
+
+export const ContactPrivacyRow = styled.label`
+  display: flex;
+  align-items: flex-start;
+  gap: ${spacing[3]};
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.5;
+  color: ${colors.textSecondary};
+
+  a {
+    color: ${colors.accentBlue};
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity ${transitions.fast};
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+`;
+
+export const ContactPrivacyCheckbox = styled.input`
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: ${colors.bgSecondary};
+  cursor: pointer;
+  margin-top: 1px;
+  transition:
+    background ${transitions.fast},
+    border-color ${transitions.fast};
+  position: relative;
+
+  &:checked {
+    background: ${colors.accentBlue};
+    border-color: ${colors.accentBlue};
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 1px;
+      width: 6px;
+      height: 10px;
+      border: 2px solid #fff;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${colors.accentBlue};
+    outline-offset: 2px;
+  }
+`;

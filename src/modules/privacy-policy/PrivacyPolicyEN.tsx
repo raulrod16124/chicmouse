@@ -106,7 +106,12 @@ export const PrivacyPolicyEN = () => {
           <Text>This Website may collect the following personal data:</Text>
           <TextList>
             <li>
-              <Text>Email address (via the contact form)</Text>
+              <Text>Full name (provided voluntarily via the contact form)</Text>
+            </li>
+            <li>
+              <Text>
+                Email address (provided voluntarily via the contact form)
+              </Text>
             </li>
             <li>
               <Text>
@@ -115,7 +120,11 @@ export const PrivacyPolicyEN = () => {
             </li>
           </TextList>
           <Text>
-            No additional data is collected, and no user profiles are created.
+            The name and email address submitted through the contact form are
+            transmitted directly to ChicMouse Studio&apos;s email inbox for the
+            sole purpose of responding to your enquiry. This data is{' '}
+            <strong>not stored on our servers</strong>, is not shared with third
+            parties, and no user profiles are created.
           </Text>
         </PolicySection>
 
@@ -312,6 +321,15 @@ export const PrivacyPolicyEN = () => {
               <Text>Not used for advertising purposes</Text>
             </li>
           </TextList>
+          <TextSecondarySubtitle>Contact form data</TextSecondarySubtitle>
+          <Text>
+            When you use the contact form, you voluntarily provide your{' '}
+            <strong>name</strong> and <strong>email address</strong>. This data
+            is not stored on our servers or on your device — it is transmitted
+            directly to ChicMouse Studio&apos;s email inbox for the sole purpose
+            of responding to your enquiry. The form requires you to accept this
+            Privacy Policy before submitting.
+          </Text>
         </PolicySection>
 
         <PolicySection>

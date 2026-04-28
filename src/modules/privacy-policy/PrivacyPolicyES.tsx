@@ -112,8 +112,14 @@ export const PrivacyPolicyES = () => {
           <TextList>
             <li>
               <Text>
-                Direcci&oacute;n de correo electr&oacute;nico (a trav&eacute;s
-                del formulario de contacto)
+                Nombre completo (facilitado voluntariamente a trav&eacute;s del
+                formulario de contacto)
+              </Text>
+            </li>
+            <li>
+              <Text>
+                Direcci&oacute;n de correo electr&oacute;nico (facilitada
+                voluntariamente a trav&eacute;s del formulario de contacto)
               </Text>
             </li>
             <li>
@@ -124,7 +130,12 @@ export const PrivacyPolicyES = () => {
             </li>
           </TextList>
           <Text>
-            No se recopilan datos adicionales ni se crean perfiles de usuario.
+            El nombre y el correo electr&oacute;nico facilitados a trav&eacute;s
+            del formulario de contacto se transmiten directamente a la bandeja
+            de entrada de ChicMouse Studio con la &uacute;nica finalidad de
+            atender tu consulta. Estos datos{' '}
+            <strong>no se almacenan en nuestros servidores</strong>, no se ceden
+            a terceros y no se crean perfiles de usuario.
           </Text>
         </PolicySection>
 
@@ -332,6 +343,18 @@ export const PrivacyPolicyES = () => {
               <Text>No se utilizan con fines publicitarios</Text>
             </li>
           </TextList>
+          <TextSecondarySubtitle>
+            Datos del formulario de contacto
+          </TextSecondarySubtitle>
+          <Text>
+            Al utilizar el formulario de contacto, facilitas voluntariamente tu{' '}
+            <strong>nombre</strong> y <strong>correo electr&oacute;nico</strong>
+            . Estos datos no se almacenan en nuestros servidores ni en tu
+            dispositivo &mdash; se transmiten directamente a la bandeja de
+            entrada de ChicMouse Studio con la &uacute;nica finalidad de atender
+            tu consulta. El formulario requiere que aceptes esta Pol&iacute;tica
+            de Privacidad antes de enviarlo.
+          </Text>
         </PolicySection>
 
         <PolicySection>

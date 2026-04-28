@@ -1,5 +1,6 @@
 import {useState, useCallback} from 'react';
-import {useIntl} from 'react-intl';
+import {useIntl, FormattedMessage} from 'react-intl';
+import {Link} from 'react-router-dom';
 import {Send, Mail, MapPin} from 'lucide-react';
 import {motion} from 'framer-motion';
 import {fadeUp} from 'animations/variants';
@@ -25,6 +26,8 @@ import {
   ContactTextarea,
   ContactSubmit,
   ContactFeedback,
+  ContactPrivacyRow,
+  ContactPrivacyCheckbox,
 } from './ContactStrip.styles';
 
 const CONTACT_ENDPOINT = 'http://localhost:8080/contact';
@@ -36,8 +39,9 @@ export const ContactStrip = () => {
   const reducedMotion = useReducedMotion();
 
   const [form, setForm] = useState<IContactForm>(EMPTY_FORM);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [status, setStatus] = useState<
-    'idle' | 'sending' | 'sent' | 'error' | 'validation'
+    'idle' | 'sending' | 'sent' | 'error' | 'validation' | 'privacy'
   >('idle');
 
   const handleChange = useCallback(
@@ -55,6 +59,10 @@ export const ContactStrip = () => {
         setStatus('validation');
         return;
       }
+      if (!privacyAccepted) {
+        setStatus('privacy');
+        return;
+      }
       setStatus('sending');
       try {
         const res = await fetch(CONTACT_ENDPOINT, {
@@ -66,6 +74,7 @@ export const ContactStrip = () => {
         if (data.status === 'Message Sent') {
           setStatus('sent');
           setForm(EMPTY_FORM);
+          setPrivacyAccepted(false);
         } else {
           setStatus('error');
         }
@@ -73,7 +82,7 @@ export const ContactStrip = () => {
         setStatus('error');
       }
     },
-    [form],
+    [form, privacyAccepted],
   );
 
   const headingAnimProps = reducedMotion
@@ -176,9 +185,30 @@ export const ContactStrip = () => {
                 />
               </ContactLabel>
 
+              <ContactPrivacyRow>
+                <ContactPrivacyCheckbox
+                  type="checkbox"
+                  checked={privacyAccepted}
+                  onChange={e => setPrivacyAccepted(e.target.checked)}
+                />
+                <span>
+                  <FormattedMessage
+                    id="privacyConsentLabel"
+                    values={{
+                      a: chunks => <Link to="/privacy-policy">{chunks}</Link>,
+                    }}
+                  />
+                </span>
+              </ContactPrivacyRow>
+
               {status === 'validation' && (
                 <ContactFeedback $isError>
                   {intl.formatMessage({id: 'missingFields'})}
+                </ContactFeedback>
+              )}
+              {status === 'privacy' && (
+                <ContactFeedback $isError>
+                  {intl.formatMessage({id: 'privacyConsentRequired'})}
                 </ContactFeedback>
               )}
               {status === 'sent' && (

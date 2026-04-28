@@ -77,7 +77,8 @@ export const ContactStrip = () => {
         setStatus('sent');
         setForm(EMPTY_FORM);
         setPrivacyAccepted(false);
-      } catch {
+      } catch (err) {
+        console.error('[EmailJS error]', err);
         setStatus('error');
       }
     },

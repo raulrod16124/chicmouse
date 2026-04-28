@@ -38,5 +38,13 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./src/test-setup.ts'],
+    assetsInclude: [
+      '**/*.webp',
+      '**/*.png',
+      '**/*.jpg',
+      '**/*.jpeg',
+      '**/*.svg',
+      '**/*.gif',
+    ],
   },
 });

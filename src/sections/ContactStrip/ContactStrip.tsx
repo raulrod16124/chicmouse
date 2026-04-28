@@ -3,6 +3,7 @@ import {useIntl, FormattedMessage} from 'react-intl';
 import {Link} from 'react-router-dom';
 import {Send, Mail, MapPin} from 'lucide-react';
 import {motion} from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import {fadeUp} from 'animations/variants';
 import {useReducedMotion} from 'hooks/useReducedMotion';
 import type {IContactForm} from 'types';
@@ -30,7 +31,9 @@ import {
   ContactPrivacyCheckbox,
 } from './ContactStrip.styles';
 
-const CONTACT_ENDPOINT = 'http://localhost:8080/contact';
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
 
 const EMPTY_FORM: IContactForm = {name: '', email: '', message: ''};
 
@@ -65,19 +68,15 @@ export const ContactStrip = () => {
       }
       setStatus('sending');
       try {
-        const res = await fetch(CONTACT_ENDPOINT, {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(form),
-        });
-        const data = (await res.json()) as {status: string};
-        if (data.status === 'Message Sent') {
-          setStatus('sent');
-          setForm(EMPTY_FORM);
-          setPrivacyAccepted(false);
-        } else {
-          setStatus('error');
-        }
+        await emailjs.send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          {name: form.name, email: form.email, message: form.message},
+          {publicKey: EMAILJS_PUBLIC_KEY},
+        );
+        setStatus('sent');
+        setForm(EMPTY_FORM);
+        setPrivacyAccepted(false);
       } catch {
         setStatus('error');
       }

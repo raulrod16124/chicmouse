@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://chicmouse.com/">
-    <img src="https://github.com/raulrod16124/chicmouse/blob/main/src/assets/logo.webp" alt="ChicMouse Studio" style="width: 150px;"/>
+    <img src="https://github.com/raulrod16124/chicmouse/src/assets/logo.webp" alt="ChicMouse Studio" style="width: 150px;"/>
   </a>
   <h1>ChicMouse Studio</h1>
   <p><em>Independent game & app studio — we craft experiences worth playing.</em></p>
@@ -51,30 +51,6 @@ The platform is designed with a dark, modern aesthetic and supports both English
 - **About Us** — Meet the team behind ChicMouse Studio.
 - **Contact** — Reach us directly through the built-in contact form.
 - **Legal** — Privacy Policy and Terms & Conditions for each product, available in English and Spanish.
-
----
-
-## 🛠️ Local Development
-
-```bash
-# Install dependencies
-yarn
-
-# Start dev server
-yarn dev
-
-# Run tests
-yarn test
-
-# Production build
-yarn build
-```
-
-The contact form backend runs separately:
-
-```bash
-node src/services/server.js
-```
 
 ---
 

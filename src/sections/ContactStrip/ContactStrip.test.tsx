@@ -1,16 +1,23 @@
 import {screen, fireEvent, waitFor} from '@testing-library/react';
-import {describe, test, expect, vi, beforeEach} from 'vitest';
+import {describe, test, expect, vi, beforeEach, afterEach} from 'vitest';
 import '@testing-library/jest-dom';
 import {ContactStrip} from './ContactStrip';
 import {renderWithRouter} from 'utils/test_utils';
 
+vi.mock('@emailjs/browser', () => ({
+  default: {
+    send: vi.fn(),
+  },
+}));
+
+import emailjs from '@emailjs/browser';
+
 beforeEach(() => {
-  // Prevent real fetch calls — individual tests override as needed
-  vi.stubGlobal('fetch', vi.fn());
+  vi.clearAllMocks();
 });
 
 afterEach(() => {
-  vi.unstubAllGlobals();
+  vi.restoreAllMocks();
 });
 
 describe('ContactStrip', () => {
@@ -73,12 +80,7 @@ describe('ContactStrip', () => {
   });
 
   test('successful submission shows success message', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn().mockResolvedValue({
-        json: async () => ({status: 'Message Sent'}),
-      }),
-    );
+    vi.mocked(emailjs.send).mockResolvedValueOnce({status: 200, text: 'OK'});
     renderWithRouter(<ContactStrip />);
     fireEvent.change(screen.getByPlaceholderText('Your name...'), {
       target: {value: 'John', name: 'name'},
@@ -99,10 +101,7 @@ describe('ContactStrip', () => {
   });
 
   test('failed fetch shows error message', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn().mockRejectedValue(new Error('Network error')),
-    );
+    vi.mocked(emailjs.send).mockRejectedValueOnce(new Error('Network error'));
     renderWithRouter(<ContactStrip />);
     fireEvent.change(screen.getByPlaceholderText('Your name...'), {
       target: {value: 'John', name: 'name'},

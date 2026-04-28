@@ -37,14 +37,12 @@ describe('SinglePage', () => {
 
   test('scrolls to section when state.scrollTo is set', () => {
     const scrollIntoViewMock = vi.fn();
-    // Attach mock before rendering so the element already has it
     document.getElementById = vi.fn().mockReturnValue({
       scrollIntoView: scrollIntoViewMock,
     });
     renderWithRouter(<SinglePage />, {
       initialEntries: [{pathname: '/', state: {scrollTo: 'games'}}],
     });
-    // The setTimeout delay is 80ms — fast-forward timers
     vi.useFakeTimers();
     vi.runAllTimers();
     vi.useRealTimers();

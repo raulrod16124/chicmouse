@@ -1,6 +1,6 @@
 import {render} from '@testing-library/react';
 import {IntlProvider} from 'react-intl';
-import {MemoryRouter} from 'react-router-dom';
+import {MemoryRouter, type MemoryRouterProps} from 'react-router-dom';
 import appEn from '../../translations/app_en.json';
 
 export const mockIntl = () => {
@@ -36,7 +36,9 @@ export const IntlProviderForTests = ({children}: ILanguageProviderProps) => {
  */
 export const renderWithRouter = (
   ui: React.ReactElement,
-  {initialEntries = ['/']} = {},
+  {
+    initialEntries = ['/'],
+  }: {initialEntries?: MemoryRouterProps['initialEntries']} = {},
 ) =>
   render(
     <MemoryRouter initialEntries={initialEntries}>

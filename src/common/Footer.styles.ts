@@ -6,30 +6,38 @@ import {typography, transitions} from 'tokens';
 
 export const FooterWrapper = styled.div`
   width: 100%;
-  height: 50px;
   background-color: ${colors.bgSecondary};
   border-top: 1px solid ${colors.surface};
-  @media ${device.laptop} {
-    max-width: 100vw;
-  }
 `;
 
 export const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
+  height: 50px;
   width: 1000px;
   margin: 0 auto;
   @media ${device.laptop} {
     width: 90%;
   }
+  @media ${device.tablet} {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    padding: 16px 0;
+  }
 `;
 
 export const TextLinksWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px;
   width: 40%;
+  @media ${device.tablet} {
+    width: auto;
+  }
 `;
 
 export const TextLink = styled(Link)`
@@ -40,15 +48,9 @@ export const TextLink = styled(Link)`
   &:hover {
     color: ${colors.textPrimary};
   }
-  @media ${device.mobileL} {
-    font-size: ${typography.fontSize.xs};
-  }
 `;
 
 export const FooterText = styled.p`
   font-size: ${typography.caption.fontSize};
   color: ${colors.textSecondary};
-  @media ${device.mobileL} {
-    font-size: ${typography.fontSize.xs};
-  }
 `;

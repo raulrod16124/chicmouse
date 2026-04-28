@@ -1,21 +1,20 @@
-import { useContext } from "react";
-import { WebBackground, Main, DefaultBackground } from "./App.styles";
-import { Root } from "routes/Root";
-import { LanguageContext } from "context/LanguageContext";
-import bg from "./../assets/bg.png";
+import {useContext} from 'react';
+import {Main, DefaultBackground} from './App.styles';
+import {Root} from 'routes/Root';
+import {LanguageContext} from 'context/LanguageContext';
+import {LoadingScreen} from 'common/LoadingScreen';
 
 function App() {
-  const { language } = useContext(LanguageContext);
+  const {language} = useContext(LanguageContext);
 
   if (!language) {
-    return <div>Loading...</div>;
+    return <LoadingScreen />;
   }
 
   return (
     <>
       <DefaultBackground />
       <Main data-testid="main-app-id">
-        <WebBackground src={bg} alt="background-image" />
         <Root />
       </Main>
     </>

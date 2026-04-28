@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { device } from "utils";
-import theme from "./../theme.json";
+import { colors } from "tokens/colors";
 
 export const Main = styled.div`
   position: relative;
@@ -9,25 +8,10 @@ export const Main = styled.div`
 `;
 
 export const DefaultBackground = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background: linear-gradient(
-    ${theme.colors.blueGreen},
-    ${theme.colors.blueDark}
-  );
-`;
-
-export const WebBackground = styled.img`
-  position: absolute;
-  position: fixed;
-  width: 100vw;
-  max-width: 100vw;
-  height: 100%;
-  background-size: 100% 100%;
-  @media ${device.mobileL} {
-    height: 100vh;
-  }
+  background-color: ${colors.bgPrimary};
 `;

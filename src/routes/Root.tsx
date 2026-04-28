@@ -1,94 +1,139 @@
-import { ErrorPage } from "common/ErrorPage";
-import { Footer } from "common/Footer";
-import { LanguageContext } from "context/LanguageContext";
-import { AboutUs } from "modules/aboutUs/AboutUs";
-import { Applications } from "modules/apps/Applications";
-import AppPage from "modules/apps/components/AppPage";
-import { Contact } from "modules/contact/Contact";
-import { Home } from "modules/home/Home";
-import { Nav } from "modules/nav/Nav";
-import { MatchupPrivacyPolicyEN } from "modules/privacy-policy/MatchupPrivacyPolicyEN";
-import { MatchupPrivacyPolicyES } from "modules/privacy-policy/MatchupPrivacyPolicyES";
-import { PrivacyPolicyEN } from "modules/privacy-policy/PrivacyPolicyEN";
-import { PrivacyPolicyES } from "modules/privacy-policy/PrivacyPolicyES";
-import { MatchupTermsAndConditionsEN } from "modules/terms-and-conditions/MatchupTermsAndConditionsEN";
-import { MatchupTermsAndConditionsES } from "modules/terms-and-conditions/MatchupTermsAndConditionsES";
-import { TermsAndConditionsEN } from "modules/terms-and-conditions/TermsAndConditionsEN";
-import { TermsAndConditionsES } from "modules/terms-and-conditions/TermsAndConditionsES";
-import { useContext } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
-import { BodyWrapper } from "./Root.styles";
+import {CookieBanner} from 'common/CookieBanner/CookieBanner';
+import {ErrorPage} from 'common/ErrorPage';
+import {Footer} from 'common/Footer';
+import {LoadingScreen} from 'common/LoadingScreen';
+import {LanguageContext} from 'context/LanguageContext';
+import {Nav} from 'modules/nav/Nav';
+import {SinglePage} from 'pages/SinglePage';
+import React, {Suspense, useContext} from 'react';
+import {Outlet, Route, Routes, useLocation} from 'react-router-dom';
+import {BodyWrapper, PageContent} from './Root.styles';
+import {AnimatePresence, motion} from 'framer-motion';
+import {pageTransition} from 'animations/variants';
+import {useReducedMotion} from 'hooks/useReducedMotion';
 
-const pages = [
-  "",
-  "home",
-  "applications",
-  "about-us",
-  "contact",
-  "privacy-policy",
-  "terms-and-conditions",
-];
+const GamePage = React.lazy(() => import('pages/GamePage/GamePage'));
+const StellarMergePrivacyPolicyEN = React.lazy(() =>
+  import('modules/privacy-policy/StellarMergePrivacyPolicyEN').then(m => ({
+    default: m.StellarMergePrivacyPolicyEN,
+  })),
+);
+const StellarMergePrivacyPolicyES = React.lazy(() =>
+  import('modules/privacy-policy/StellarMergePrivacyPolicyES').then(m => ({
+    default: m.StellarMergePrivacyPolicyES,
+  })),
+);
+const PrivacyPolicyEN = React.lazy(() =>
+  import('modules/privacy-policy/PrivacyPolicyEN').then(m => ({
+    default: m.PrivacyPolicyEN,
+  })),
+);
+const PrivacyPolicyES = React.lazy(() =>
+  import('modules/privacy-policy/PrivacyPolicyES').then(m => ({
+    default: m.PrivacyPolicyES,
+  })),
+);
+const StellarMergeTermsAndConditionsEN = React.lazy(() =>
+  import('modules/terms-and-conditions/StellarMergeTermsAndConditionsEN').then(
+    m => ({default: m.StellarMergeTermsAndConditionsEN}),
+  ),
+);
+const StellarMergeTermsAndConditionsES = React.lazy(() =>
+  import('modules/terms-and-conditions/StellarMergeTermsAndConditionsES').then(
+    m => ({default: m.StellarMergeTermsAndConditionsES}),
+  ),
+);
+const TermsAndConditionsEN = React.lazy(() =>
+  import('modules/terms-and-conditions/TermsAndConditionsEN').then(m => ({
+    default: m.TermsAndConditionsEN,
+  })),
+);
+const TermsAndConditionsES = React.lazy(() =>
+  import('modules/terms-and-conditions/TermsAndConditionsES').then(m => ({
+    default: m.TermsAndConditionsES,
+  })),
+);
 
-export const Root = () => {
-  const { pathname } = useLocation();
-  const { language } = useContext(LanguageContext);
-
-  const wrongPathname = !pages.includes(pathname.split("/")[1]);
-
-  if (wrongPathname) {
-    return <ErrorPage />;
-  }
+/** Shared layout wrapper for all secondary (non-home) pages. */
+const SecondaryLayout = () => {
+  const {pathname} = useLocation();
+  const reducedMotion = useReducedMotion();
 
   return (
-    <div>
+    <BodyWrapper>
+      <PageContent>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={pathname}
+            variants={reducedMotion ? undefined : pageTransition}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            style={{width: '100%'}}>
+            <Suspense fallback={<LoadingScreen />}>
+              <Outlet />
+            </Suspense>
+          </motion.div>
+        </AnimatePresence>
+      </PageContent>
+      <Footer />
+    </BodyWrapper>
+  );
+};
+
+export const Root = () => {
+  const {language} = useContext(LanguageContext);
+
+  return (
+    <>
+      <CookieBanner />
       <Nav />
-      <BodyWrapper>
-        <Routes>
-          <Route path={"/"} element={<Home />} />
-          <Route path={"/home"} element={<Home />} />
-          <Route path={"/applications"} element={<Applications />} />
-          <Route path={"applications/:id"} element={<AppPage />} />
+      <Routes>
+        {/* Main single-page layout */}
+        <Route path="/" element={<SinglePage />} />
+
+        {/* Secondary pages — legal / app detail */}
+        <Route element={<SecondaryLayout />}>
+          <Route path="applications/:id" element={<GamePage />} />
           <Route
-            path={"applications/:id/privacy-policy"}
+            path="applications/:id/privacy-policy"
             element={
-              language === "es-ES" ? (
-                <MatchupPrivacyPolicyES />
+              language === 'es-ES' ? (
+                <StellarMergePrivacyPolicyES />
               ) : (
-                <MatchupPrivacyPolicyEN />
+                <StellarMergePrivacyPolicyEN />
               )
             }
           />
           <Route
-            path={"applications/:id/terms-and-conditions"}
+            path="applications/:id/terms-and-conditions"
             element={
-              language === "es-ES" ? (
-                <MatchupTermsAndConditionsES />
+              language === 'es-ES' ? (
+                <StellarMergeTermsAndConditionsES />
               ) : (
-                <MatchupTermsAndConditionsEN />
+                <StellarMergeTermsAndConditionsEN />
               )
             }
           />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact" element={<Contact />} />
           <Route
-            path="/privacy-policy"
+            path="privacy-policy"
             element={
-              language === "es-ES" ? <PrivacyPolicyES /> : <PrivacyPolicyEN />
+              language === 'es-ES' ? <PrivacyPolicyES /> : <PrivacyPolicyEN />
             }
           />
           <Route
-            path="/terms-and-conditions"
+            path="terms-and-conditions"
             element={
-              language === "es-ES" ? (
+              language === 'es-ES' ? (
                 <TermsAndConditionsES />
               ) : (
                 <TermsAndConditionsEN />
               )
             }
           />
-        </Routes>
-        <Footer />
-      </BodyWrapper>
-    </div>
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 };

@@ -1,312 +1,342 @@
 import {
+  Building2,
+  CheckCircle,
+  FileText,
+  Globe,
+  Link2,
+  Lock,
+  RefreshCw,
+  Scale,
+  ScrollText,
+  Shield,
+  ShieldAlert,
+  XCircle,
+} from 'lucide-react';
+import {
+  PolicyHero,
+  PolicyHeroEyebrow,
+  PolicyHeroIconWrapper,
+  PolicyHeroMeta,
+  PolicyHeroTitle,
+  PolicyIntro,
+  PolicySection,
+  PolicySectionHeader,
+  PolicySectionIcon,
   TermsAndConditionsContent,
   TermsAndConditionsWrapper,
   Text,
+  TextList,
   TextSecondarySubtitle,
   TextSubtitle,
-  TextTitle,
-  TextList,
-} from "./TermsAndConditions.styles";
+} from './TermsAndConditions.styles';
 
 export const TermsAndConditionsEN = () => {
   return (
     <TermsAndConditionsWrapper data-testid="terms-and-conditions-en-page-id">
+      <PolicyHero>
+        <PolicyHeroIconWrapper>
+          <ScrollText size={32} />
+        </PolicyHeroIconWrapper>
+        <PolicyHeroEyebrow>ChicMouse Studio · Legal</PolicyHeroEyebrow>
+        <PolicyHeroTitle>Terms and Conditions</PolicyHeroTitle>
+        <PolicyHeroMeta>Last updated: April 28, 2026</PolicyHeroMeta>
+      </PolicyHero>
+
       <TermsAndConditionsContent>
-        <TextTitle>Terms and Conditions</TextTitle>
-        <Text>Last updated: January 03, 2024</Text>
-        <Text>
-          Please read these terms and conditions carefully before using Our
-          Service.
-        </Text>
-        <TextSubtitle>Interpretation and Definitions</TextSubtitle>
-        <TextSecondarySubtitle>Interpretation</TextSecondarySubtitle>
-        <Text>
-          The words of which the initial letter is capitalized have meanings
-          defined under the following conditions. The following definitions
-          shall have the same meaning regardless of whether they appear in
-          singular or in plural.
-        </Text>
-        <TextSecondarySubtitle>Definitions</TextSecondarySubtitle>
-        <Text>For the purposes of these Terms and Conditions:</Text>
-        <TextList>
-          <li>
-            <Text>
-              <strong>Affiliate</strong> means an entity that controls, is
-              controlled by or is under common control with a party, where
-              &quot;control&quot; means ownership of 50% or more of the shares,
-              equity interest or other securities entitled to vote for election
-              of directors or other managing authority.
-            </Text>
-          </li>
-          <li>
-            <Text>
-              <strong>Country</strong> refers to: Spain
-            </Text>
-          </li>
-          <li>
-            <Text>
-              <strong>Company</strong> (referred to as either &quot;the
-              Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot;
-              in this Agreement) refers to chicmouse.
-            </Text>
-          </li>
-          <li>
-            <Text>
-              <strong>Device</strong> means any device that can access the
-              Service such as a computer, a cellphone or a digital tablet.
-            </Text>
-          </li>
-          <li>
-            <Text>
-              <strong>Service</strong> refers to the Website.
-            </Text>
-          </li>
-          <li>
-            <Text>
-              <strong>Terms and Conditions</strong> (also referred as
-              &quot;Terms&quot;) mean these Terms and Conditions that form the
-              entire agreement between You and the Company regarding the use of
-              the Service.
-            </Text>
-          </li>
-          <li>
-            <Text>
-              <strong>Third-party Social Media Service</strong> means any
-              services or content (including data, information, products or
-              services) provided by a third-party that may be displayed,
-              included or made available by the Service.
-            </Text>
-          </li>
-          <li>
-            <Text>
-              <strong>Website</strong> refers to chicmouse, accessible from{" "}
-              <a
-                href="https://chicmouse.com/"
-                rel="external nofollow noopener"
-                target="_blank"
-              >
-                https://chicmouse.com/
-              </a>
-            </Text>
-          </li>
-          <li>
-            <Text>
-              <strong>You</strong> means the individual accessing or using the
-              Service, or the company, or other legal entity on behalf of which
-              such individual is accessing or using the Service, as applicable.
-            </Text>
-          </li>
-        </TextList>
-        <TextSubtitle>Acknowledgment</TextSubtitle>
-        <Text>
-          These are the Terms and Conditions governing the use of this Service
-          and the agreement that operates between You and the Company. These
-          Terms and Conditions set out the rights and obligations of all users
-          regarding the use of the Service.
-        </Text>
-        <Text>
-          Your access to and use of the Service is conditioned on Your
-          acceptance of and compliance with these Terms and Conditions. These
-          Terms and Conditions apply to all visitors, users and others who
-          access or use the Service.
-        </Text>
-        <Text>
-          By accessing or using the Service You agree to be bound by these Terms
-          and Conditions. If You disagree with any part of these Terms and
-          Conditions then You may not access the Service.
-        </Text>
-        <Text>
-          Your access to and use of the Service is also conditioned on Your
-          acceptance of and compliance with the Privacy Policy of the Company.
-          Our Privacy Policy describes Our policies and procedures on the
-          collection, use and disclosure of Your personal information when You
-          use the Application or the Website and tells You about Your privacy
-          rights and how the law protects You. Please read Our Privacy Policy
-          carefully before using Our Service.
-        </Text>
-        <TextSubtitle>Links to Other Websites</TextSubtitle>
-        <Text>
-          Our Service may contain links to third-party web sites or services
-          that are not owned or controlled by the Company.
-        </Text>
-        <Text>
-          The Company has no control over, and assumes no responsibility for,
-          the content, privacy policies, or practices of any third party web
-          sites or services. You further acknowledge and agree that the Company
-          shall not be responsible or liable, directly or indirectly, for any
-          damage or loss caused or alleged to be caused by or in connection with
-          the use of or reliance on any such content, goods or services
-          available on or through any such web sites or services.
-        </Text>
-        <Text>
-          We strongly advise You to read the terms and conditions and privacy
-          policies of any third-party web sites or services that You visit.
-        </Text>
-        <TextSubtitle>Termination</TextSubtitle>
-        <Text>
-          We may terminate or suspend Your access immediately, without prior
-          notice or liability, for any reason whatsoever, including without
-          limitation if You breach these Terms and Conditions.
-        </Text>
-        <Text>
-          Upon termination, Your right to use the Service will cease
-          immediately.
-        </Text>
-        <TextSubtitle>Limitation of Liability</TextSubtitle>
-        <Text>
-          Notwithstanding any damages that You might incur, the entire liability
-          of the Company and any of its suppliers under any provision of this
-          Terms and Your exclusive remedy for all of the foregoing shall be
-          limited to the amount actually paid by You through the Service or 100
-          USD if You haven't purchased anything through the Service.
-        </Text>
-        <Text>
-          To the maximum extent permitted by applicable law, in no event shall
-          the Company or its suppliers be liable for any special, incidental,
-          indirect, or consequential damages whatsoever (including, but not
-          limited to, damages for loss of profits, loss of data or other
-          information, for business interruption, for personal injury, loss of
-          privacy arising out of or in any way related to the use of or
-          inability to use the Service, third-party software and/or third-party
-          hardware used with the Service, or otherwise in connection with any
-          provision of this Terms), even if the Company or any supplier has been
-          advised of the possibility of such damages and even if the remedy
-          fails of its essential purpose.
-        </Text>
-        <Text>
-          Some states do not allow the exclusion of implied warranties or
-          limitation of liability for incidental or consequential damages, which
-          means that some of the above limitations may not apply. In these
-          states, each party's liability will be limited to the greatest extent
-          permitted by law.
-        </Text>
-        <TextSubtitle>
-          &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; Disclaimer
-        </TextSubtitle>
-        <Text>
-          The Service is provided to You &quot;AS IS&quot; and &quot;AS
-          AVAILABLE&quot; and with all faults and defects without warranty of
-          any kind. To the maximum extent permitted under applicable law, the
-          Company, on its own behalf and on behalf of its Affiliates and its and
-          their respective licensors and service providers, expressly disclaims
-          all warranties, whether express, implied, statutory or otherwise, with
-          respect to the Service, including all implied warranties of
-          merchantability, fitness for a particular purpose, title and
-          non-infringement, and warranties that may arise out of course of
-          dealing, course of performance, usage or trade practice. Without
-          limitation to the foregoing, the Company provides no warranty or
-          undertaking, and makes no representation of any kind that the Service
-          will meet Your requirements, achieve any intended results, be
-          compatible or work with any other software, applications, systems or
-          services, operate without interruption, meet any performance or
-          reliability standards or be error free or that any errors or defects
-          can or will be corrected.
-        </Text>
-        <Text>
-          Without limiting the foregoing, neither the Company nor any of the
-          company's provider makes any representation or warranty of any kind,
-          express or implied: (i) as to the operation or availability of the
-          Service, or the information, content, and materials or products
-          included thereon; (ii) that the Service will be uninterrupted or
-          error-free; (iii) as to the accuracy, reliability, or currency of any
-          information or content provided through the Service; or (iv) that the
-          Service, its servers, the content, or e-mails sent from or on behalf
-          of the Company are free of viruses, scripts, trojan horses, worms,
-          malware, timebombs or other harmful components.
-        </Text>
-        <Text>
-          Some jurisdictions do not allow the exclusion of certain types of
-          warranties or limitations on applicable statutory rights of a
-          consumer, so some or all of the above exclusions and limitations may
-          not apply to You. But in such a case the exclusions and limitations
-          set forth in this section shall be applied to the greatest extent
-          enforceable under applicable law.
-        </Text>
-        <TextSubtitle>Governing Law</TextSubtitle>
-        <Text>
-          The laws of the Country, excluding its conflicts of law rules, shall
-          govern this Terms and Your use of the Service. Your use of the
-          Application may also be subject to other local, state, national, or
-          international laws.
-        </Text>
-        <TextSubtitle>Disputes Resolution</TextSubtitle>
-        <Text>
-          If You have any concern or dispute about the Service, You agree to
-          first try to resolve the dispute informally by contacting the Company.
-        </Text>
-        <TextSubtitle>For European Union (EU) Users</TextSubtitle>
-        <Text>
-          If You are a European Union consumer, you will benefit from any
-          mandatory provisions of the law of the country in which You are
-          resident.
-        </Text>
-        <TextSubtitle>United States Legal Compliance</TextSubtitle>
-        <Text>
-          You represent and warrant that (i) You are not located in a country
-          that is subject to the United States government embargo, or that has
-          been designated by the United States government as a &quot;terrorist
-          supporting&quot; country, and (ii) You are not listed on any United
-          States government list of prohibited or restricted parties.
-        </Text>
-        <TextSubtitle>Severability and Waiver</TextSubtitle>
-        <TextSecondarySubtitle>Severability</TextSecondarySubtitle>
-        <Text>
-          If any provision of these Terms is held to be unenforceable or
-          invalid, such provision will be changed and interpreted to accomplish
-          the objectives of such provision to the greatest extent possible under
-          applicable law and the remaining provisions will continue in full
-          force and effect.
-        </Text>
-        <TextSecondarySubtitle>Waiver</TextSecondarySubtitle>
-        <Text>
-          Except as provided herein, the failure to exercise a right or to
-          require performance of an obligation under these Terms shall not
-          affect a party's ability to exercise such right or require such
-          performance at any time thereafter nor shall the waiver of a breach
-          constitute a waiver of any subsequent breach.
-        </Text>
-        <TextSubtitle>Translation Interpretation</TextSubtitle>
-        <Text>
-          These Terms and Conditions may have been translated if We have made
-          them available to You on our Service. You agree that the original
-          English text shall prevail in the case of a dispute.
-        </Text>
-        <TextSubtitle>Changes to These Terms and Conditions</TextSubtitle>
-        <Text>
-          We reserve the right, at Our sole discretion, to modify or replace
-          these Terms at any time. If a revision is material We will make
-          reasonable efforts to provide at least 30 days' notice prior to any
-          new terms taking effect. What constitutes a material change will be
-          determined at Our sole discretion.
-        </Text>
-        <Text>
-          By continuing to access or use Our Service after those revisions
-          become effective, You agree to be bound by the revised terms. If You
-          do not agree to the new terms, in whole or in part, please stop using
-          the website and the Service.
-        </Text>
-        <TextSubtitle>Contact Us</TextSubtitle>
-        <Text>
-          If you have any questions about these Terms and Conditions, You can
-          contact us:
-        </Text>
-        <TextList>
-          <li>
-            <Text>By email: chicmouse.group@gmail.com</Text>
-          </li>
-          <li>
-            <Text>
-              By visiting this page on our website:{" "}
-              <a
-                href="https://chicmouse.com/contact"
-                rel="external nofollow noopener"
-                target="_blank"
-              >
-                https://chicmouse.com/contact
-              </a>
-            </Text>
-          </li>
-        </TextList>
+        <PolicyIntro>
+          <Text>
+            This document governs access to and use of the website{' '}
+            <a
+              href="https://chicmouse.com/"
+              rel="external nofollow noopener"
+              target="_blank">
+              https://chicmouse.com/
+            </a>{' '}
+            (hereinafter, the &quot;Website&quot;). Please read these terms
+            carefully before using our services.
+          </Text>
+        </PolicyIntro>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Building2 size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Identification</TextSubtitle>
+          </PolicySectionHeader>
+          <TextList>
+            <li>
+              <Text>
+                <strong>Owner:</strong> ChicMouse Studio
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Activity:</strong> Development of mobile games and
+                digital content
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Contact email:</strong> admin@chicmouse.com
+              </Text>
+            </li>
+          </TextList>
+          <Text>
+            ChicMouse Studio is an independent project managed by an individual
+            developer.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <CheckCircle size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Acceptance of Terms</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            Accessing and using this Website grants you the status of user and
+            implies full and unconditional acceptance of these Terms and
+            Conditions.
+          </Text>
+          <Text>
+            If you do not agree with these terms, you must refrain from using
+            the Website.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <FileText size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Purpose of the Website</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>The Website is intended to:</Text>
+          <TextList>
+            <li>
+              <Text>Present information about ChicMouse Studio</Text>
+            </li>
+            <li>
+              <Text>Showcase games, projects, and related content</Text>
+            </li>
+            <li>
+              <Text>Provide contact information</Text>
+            </li>
+          </TextList>
+          <Text>
+            The content of the Website is informational and promotional in
+            nature.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <XCircle size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Conditions of Use</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            The user agrees to use the Website appropriately and in accordance
+            with applicable law.
+          </Text>
+          <TextSecondarySubtitle>
+            The following is prohibited
+          </TextSecondarySubtitle>
+          <TextList>
+            <li>
+              <Text>
+                Using the Website for unlawful purposes or contrary to good
+                faith
+              </Text>
+            </li>
+            <li>
+              <Text>Attempting to access restricted areas of the system</Text>
+            </li>
+            <li>
+              <Text>Introducing viruses, malware, or any harmful code</Text>
+            </li>
+            <li>
+              <Text>
+                Engaging in activities that may damage, overload, or deteriorate
+                the Website
+              </Text>
+            </li>
+            <li>
+              <Text>
+                Copying, reproducing, or distributing content without
+                authorisation
+              </Text>
+            </li>
+          </TextList>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Shield size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Intellectual Property</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>All content on the Website, including but not limited to:</Text>
+          <TextList>
+            <li>
+              <Text>Designs and code</Text>
+            </li>
+            <li>
+              <Text>Graphics and logos</Text>
+            </li>
+            <li>
+              <Text>Texts</Text>
+            </li>
+            <li>
+              <Text>Video games and their elements</Text>
+            </li>
+          </TextList>
+          <Text>
+            are owned by ChicMouse Studio or used under licence, and are
+            protected by intellectual and industrial property regulations.
+            Reproduction, distribution, or modification without the express
+            authorisation of the owner is strictly prohibited.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Globe size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Game Content</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            The games, images, videos, and related materials displayed on the
+            Website are the property of ChicMouse Studio. Their use is limited
+            to personal and informational purposes.
+          </Text>
+          <Text>
+            Commercial use, redistribution, or modification without prior
+            authorisation is not permitted.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Link2 size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Links to Third Parties</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            The Website may contain links to third-party websites. ChicMouse
+            Studio is not responsible for the content, policies, or practices of
+            those external sites.
+          </Text>
+          <Text>
+            Access to these sites is the sole responsibility of the user.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <ShieldAlert size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Limitation of Liability</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            The Website is provided for informational purposes and offered
+            &quot;as is&quot;. ChicMouse Studio does not guarantee:
+          </Text>
+          <TextList>
+            <li>
+              <Text>The continuous availability of the Website</Text>
+            </li>
+            <li>
+              <Text>The absence of errors</Text>
+            </li>
+            <li>
+              <Text>The accuracy or up-to-date nature of the content</Text>
+            </li>
+          </TextList>
+          <Text>
+            To the extent permitted by law, ChicMouse Studio shall not be liable
+            for damages arising from use of the Website, including data loss or
+            service interruptions.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Lock size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Data Protection</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            The processing of personal data is governed by the{' '}
+            <a href="/privacy-policy">Privacy Policy</a> of the Website. Users
+            are advised to review that policy before using the Website.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <RefreshCw size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Modifications</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            ChicMouse Studio reserves the right to modify these Terms and
+            Conditions at any time. Changes will take effect from the moment
+            they are published on the Website.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <Scale size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Applicable Law</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            These Terms and Conditions are governed by Spanish law. For the
+            resolution of any dispute, the parties shall submit to the courts
+            and tribunals that correspond under applicable regulations.
+          </Text>
+        </PolicySection>
+
+        <PolicySection>
+          <PolicySectionHeader>
+            <PolicySectionIcon>
+              <FileText size={20} />
+            </PolicySectionIcon>
+            <TextSubtitle>Contact</TextSubtitle>
+          </PolicySectionHeader>
+          <Text>
+            For any queries relating to these Terms and Conditions, you can get
+            in touch via:
+          </Text>
+          <TextList>
+            <li>
+              <Text>Email: admin@chicmouse.com</Text>
+            </li>
+            <li>
+              <Text>
+                Website:{' '}
+                <a
+                  href="https://chicmouse.com/"
+                  rel="external nofollow noopener"
+                  target="_blank">
+                  https://chicmouse.com/
+                </a>
+              </Text>
+            </li>
+          </TextList>
+        </PolicySection>
       </TermsAndConditionsContent>
     </TermsAndConditionsWrapper>
   );

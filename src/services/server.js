@@ -1,7 +1,7 @@
-import express from "express";
-import cors from "cors";
-import nodemailer from "nodemailer";
-import dotenv from "dotenv"
+import express from 'express';
+import cors from 'cors';
+import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -13,38 +13,41 @@ const PASS = process.env.VITE_PASS;
 const router = express.Router();
 
 const app = express();
-app.use(cors({
-  origin: [URL_AUTHORIZED_1, URL_AUTHORIZED_2]
-}));
+app.use(
+  cors({
+    origin: [URL_AUTHORIZED_1, URL_AUTHORIZED_2, 'http://localhost:5173'],
+  }),
+);
 app.use(express.json());
-app.use("/", router);
-app.listen(8080, () => console.log("Server Running"));
+app.use('/', router);
+app.listen(8080, () => console.log('Server Running'));
 
 const contactEmail = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: EMAIL,
-        pass: PASS,
-    },
+  service: 'gmail',
+  auth: {
+    user: EMAIL,
+    pass: PASS,
+  },
 });
 
-contactEmail.verify((error) => {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log("Ready to Send");
-    }
+contactEmail.verify(error => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Ready to Send');
+  }
 });
 
-router.post("/contact", (req, res) => {
-    const name = req.body.name;
-    const email = req.body.email;
-    const message = req.body.message; 
-    const mail = {
-      from: name,
-      to: EMAIL,
-      subject: "Contact from chicmouse web form",
-      html: `
+router.post('/contact', (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const message = req.body.message;
+  const mail = {
+    from: `"${name}" <${EMAIL}>`,
+    replyTo: email,
+    to: EMAIL,
+    subject: 'Contact from chicmouse web form',
+    html: `
         <h3 style="display: block;">New message</h3>
         <hr/>
         <br/>
@@ -52,12 +55,12 @@ router.post("/contact", (req, res) => {
         <p>Email: ${email}</p>
         <p>Message: ${message}</p>
       `,
-    };
-    contactEmail.sendMail(mail, (error) => {
-      if (error) {
-        res.json({ status: "ERROR" });
-      } else {
-        res.json({ status: "Message Sent" });
-      }
-    });
+  };
+  contactEmail.sendMail(mail, error => {
+    if (error) {
+      res.json({status: 'ERROR'});
+    } else {
+      res.json({status: 'Message Sent'});
+    }
+  });
 });

@@ -1,8 +1,19 @@
 :root {
-  background-color: #ffffff;
+  background-color: #0b132b;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family:
+    'Poppins',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
 }

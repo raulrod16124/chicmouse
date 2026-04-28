@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://chicmouse.com/">
-    <img src="https://github.com/raulrod16124/chicmouse/blob/improve-web-system-and-design/src/assets/logo.webp" alt="ChicMouse Studio" style="width: 150px;"/>
+    <img src="https://github.com/raulrod16124/chicmouse/blob/main/src/assets/logo.webp" alt="ChicMouse Studio" style="width: 150px;"/>
   </a>
   <h1>ChicMouse Studio</h1>
   <p><em>Independent game & app studio — we craft experiences worth playing.</em></p>

@@ -71,7 +71,7 @@ export const Nav = memo(() => {
       if (isHome) {
         scrollToSection(id);
       } else {
-        navigate(id === 'hero' ? '/' : `/#${id}`);
+        navigate('/', {state: {scrollTo: id === 'hero' ? null : id}});
       }
       closeDrawer();
     },

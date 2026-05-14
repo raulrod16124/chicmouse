@@ -1,0 +1,109 @@
+Términos y Condiciones
+Última actualización: 14 de mayo de 2026
+
+1. Aceptación
+Al descargar, instalar o jugar a Stellar Merge ("el Juego"), aceptas estos
+Términos y Condiciones ("Términos"). Si no estás de acuerdo, no uses el Juego.
+Estos Términos constituyen un acuerdo vinculante entre tú y ChicMouse
+("nosotros", "nos", "nuestro").
+
+2. Elegibilidad
+Debes tener al menos 13 años para usar Stellar Merge. Si eres menor de 18 años
+(o de la mayoría de edad en tu jurisdicción), confirmas que tienes el permiso
+de tu padre, madre o tutor legal para usar el Juego.
+
+3. Cuenta
+Ciertas funciones (clasificaciones, clanes, desafíos diarios, Carrera de
+Puntuación) requieren una sesión anónima creada mediante Firebase Authentication.
+Eres responsable de toda la actividad que ocurra bajo tu sesión.
+Nos reservamos el derecho de suspender o eliminar cuentas que incumplan
+estos Términos.
+
+4. Licencia
+ChicMouse te otorga una licencia limitada, no exclusiva, intransferible
+y revocable para usar el Juego únicamente con fines personales y no comerciales.
+No puedes:
+- Copiar, modificar ni distribuir el Juego o su contenido.
+- Realizar ingeniería inversa, descompilar o desensamblar el Juego.
+- Crear obras derivadas basadas en el Juego.
+- Usar el Juego con fines comerciales sin permiso por escrito.
+
+5. Objetos Virtuales y Moneda
+El Juego incluye moneda virtual, objetos y bienes digitales ("Objetos Virtuales",
+incluyendo Monedas Estelares, cosméticos, avatares y recompensas del Stellar Pass).
+Los Objetos Virtuales:
+- No tienen valor monetario en el mundo real.
+- No se pueden transferir entre usuarios.
+- No se pueden canjear por dinero real.
+- No son reembolsables salvo cuando lo exija la legislación aplicable.
+
+Todos los Objetos Virtuales se te licencian, no se venden.
+ChicMouse se reserva el derecho de modificar, reequilibrar o eliminar cualquier
+Objeto Virtual en cualquier momento.
+
+6. Compras dentro de la Aplicación
+Cierto contenido puede adquirirse a través de Google Play (por ejemplo, Stellar Pass,
+packs de monedas, paquetes de cosméticos). Todas las compras son definitivas.
+Las solicitudes de reembolso están sujetas a las políticas de reembolso de Google Play:
+https://support.google.com/googleplay/answer/2479637
+Nos reservamos el derecho de modificar precios y contenido disponible en cualquier momento.
+
+7. Conducta Prohibida
+Aceptas no:
+- Hacer trampas, explotar mecánicas del juego ni usar bots o herramientas de automatización.
+- Acosar, amenazar o dañar a otros jugadores.
+- Intentar hackear, dañar o interrumpir los servidores o la infraestructura del juego.
+- Suplantar a otros usuarios o al personal de ChicMouse.
+- Cargar o transmitir código o contenido malicioso.
+- Infringir cualquier ley aplicable en relación con tu uso del Juego.
+
+Las infracciones podrán resultar en la suspensión inmediata o el bloqueo permanente
+de la cuenta, sin previo aviso ni reembolso de ninguna compra.
+
+8. Propiedad Intelectual
+Todo el contenido de Stellar Merge — incluyendo ilustraciones, música, efectos
+de sonido, código, textos, logotipos y diseños de personajes — es propiedad
+exclusiva de ChicMouse o sus licenciantes. Todos los derechos reservados.
+No adquieres ningún derecho de propiedad por usar el Juego.
+
+9. Contenido Generado por el Usuario
+Si el Juego te permite enviar contenido (por ejemplo, nombres de usuario o de
+clanes), confirmas que dicho contenido no infringe derechos de terceros ni
+vulnera la legislación aplicable. Otorgas a ChicMouse una licencia mundial,
+libre de regalías y perpetua para usar, mostrar y moderar ese contenido dentro
+del Juego.
+
+10. Disponibilidad y Actualizaciones
+Podemos modificar, actualizar, suspender o descontinuar cualquier parte del
+Juego en cualquier momento sin previo aviso. Las actualizaciones del Juego
+pueden alterar mecánicas, equilibrio o contenido. Las temporadas, clasificaciones
+y eventos de tiempo limitado pueden finalizar de forma permanente. El uso
+continuado del Juego tras cualquier actualización implica la aceptación de
+los cambios.
+
+11. Exclusión de Garantías
+El Juego se proporciona "tal cual" y "según disponibilidad", sin garantías de
+ningún tipo, expresas o implícitas, incluyendo garantías de comerciabilidad,
+idoneidad para un fin específico o disponibilidad ininterrumpida. No garantizamos
+que el Juego esté libre de errores ni de componentes dañinos.
+
+12. Limitación de Responsabilidad
+En la máxima medida permitida por la ley aplicable, ChicMouse no será responsable
+de daños indirectos, incidentales, especiales, consecuentes o punitivos derivados
+del uso o la imposibilidad de uso del Juego, incluyendo pérdida de progreso,
+objetos virtuales o datos de juego.
+
+13. Ley Aplicable
+Estos Términos se rigen por las leyes de España, sin tener en cuenta los principios
+de conflicto de leyes. Cualquier disputa estará sujeta a la jurisdicción de los
+tribunales españoles, salvo que seas un consumidor en el EEE con derecho a
+presentar reclamaciones ante tus tribunales locales.
+
+14. Cambios en estos Términos
+Podemos actualizar estos Términos periódicamente. Te notificaremos los cambios
+significativos mediante un aviso dentro de la aplicación al siguiente lanzamiento.
+El uso continuado del Juego tras los cambios implica la aceptación de los
+Términos actualizados.
+
+15. Contacto
+ChicMouse — admin@chicmouse.com

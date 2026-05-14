@@ -1,0 +1,110 @@
+Terms and Conditions
+Last updated: May 14, 2026
+
+1. Acceptance
+By downloading, installing, or playing Stellar Merge ("the Game"),
+you agree to these Terms and Conditions ("Terms"). If you do not agree,
+do not use the Game. These Terms form a binding agreement between you
+and ChicMouse ("we", "us", "our").
+
+2. Eligibility
+You must be at least 13 years old to use Stellar Merge. If you are
+under 18 (or the age of majority in your jurisdiction), you confirm
+that you have your parent's or legal guardian's permission to use
+the Game.
+
+3. Account
+Certain features (rankings, clans, daily challenges, Score Race)
+require an anonymous session created via Firebase Authentication.
+You are responsible for all activity that occurs under your session.
+We reserve the right to suspend or delete accounts that violate
+these Terms.
+
+4. Licence
+ChicMouse grants you a limited, non-exclusive, non-transferable,
+revocable licence to use the Game for personal, non-commercial
+purposes only. You may not:
+- Copy, modify, or distribute the Game or its content.
+- Reverse-engineer, decompile, or disassemble the Game.
+- Create derivative works based on the Game.
+- Use the Game for commercial purposes without written permission.
+
+5. Virtual Items and Currency
+The Game includes virtual currency, items, and digital goods
+("Virtual Items" — including Stellar Coins, cosmetics, avatars,
+and Stellar Pass rewards). Virtual Items:
+- Have no real-world monetary value.
+- Cannot be transferred between users.
+- Cannot be exchanged for real money.
+- Are not refundable except where required by applicable law.
+
+All Virtual Items are licensed to you, not sold.
+ChicMouse reserves the right to modify, rebalance, or remove any
+Virtual Items at any time.
+
+6. In-App Purchases
+Certain content may be purchased via Google Play (e.g., Stellar Pass,
+coin packs, cosmetic bundles). All purchases are final. Refund requests
+are subject to Google Play's refund policies:
+https://support.google.com/googleplay/answer/2479637
+We reserve the right to change prices and available content at any time.
+
+7. Prohibited Conduct
+You agree not to:
+- Cheat, exploit game mechanics, or use bots or automation tools.
+- Harass, threaten, or harm other players.
+- Attempt to hack, damage, or disrupt game servers or infrastructure.
+- Impersonate other users or ChicMouse staff.
+- Upload or transmit malicious code or content.
+- Violate any applicable law in connection with your use of the Game.
+
+Violations may result in immediate account suspension or permanent ban,
+without prior notice or refund of any purchases.
+
+8. Intellectual Property
+All content in Stellar Merge — including artwork, music, sound effects,
+code, text, logos, and character designs — is the exclusive property
+of ChicMouse or its licensors. All rights are reserved. You acquire
+no ownership rights by using the Game.
+
+9. User-Generated Content
+If the Game allows you to submit content (e.g., usernames, clan names),
+you confirm that such content does not infringe third-party rights
+or violate applicable law. You grant ChicMouse a worldwide,
+royalty-free, perpetual licence to use, display, and moderate
+that content within the Game.
+
+10. Availability and Updates
+We may modify, update, suspend, or discontinue any part of the Game
+at any time without prior notice. Game updates may alter mechanics,
+balance, or content. Seasons, rankings, and limited-time events may
+end permanently. Continued use of the Game after any update
+constitutes acceptance of the changes.
+
+11. Disclaimer of Warranties
+The Game is provided "as is" and "as available" without warranties
+of any kind, express or implied, including warranties of
+merchantability, fitness for a particular purpose, or uninterrupted
+availability. We do not warrant that the Game will be error-free
+or free of harmful components.
+
+12. Limitation of Liability
+To the maximum extent permitted by applicable law, ChicMouse shall
+not be liable for any indirect, incidental, special, consequential,
+or punitive damages arising from your use of or inability to use
+the Game, including loss of progress, virtual items, or game data.
+
+13. Governing Law
+These Terms are governed by the laws of Spain, without regard to
+conflict of law principles. Any disputes shall be subject to the
+jurisdiction of the courts of Spain, unless you are a consumer
+in the EEA entitled to bring claims before your local courts.
+
+14. Changes to These Terms
+We may update these Terms periodically. We will notify you of
+material changes via an in-app notice upon next launch. Continued
+use of the Game after changes constitutes acceptance of the
+updated Terms.
+
+15. Contact
+ChicMouse — admin@chicmouse.com

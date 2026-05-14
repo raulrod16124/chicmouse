@@ -252,16 +252,14 @@ export default function GamePage() {
               {intl.formatMessage({id: 'stellarMergeDescP2'})}
             </AboutParagraph>
           </AboutColumns>
-          {/* TODO: Pending to rewrite those files.
-            <LegalRow>
-                <LegalLink to={`/applications/${appName}/privacy-policy`}>
-                {intl.formatMessage({id: 'privacyPolicy'})}
-                </LegalLink>
-                <LegalLink to={`/applications/${appName}/terms-and-conditions`}>
-                {intl.formatMessage({id: 'termsAndConditions'})}
-                </LegalLink>
-            </LegalRow> 
-          */}
+          <LegalRow>
+            <LegalLink to={`/applications/${appName}/privacy-policy`}>
+              {intl.formatMessage({id: 'privacyPolicy'})}
+            </LegalLink>
+            <LegalLink to={`/applications/${appName}/terms-and-conditions`}>
+              {intl.formatMessage({id: 'termsAndConditions'})}
+            </LegalLink>
+          </LegalRow>
         </GameSectionInner>
       </GameSection>
     </GamePageWrapper>

@@ -105,6 +105,13 @@ export const StellarMergePrivacyPolicyES = () => {
               dispositivo y versi&oacute;n del sistema operativo para fines de
               compatibilidad e informes de errores.
             </li>
+            <li>
+              <strong>Identificador publicitario (GAID):</strong> un
+              identificador de dispositivo restablecible utilizado por Google
+              AdMob para mostrar anuncios en el juego. Puedes restablecerlo o
+              desactivarlo en Ajustes del dispositivo &rarr; Google &rarr;
+              Anuncios.
+            </li>
           </TextList>
         </PolicySection>
 

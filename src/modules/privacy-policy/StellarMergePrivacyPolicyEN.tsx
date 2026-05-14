@@ -96,6 +96,12 @@ export const StellarMergePrivacyPolicyEN = () => {
               <strong>Device data:</strong> basic device type and OS version for
               compatibility and crash-reporting purposes.
             </li>
+            <li>
+              <strong>Advertising ID (GAID):</strong> a resettable device
+              identifier used by Google AdMob to serve in-game advertisements.
+              You can reset or opt out of personalised ads in your device
+              Settings &rarr; Google &rarr; Ads.
+            </li>
           </TextList>
         </PolicySection>
 

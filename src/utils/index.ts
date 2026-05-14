@@ -3,6 +3,8 @@ import stellarMergeIcon from 'assets/stellar_merge_logo.webp';
 import stellarMergeImg1 from 'assets/stellar_merge_1.webp';
 import stellarMergeImg2 from 'assets/stellar_merge_2.webp';
 import stellarMergeImg3 from 'assets/stellar_merge_3.webp';
+import stellarMergeImg4 from 'assets/stellar_merge_4.webp';
+import stellarMergeImg5 from 'assets/stellar_merge_5.webp';
 import imageNotFound from 'assets/image_not_found.webp';
 
 // const { VITE_MATCHUP_APP_URL } = import.meta.env;
@@ -37,7 +39,13 @@ export const AppPages: IAppPage[] = [
   {
     name: 'stellar merge',
     description: 'stellarMergeDescription',
-    images: [stellarMergeImg1, stellarMergeImg2, stellarMergeImg3],
+    images: [
+      stellarMergeImg1,
+      stellarMergeImg2,
+      stellarMergeImg3,
+      stellarMergeImg4,
+      stellarMergeImg5,
+    ],
     icon: stellarMergeIcon,
     stars: 0.0,
     downloadsNumber: 0,

@@ -267,21 +267,17 @@ export const ScreenshotScroller = styled.div`
 `;
 
 export const ScreenshotItem = styled.img`
-  height: 440px;
-  width: auto;
-  aspect-ratio: 9 / 16;
-  border-radius: ${radius.md};
+  height: auto;
+  width: 200px;
+  aspect-ratio: 6 / 13;
   border: 1px solid rgba(255, 255, 255, 0.08);
   flex-shrink: 0;
   scroll-snap-align: start;
   object-fit: cover;
 
   @media ${device.tablet} {
-    height: 320px;
-  }
-
-  @media ${device.mobileL} {
-    height: 240px;
+    width: 150px;
+    aspect-ratio: 6 / 13;
   }
 `;
 

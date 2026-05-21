@@ -81,7 +81,7 @@ export const FeaturedGame = () => {
             </GameHeader>
 
             <GameTagline>
-              {intl.formatMessage({id: 'stellarMergeTagline'})}
+              {intl.formatMessage({id: 'stellarFusionTagline'})}
             </GameTagline>
 
             <GameDescription>

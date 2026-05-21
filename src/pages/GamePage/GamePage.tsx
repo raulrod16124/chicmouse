@@ -53,18 +53,18 @@ const heroImageVariants: Variants = {
 const features = [
   {
     icon: <Layers size={22} />,
-    titleKey: 'stellarMergeFeature1Title',
-    bodyKey: 'stellarMergeFeature1Body',
+    titleKey: 'stellarFusionFeature1Title',
+    bodyKey: 'stellarFusionFeature1Body',
   },
   {
     icon: <Trophy size={22} />,
-    titleKey: 'stellarMergeFeature2Title',
-    bodyKey: 'stellarMergeFeature2Body',
+    titleKey: 'stellarFusionFeature2Title',
+    bodyKey: 'stellarFusionFeature2Body',
   },
   {
     icon: <Heart size={22} />,
-    titleKey: 'stellarMergeFeature3Title',
-    bodyKey: 'stellarMergeFeature3Body',
+    titleKey: 'stellarFusionFeature3Title',
+    bodyKey: 'stellarFusionFeature3Body',
   },
 ];
 
@@ -157,7 +157,7 @@ export default function GamePage() {
             </GameHeroHeader>
 
             <GameHeroTagline>
-              {intl.formatMessage({id: 'stellarMergeTagline'})}
+              {intl.formatMessage({id: 'stellarFusionTagline'})}
             </GameHeroTagline>
 
             <div>
@@ -246,10 +246,10 @@ export default function GamePage() {
           </GameSectionEyebrow>
           <AboutColumns>
             <AboutParagraph>
-              {intl.formatMessage({id: 'stellarMergeDescP1'})}
+              {intl.formatMessage({id: 'stellarFusionDescP1'})}
             </AboutParagraph>
             <AboutParagraph>
-              {intl.formatMessage({id: 'stellarMergeDescP2'})}
+              {intl.formatMessage({id: 'stellarFusionDescP2'})}
             </AboutParagraph>
           </AboutColumns>
           <LegalRow>

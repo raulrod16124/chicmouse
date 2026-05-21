@@ -2,13 +2,13 @@ Terms and Conditions
 Last updated: May 14, 2026
 
 1. Acceptance
-By downloading, installing, or playing Stellar Merge ("the Game"),
+By downloading, installing, or playing Stellar Fusion ("the Game"),
 you agree to these Terms and Conditions ("Terms"). If you do not agree,
 do not use the Game. These Terms form a binding agreement between you
 and ChicMouse ("we", "us", "our").
 
 2. Eligibility
-You must be at least 13 years old to use Stellar Merge. If you are
+You must be at least 13 years old to use Stellar Fusion. If you are
 under 18 (or the age of majority in your jurisdiction), you confirm
 that you have your parent's or legal guardian's permission to use
 the Game.
@@ -62,7 +62,7 @@ Violations may result in immediate account suspension or permanent ban,
 without prior notice or refund of any purchases.
 
 8. Intellectual Property
-All content in Stellar Merge — including artwork, music, sound effects,
+All content in Stellar Fusion — including artwork, music, sound effects,
 code, text, logos, and character designs — is the exclusive property
 of ChicMouse or its licensors. All rights are reserved. You acquire
 no ownership rights by using the Game.

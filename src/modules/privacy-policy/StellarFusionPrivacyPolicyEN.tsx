@@ -29,14 +29,14 @@ import {
   TextList,
 } from './PrivacyPolicy.styles';
 
-export const StellarMergePrivacyPolicyEN = () => {
+export const StellarFusionPrivacyPolicyEN = () => {
   return (
-    <PrivacyPolicyWrapper data-testid="stellar-merge-privacy-policy-en-page-id">
+    <PrivacyPolicyWrapper data-testid="stellar-fusion-privacy-policy-en-page-id">
       <PolicyHero>
         <PolicyHeroIconWrapper>
           <Shield size={32} />
         </PolicyHeroIconWrapper>
-        <PolicyHeroEyebrow>Stellar Merge &middot; Legal</PolicyHeroEyebrow>
+        <PolicyHeroEyebrow>Stellar Fusion &middot; Legal</PolicyHeroEyebrow>
         <PolicyHeroTitle>Privacy Policy</PolicyHeroTitle>
         <PolicyHeroMeta>Last updated: May 14, 2026</PolicyHeroMeta>
       </PolicyHero>
@@ -45,7 +45,7 @@ export const StellarMergePrivacyPolicyEN = () => {
         <PolicyIntro>
           <Text>
             This Privacy Policy describes how ChicMouse collects, uses, and
-            protects your information when you play Stellar Merge. We are
+            protects your information when you play Stellar Fusion. We are
             committed to handling your data with care and full transparency.
           </Text>
         </PolicyIntro>
@@ -59,7 +59,7 @@ export const StellarMergePrivacyPolicyEN = () => {
             <TextSubtitle>1. Data Controller</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Stellar Merge is developed and operated by ChicMouse
+            Stellar Fusion is developed and operated by ChicMouse
             (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). For any
             privacy-related questions, contact us at:{' '}
             <a href="mailto:admin@chicmouse.com">admin@chicmouse.com</a>
@@ -296,7 +296,7 @@ export const StellarMergePrivacyPolicyEN = () => {
             <TextSubtitle>10. Children</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Stellar Merge is not directed at children under the age of 13 (or 16
+            Stellar Fusion is not directed at children under the age of 13 (or 16
             in certain EU member states). We do not knowingly collect personal
             data from children under these ages. If you are a parent or guardian
             and believe your child has provided personal data, contact us at{' '}

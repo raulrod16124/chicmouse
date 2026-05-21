@@ -32,14 +32,14 @@ import {
   TextList,
 } from './TermsAndConditions.styles';
 
-export const StellarMergeTermsAndConditionsES = () => {
+export const StellarFusionTermsAndConditionsES = () => {
   return (
-    <TermsAndConditionsWrapper data-testid="stellar-merge-terms-and-conditions-es-page-id">
+    <TermsAndConditionsWrapper data-testid="stellar-fusion-terms-and-conditions-es-page-id">
       <PolicyHero>
         <PolicyHeroIconWrapper>
           <ScrollText size={32} />
         </PolicyHeroIconWrapper>
-        <PolicyHeroEyebrow>Stellar Merge &middot; Legal</PolicyHeroEyebrow>
+        <PolicyHeroEyebrow>Stellar Fusion &middot; Legal</PolicyHeroEyebrow>
         <PolicyHeroTitle>T&eacute;rminos y Condiciones</PolicyHeroTitle>
         <PolicyHeroMeta>
           &Uacute;ltima actualizaci&oacute;n: 14 de mayo de 2026
@@ -67,7 +67,7 @@ export const StellarMergeTermsAndConditionsES = () => {
             </TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Al acceder o utilizar Stellar Merge confirmas que tienes al menos 13
+            Al acceder o utilizar Stellar Fusion confirmas que tienes al menos 13
             a&ntilde;os (o 16 en determinados estados miembros de la UE) y que
             has le&iacute;do, comprendido y aceptas quedar vinculado por estos
             T&eacute;rminos.
@@ -135,7 +135,7 @@ export const StellarMergeTermsAndConditionsES = () => {
             <TextSubtitle>4. Propiedad Intelectual</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Todo el contenido de Stellar Merge &mdash;incluidos, entre otros,
+            Todo el contenido de Stellar Fusion &mdash;incluidos, entre otros,
             ilustraciones, m&uacute;sica, c&oacute;digo, texto y
             mec&aacute;nicas de juego&mdash; es propiedad de ChicMouse o de sus
             licenciantes. Se te otorga una licencia limitada, no exclusiva, no
@@ -236,9 +236,9 @@ export const StellarMergeTermsAndConditionsES = () => {
             <TextSubtitle>9. Privacidad</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Tu uso de Stellar Merge tambi&eacute;n est&aacute; regido por
+            Tu uso de Stellar Fusion tambi&eacute;n est&aacute; regido por
             nuestra{' '}
-            <a href="/applications/stellar-merge/privacy-policy">
+            <a href="/applications/stellar-fusion/privacy-policy">
               Pol&iacute;tica de Privacidad
             </a>
             , que se incorpora a estos T&eacute;rminos por referencia.
@@ -257,7 +257,7 @@ export const StellarMergeTermsAndConditionsES = () => {
           </PolicySectionHeader>
           <Text>
             Podemos actualizar, modificar o discontinuar cualquier
-            caracter&iacute;stica de Stellar Merge en cualquier momento sin
+            caracter&iacute;stica de Stellar Fusion en cualquier momento sin
             responsabilidad. El uso continuado del juego tras una
             actualizaci&oacute;n constituye tu aceptaci&oacute;n de los cambios.
           </Text>
@@ -272,7 +272,7 @@ export const StellarMergeTermsAndConditionsES = () => {
             <TextSubtitle>11. Exclusiones de Responsabilidad</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Stellar Merge se proporciona &ldquo;tal cual&rdquo; sin garantias de
+            Stellar Fusion se proporciona &ldquo;tal cual&rdquo; sin garantias de
             ning&uacute;n tipo. En la medida en que lo permita la ley, ChicMouse
             no ser&aacute; responsable de ning&uacute;n da&ntilde;o indirecto,
             incidental o consecuente derivado del uso del juego, incluida la
@@ -306,7 +306,7 @@ export const StellarMergeTermsAndConditionsES = () => {
             <TextSubtitle>13. Usuarios Internacionales</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Stellar Merge se opera desde Espa&ntilde;a. Si accedes al juego
+            Stellar Fusion se opera desde Espa&ntilde;a. Si accedes al juego
             desde fuera de Espa&ntilde;a, lo haces bajo tu propio riesgo y eres
             responsable del cumplimiento de tus leyes locales.
           </Text>

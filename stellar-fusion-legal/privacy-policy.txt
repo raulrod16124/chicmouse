@@ -2,7 +2,7 @@ Privacy Policy
 Last updated: May 14, 2026
 
 1. Data Controller
-Stellar Merge is developed and operated by ChicMouse ("we", "us", "our").
+Stellar Fusion is developed and operated by ChicMouse ("we", "us", "our").
 For any privacy-related questions, contact us at: admin@chicmouse.com
 
 2. What Data We Collect
@@ -82,7 +82,7 @@ complaint with your local data protection supervisory authority
 (e.g., the AEPD in Spain: https://www.aepd.es).
 
 10. Children
-Stellar Merge is not directed at children under the age of 13
+Stellar Fusion is not directed at children under the age of 13
 (or 16 in certain EU member states). We do not knowingly collect
 personal data from children under these ages. If you are a parent
 or guardian and believe your child has provided personal data,

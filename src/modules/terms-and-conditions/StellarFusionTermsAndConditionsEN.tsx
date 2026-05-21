@@ -32,14 +32,14 @@ import {
   TextList,
 } from './TermsAndConditions.styles';
 
-export const StellarMergeTermsAndConditionsEN = () => {
+export const StellarFusionTermsAndConditionsEN = () => {
   return (
-    <TermsAndConditionsWrapper data-testid="stellar-merge-terms-and-conditions-en-page-id">
+    <TermsAndConditionsWrapper data-testid="stellar-fusion-terms-and-conditions-en-page-id">
       <PolicyHero>
         <PolicyHeroIconWrapper>
           <ScrollText size={32} />
         </PolicyHeroIconWrapper>
-        <PolicyHeroEyebrow>Stellar Merge &middot; Legal</PolicyHeroEyebrow>
+        <PolicyHeroEyebrow>Stellar Fusion &middot; Legal</PolicyHeroEyebrow>
         <PolicyHeroTitle>Terms and Conditions</PolicyHeroTitle>
         <PolicyHeroMeta>Last updated: May 14, 2026</PolicyHeroMeta>
       </PolicyHero>
@@ -63,7 +63,7 @@ export const StellarMergeTermsAndConditionsEN = () => {
             <TextSubtitle>1. Acceptance of Terms</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            By accessing or using Stellar Merge you confirm that you are at
+            By accessing or using Stellar Fusion you confirm that you are at
             least 13 years old (or 16 in certain EU member states) and that you
             have read, understood, and agree to be bound by these Terms.
           </Text>
@@ -124,7 +124,7 @@ export const StellarMergeTermsAndConditionsEN = () => {
             <TextSubtitle>4. Intellectual Property</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            All content in Stellar Merge &mdash; including but not limited to
+            All content in Stellar Fusion &mdash; including but not limited to
             artwork, music, code, text, and game mechanics &mdash; is owned by
             ChicMouse or its licensors. You are granted a limited,
             non-exclusive, non-transferable, revocable licence to play the game
@@ -214,8 +214,8 @@ export const StellarMergeTermsAndConditionsEN = () => {
             <TextSubtitle>9. Privacy</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Your use of Stellar Merge is also governed by our{' '}
-            <a href="/applications/stellar-merge/privacy-policy">
+            Your use of Stellar Fusion is also governed by our{' '}
+            <a href="/applications/stellar-fusion/privacy-policy">
               Privacy Policy
             </a>
             , which is incorporated into these Terms by reference.
@@ -231,7 +231,7 @@ export const StellarMergeTermsAndConditionsEN = () => {
             <TextSubtitle>10. Updates and Changes to the Game</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            We may update, modify, or discontinue any feature of Stellar Merge
+            We may update, modify, or discontinue any feature of Stellar Fusion
             at any time without liability. Continued use of the game after an
             update constitutes your acceptance of the changes.
           </Text>
@@ -248,7 +248,7 @@ export const StellarMergeTermsAndConditionsEN = () => {
             </TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Stellar Merge is provided &ldquo;as is&rdquo; without warranties of
+            Stellar Fusion is provided &ldquo;as is&rdquo; without warranties of
             any kind. To the fullest extent permitted by law, ChicMouse is not
             liable for any indirect, incidental, or consequential damages
             arising from your use of the game, including loss of virtual items
@@ -281,7 +281,7 @@ export const StellarMergeTermsAndConditionsEN = () => {
             <TextSubtitle>13. International Users</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Stellar Merge is operated from Spain. If you access the game from
+            Stellar Fusion is operated from Spain. If you access the game from
             outside Spain, you do so at your own risk and are responsible for
             compliance with your local laws.
           </Text>

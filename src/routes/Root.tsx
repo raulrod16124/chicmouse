@@ -13,14 +13,14 @@ import {pageTransition} from 'animations/variants';
 import {useReducedMotion} from 'hooks/useReducedMotion';
 
 const GamePage = React.lazy(() => import('pages/GamePage/GamePage'));
-const StellarMergePrivacyPolicyEN = React.lazy(() =>
-  import('modules/privacy-policy/StellarMergePrivacyPolicyEN').then(m => ({
-    default: m.StellarMergePrivacyPolicyEN,
+const StellarFusionPrivacyPolicyEN = React.lazy(() =>
+  import('modules/privacy-policy/StellarFusionPrivacyPolicyEN').then(m => ({
+    default: m.StellarFusionPrivacyPolicyEN,
   })),
 );
-const StellarMergePrivacyPolicyES = React.lazy(() =>
-  import('modules/privacy-policy/StellarMergePrivacyPolicyES').then(m => ({
-    default: m.StellarMergePrivacyPolicyES,
+const StellarFusionPrivacyPolicyES = React.lazy(() =>
+  import('modules/privacy-policy/StellarFusionPrivacyPolicyES').then(m => ({
+    default: m.StellarFusionPrivacyPolicyES,
   })),
 );
 const PrivacyPolicyEN = React.lazy(() =>
@@ -33,14 +33,14 @@ const PrivacyPolicyES = React.lazy(() =>
     default: m.PrivacyPolicyES,
   })),
 );
-const StellarMergeTermsAndConditionsEN = React.lazy(() =>
-  import('modules/terms-and-conditions/StellarMergeTermsAndConditionsEN').then(
-    m => ({default: m.StellarMergeTermsAndConditionsEN}),
+const StellarFusionTermsAndConditionsEN = React.lazy(() =>
+  import('modules/terms-and-conditions/StellarFusionTermsAndConditionsEN').then(
+    m => ({default: m.StellarFusionTermsAndConditionsEN}),
   ),
 );
-const StellarMergeTermsAndConditionsES = React.lazy(() =>
-  import('modules/terms-and-conditions/StellarMergeTermsAndConditionsES').then(
-    m => ({default: m.StellarMergeTermsAndConditionsES}),
+const StellarFusionTermsAndConditionsES = React.lazy(() =>
+  import('modules/terms-and-conditions/StellarFusionTermsAndConditionsES').then(
+    m => ({default: m.StellarFusionTermsAndConditionsES}),
   ),
 );
 const TermsAndConditionsEN = React.lazy(() =>
@@ -99,9 +99,9 @@ export const Root = () => {
             path="applications/:id/privacy-policy"
             element={
               language === 'es-ES' ? (
-                <StellarMergePrivacyPolicyES />
+                <StellarFusionPrivacyPolicyES />
               ) : (
-                <StellarMergePrivacyPolicyEN />
+                <StellarFusionPrivacyPolicyEN />
               )
             }
           />
@@ -109,9 +109,9 @@ export const Root = () => {
             path="applications/:id/terms-and-conditions"
             element={
               language === 'es-ES' ? (
-                <StellarMergeTermsAndConditionsES />
+                <StellarFusionTermsAndConditionsES />
               ) : (
-                <StellarMergeTermsAndConditionsEN />
+                <StellarFusionTermsAndConditionsEN />
               )
             }
           />

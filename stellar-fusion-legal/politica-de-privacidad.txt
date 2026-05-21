@@ -2,7 +2,7 @@ Política de Privacidad
 Última actualización: 14 de mayo de 2026
 
 1. Responsable del Tratamiento
-Stellar Merge es desarrollado y operado por ChicMouse ("nosotros", "nos", "nuestro").
+Stellar Fusion es desarrollado y operado por ChicMouse ("nosotros", "nos", "nuestro").
 Para cualquier consulta relacionada con la privacidad, contáctanos en: admin@chicmouse.com
 
 2. Datos que Recopilamos
@@ -85,7 +85,7 @@ ante la autoridad de supervisión de protección de datos de tu país
 (por ejemplo, la AEPD en España: https://www.aepd.es).
 
 10. Menores de Edad
-Stellar Merge no está dirigido a menores de 13 años (ni de 16 en determinados
+Stellar Fusion no está dirigido a menores de 13 años (ni de 16 en determinados
 estados miembros de la UE). No recopilamos conscientemente datos personales
 de menores de estas edades. Si eres padre, madre o tutor legal y crees que
 tu hijo/a ha proporcionado datos personales, contáctanos en admin@chicmouse.com

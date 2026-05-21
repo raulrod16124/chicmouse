@@ -29,14 +29,14 @@ import {
   TextList,
 } from './PrivacyPolicy.styles';
 
-export const StellarMergePrivacyPolicyES = () => {
+export const StellarFusionPrivacyPolicyES = () => {
   return (
-    <PrivacyPolicyWrapper data-testid="stellar-merge-privacy-policy-es-page-id">
+    <PrivacyPolicyWrapper data-testid="stellar-fusion-privacy-policy-es-page-id">
       <PolicyHero>
         <PolicyHeroIconWrapper>
           <Shield size={32} />
         </PolicyHeroIconWrapper>
-        <PolicyHeroEyebrow>Stellar Merge &middot; Legal</PolicyHeroEyebrow>
+        <PolicyHeroEyebrow>Stellar Fusion &middot; Legal</PolicyHeroEyebrow>
         <PolicyHeroTitle>Pol&iacute;tica de Privacidad</PolicyHeroTitle>
         <PolicyHeroMeta>
           &Uacute;ltima actualizaci&oacute;n: 14 de mayo de 2026
@@ -48,7 +48,7 @@ export const StellarMergePrivacyPolicyES = () => {
           <Text>
             Esta Pol&iacute;tica de Privacidad describe c&oacute;mo ChicMouse
             recopila, usa y protege tu informaci&oacute;n cuando juegas a
-            Stellar Merge. Nos comprometemos a gestionar tus datos con cuidado y
+            Stellar Fusion. Nos comprometemos a gestionar tus datos con cuidado y
             total transparencia.
           </Text>
         </PolicyIntro>
@@ -62,7 +62,7 @@ export const StellarMergePrivacyPolicyES = () => {
             <TextSubtitle>1. Responsable del Tratamiento</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Stellar Merge es desarrollado y operado por ChicMouse
+            Stellar Fusion es desarrollado y operado por ChicMouse
             (&ldquo;nosotros&rdquo;, &ldquo;nos&rdquo;, &ldquo;nuestro&rdquo;).
             Para cualquier consulta relacionada con la privacidad,
             cont&aacute;ctanos en:{' '}
@@ -316,7 +316,7 @@ export const StellarMergePrivacyPolicyES = () => {
             <TextSubtitle>10. Menores de Edad</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Stellar Merge no est&aacute; dirigido a menores de 13 a&ntilde;os
+            Stellar Fusion no est&aacute; dirigido a menores de 13 a&ntilde;os
             (ni de 16 en determinados estados miembros de la UE). No recopilamos
             conscientemente datos personales de menores de estas edades. Si eres
             padre, madre o tutor legal y crees que tu hijo/a ha proporcionado

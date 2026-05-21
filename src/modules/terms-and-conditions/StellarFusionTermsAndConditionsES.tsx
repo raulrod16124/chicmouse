@@ -50,7 +50,7 @@ export const StellarFusionTermsAndConditionsES = () => {
         <PolicyIntro>
           <Text>
             Estos T&eacute;rminos y Condiciones rigen tu acceso y uso de Stellar
-            Merge, un juego de puzles m&oacute;vil desarrollado por ChicMouse.
+            Fusion, un juego de puzles m&oacute;vil desarrollado por ChicMouse.
             Al descargar, instalar o jugar, aceptas estos T&eacute;rminos. Si no
             est&aacute;s de acuerdo, no uses el juego.
           </Text>
@@ -67,10 +67,10 @@ export const StellarFusionTermsAndConditionsES = () => {
             </TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Al acceder o utilizar Stellar Fusion confirmas que tienes al menos 13
-            a&ntilde;os (o 16 en determinados estados miembros de la UE) y que
-            has le&iacute;do, comprendido y aceptas quedar vinculado por estos
-            T&eacute;rminos.
+            Al acceder o utilizar Stellar Fusion confirmas que tienes al menos
+            13 a&ntilde;os (o 16 en determinados estados miembros de la UE) y
+            que has le&iacute;do, comprendido y aceptas quedar vinculado por
+            estos T&eacute;rminos.
           </Text>
         </PolicySection>
 
@@ -272,11 +272,11 @@ export const StellarFusionTermsAndConditionsES = () => {
             <TextSubtitle>11. Exclusiones de Responsabilidad</TextSubtitle>
           </PolicySectionHeader>
           <Text>
-            Stellar Fusion se proporciona &ldquo;tal cual&rdquo; sin garantias de
-            ning&uacute;n tipo. En la medida en que lo permita la ley, ChicMouse
-            no ser&aacute; responsable de ning&uacute;n da&ntilde;o indirecto,
-            incidental o consecuente derivado del uso del juego, incluida la
-            p&eacute;rdida de art&iacute;culos virtuales o datos.
+            Stellar Fusion se proporciona &ldquo;tal cual&rdquo; sin garantias
+            de ning&uacute;n tipo. En la medida en que lo permita la ley,
+            ChicMouse no ser&aacute; responsable de ning&uacute;n da&ntilde;o
+            indirecto, incidental o consecuente derivado del uso del juego,
+            incluida la p&eacute;rdida de art&iacute;culos virtuales o datos.
           </Text>
         </PolicySection>
 

@@ -4,7 +4,7 @@ import {ArrowRight} from 'lucide-react';
 import {cardEntrance} from 'animations/variants';
 import {useReducedMotion} from 'hooks/useReducedMotion';
 import {AppPages} from 'utils';
-import spotlightImg from 'assets/stellar_merge_product_spotlight.webp';
+import spotlightImg from 'assets/stellar_fusion_product_spotlight.webp';
 import {
   FeaturedGameSection,
   FeaturedGameInner,

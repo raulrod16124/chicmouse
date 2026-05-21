@@ -1,10 +1,10 @@
 import {IAppPage} from 'types';
-import stellarFusionIcon from 'assets/stellar_merge_logo.webp';
-import stellarFusionImg1 from 'assets/stellar_merge_1.webp';
-import stellarFusionImg2 from 'assets/stellar_merge_2.webp';
-import stellarFusionImg3 from 'assets/stellar_merge_3.webp';
-import stellarFusionImg4 from 'assets/stellar_merge_4.webp';
-import stellarFusionImg5 from 'assets/stellar_merge_5.webp';
+import stellarFusionIcon from 'assets/stellar_fusion_logo.webp';
+import stellarFusionImg1 from 'assets/stellar_fusion_1.webp';
+import stellarFusionImg2 from 'assets/stellar_fusion_2.webp';
+import stellarFusionImg3 from 'assets/stellar_fusion_3.webp';
+import stellarFusionImg4 from 'assets/stellar_fusion_4.webp';
+import stellarFusionImg5 from 'assets/stellar_fusion_5.webp';
 import imageNotFound from 'assets/image_not_found.webp';
 
 // const { VITE_MATCHUP_APP_URL } = import.meta.env;

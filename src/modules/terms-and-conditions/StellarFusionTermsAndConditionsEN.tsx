@@ -48,7 +48,7 @@ export const StellarFusionTermsAndConditionsEN = () => {
         <PolicyIntro>
           <Text>
             These Terms and Conditions govern your access to and use of Stellar
-            Merge, a mobile puzzle game developed by ChicMouse. By downloading,
+            Fusion, a mobile puzzle game developed by ChicMouse. By downloading,
             installing, or playing the game, you agree to these Terms. If you do
             not agree, do not use the game.
           </Text>

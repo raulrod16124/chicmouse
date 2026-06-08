@@ -8,7 +8,7 @@ import {useReducedMotion} from 'hooks/useReducedMotion';
 import {AppPages} from 'utils';
 import {colors} from 'tokens/colors';
 import type {IAppPage} from 'types';
-import spotlightImg from 'assets/stellar_merge_product_spotlight.webp';
+import spotlightImg from 'assets/stellar_fusion_product_spotlight.webp';
 import {
   GamePageWrapper,
   GameHeroSection,

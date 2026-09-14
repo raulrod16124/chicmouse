@@ -18,7 +18,7 @@ describe('StudioStatement', () => {
   test('renders all three pillar titles', () => {
     renderWithRouter(<StudioStatement />);
     expect(screen.getByText('Made to Entertain')).toBeInTheDocument();
-    expect(screen.getByText('Your Pace, Your Rules')).toBeInTheDocument();
+    expect(screen.getByText('Fair & Fun By Design')).toBeInTheDocument();
     expect(screen.getByText('Born In-House')).toBeInTheDocument();
   });
 

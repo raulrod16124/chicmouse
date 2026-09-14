@@ -13,7 +13,7 @@ describe('FeaturedGame', () => {
   test('renders the game tagline', () => {
     renderWithRouter(<FeaturedGame />);
     expect(
-      screen.getByText('Merge planets. Create the cosmos.'),
+      screen.getByText('Merge. Strategize. Compete across the cosmos.'),
     ).toBeInTheDocument();
   });
 

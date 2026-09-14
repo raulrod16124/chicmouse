@@ -62,7 +62,7 @@ export const FeaturedGame = () => {
                 })}>
             <ProductSpotlightImage
               src={spotlightImg}
-              alt={`${game.name} product spotlight`}
+              alt={`${game.name} artwork`}
               loading="lazy"
             />
           </ProductSpotlightWrapper>

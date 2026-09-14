@@ -17,7 +17,7 @@ describe('SinglePage', () => {
 
   test('renders the FeaturedGame section', () => {
     renderWithRouter(<SinglePage />);
-    expect(screen.getByText('OUR LATEST GAME')).toBeInTheDocument();
+    expect(screen.getByText('A CHICMOUSE ORIGINAL')).toBeInTheDocument();
   });
 
   test('renders the StudioStatement section', () => {

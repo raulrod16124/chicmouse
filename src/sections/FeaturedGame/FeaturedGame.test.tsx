@@ -7,19 +7,19 @@ import {renderWithRouter} from 'utils/test_utils';
 describe('FeaturedGame', () => {
   test('renders the section eyebrow', () => {
     renderWithRouter(<FeaturedGame />);
-    expect(screen.getByText('OUR LATEST GAME')).toBeInTheDocument();
+    expect(screen.getByText('A CHICMOUSE ORIGINAL')).toBeInTheDocument();
   });
 
   test('renders the game tagline', () => {
     renderWithRouter(<FeaturedGame />);
     expect(
-      screen.getByText('Merge planets. Create the cosmos.'),
+      screen.getByText('Merge. Strategize. Compete across the cosmos.'),
     ).toBeInTheDocument();
   });
 
   test('renders the game CTA link', () => {
     renderWithRouter(<FeaturedGame />);
-    expect(screen.getByText('Explore Game Details')).toBeInTheDocument();
+    expect(screen.getByText('Meet Stellar Fusion')).toBeInTheDocument();
   });
 
   test('renders a product image', () => {
@@ -30,7 +30,7 @@ describe('FeaturedGame', () => {
 
   test('game CTA link navigates to the game page', () => {
     renderWithRouter(<FeaturedGame />);
-    const link = screen.getByText('Explore Game Details').closest('a');
+    const link = screen.getByText('Meet Stellar Fusion').closest('a');
     expect(link).toHaveAttribute('href');
   });
 });

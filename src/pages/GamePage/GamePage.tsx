@@ -5,6 +5,7 @@ import {ArrowLeft, Layers, Trophy, Heart} from 'lucide-react';
 import {ClipLoader} from 'react-spinners';
 import {fadeUp, staggerContainer} from 'animations/variants';
 import {useReducedMotion} from 'hooks/useReducedMotion';
+import {usePageMeta} from 'hooks/usePageMeta';
 import {AppPages} from 'utils';
 import {colors} from 'tokens/colors';
 import type {IAppPage} from 'types';
@@ -73,6 +74,10 @@ export default function GamePage() {
   const navigate = useNavigate();
   const {id: appName} = useParams();
   const reducedMotion = useReducedMotion();
+  usePageMeta({
+    titleKey: 'metaTitleGame',
+    descriptionKey: 'metaDescriptionGame',
+  });
 
   const appData = AppPages.find((app: IAppPage) => app.name === appName);
 
@@ -83,7 +88,7 @@ export default function GamePage() {
           color={colors.accentBlue}
           loading={true}
           size={50}
-          aria-label="Loading"
+          aria-label={intl.formatMessage({id: 'loadingLabel'})}
         />
       </GamePageLoader>
     );
@@ -168,7 +173,7 @@ export default function GamePage() {
                 <HeroStoreBadge
                   href="#"
                   $disabled
-                  aria-label="Download on the App Store"
+                  aria-label={intl.formatMessage({id: 'ariaDownloadAppStore'})}
                   aria-disabled="true">
                   <BadgeLabel>
                     {intl.formatMessage({id: 'downloadOn'})}
@@ -180,7 +185,7 @@ export default function GamePage() {
                   href={appData.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Get it on Google Play">
+                  aria-label={intl.formatMessage({id: 'ariaGetGooglePlay'})}>
                   <BadgeLabel>{intl.formatMessage({id: 'getItOn'})}</BadgeLabel>
                   <BadgeName>Google Play</BadgeName>
                 </HeroStoreBadge>

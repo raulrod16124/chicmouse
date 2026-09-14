@@ -62,7 +62,7 @@ export const FeaturedGame = () => {
                 })}>
             <ProductSpotlightImage
               src={spotlightImg}
-              alt={`${game.name} product spotlight`}
+              alt={`${game.name} artwork`}
               loading="lazy"
             />
           </ProductSpotlightWrapper>
@@ -85,16 +85,16 @@ export const FeaturedGame = () => {
             </GameTagline>
 
             <GameDescription>
-              {intl.formatMessage({id: 'matchupDescriptionP1'})}
+              {intl.formatMessage({id: 'featuredCardP1'})}
             </GameDescription>
             <GameDescription>
-              {intl.formatMessage({id: 'matchupDescriptionP2'})}
+              {intl.formatMessage({id: 'featuredCardP2'})}
             </GameDescription>
 
             <StoreBadges>
               <StoreBadge
                 href="#"
-                aria-label="Download on the App Store"
+                aria-label={intl.formatMessage({id: 'ariaDownloadAppStore'})}
                 aria-disabled="true"
                 style={{opacity: 0.45, pointerEvents: 'none'}}>
                 <StoreBadgeLabel>
@@ -107,7 +107,7 @@ export const FeaturedGame = () => {
                 href={game.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Get it on Google Play">
+                aria-label={intl.formatMessage({id: 'ariaGetGooglePlay'})}>
                 <StoreBadgeLabel>
                   {intl.formatMessage({id: 'getItOn'})}
                 </StoreBadgeLabel>

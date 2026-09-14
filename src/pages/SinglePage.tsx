@@ -1,5 +1,6 @@
 import {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
+import {usePageMeta} from 'hooks/usePageMeta';
 import {Hero} from 'sections/Hero/Hero';
 import {FeaturedGame} from 'sections/FeaturedGame/FeaturedGame';
 import {StudioStatement} from 'sections/StudioStatement/StudioStatement';
@@ -8,6 +9,10 @@ import {Footer} from 'common/Footer';
 
 export const SinglePage = () => {
   const location = useLocation();
+  usePageMeta({
+    titleKey: 'metaTitleHome',
+    descriptionKey: 'metaDescriptionHome',
+  });
 
   useEffect(() => {
     const scrollTo = (location.state as {scrollTo?: string} | null)?.scrollTo;

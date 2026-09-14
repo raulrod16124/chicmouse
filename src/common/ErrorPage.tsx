@@ -14,7 +14,10 @@ export const ErrorPage = () => {
   return (
     <ErrorPageWrapper>
       <ErrorPageContent>
-        <ErrorPageImg src={mouseConfusedImage} alt="mouse-confused-image" />
+        <ErrorPageImg
+          src={mouseConfusedImage}
+          alt={intl.formatMessage({id: 'errorAlt'})}
+        />
         <ErrorPageText>{intl.formatMessage({id: 'wrongPath'})}</ErrorPageText>
         <RedirectButton to={'/'}>
           {intl.formatMessage({id: 'goHome'})}

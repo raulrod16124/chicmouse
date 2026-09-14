@@ -53,7 +53,7 @@ describe('ContactStrip', () => {
     fireEvent.click(screen.getByRole('button'));
     await waitFor(() => {
       expect(
-        screen.getByText('Please fill in all fields before sending.'),
+        screen.getByText('Please fill in all the fields before sending.'),
       ).toBeInTheDocument();
     });
   });
@@ -95,7 +95,7 @@ describe('ContactStrip', () => {
     fireEvent.click(screen.getByRole('button'));
     await waitFor(() => {
       expect(
-        screen.getByText('Your message was successfully sent, thank you!.'),
+        screen.getByText('Your message was sent successfully. Thank you!'),
       ).toBeInTheDocument();
     });
   });

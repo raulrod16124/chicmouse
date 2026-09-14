@@ -1,5 +1,5 @@
 import {useIntl} from 'react-intl';
-import {Users, Compass, Cpu} from 'lucide-react';
+import {Smile, Compass, Hammer} from 'lucide-react';
 import {fadeUp, staggerContainer, cardEntrance} from 'animations/variants';
 import {useReducedMotion} from 'hooks/useReducedMotion';
 import {
@@ -19,9 +19,9 @@ import {
 } from './StudioStatement.styles';
 
 const PILLARS = [
-  {icon: Users, titleKey: 'pillar1Title', bodyKey: 'pillar1Body'},
+  {icon: Smile, titleKey: 'pillar1Title', bodyKey: 'pillar1Body'},
   {icon: Compass, titleKey: 'pillar2Title', bodyKey: 'pillar2Body'},
-  {icon: Cpu, titleKey: 'pillar3Title', bodyKey: 'pillar3Body'},
+  {icon: Hammer, titleKey: 'pillar3Title', bodyKey: 'pillar3Body'},
 ] as const;
 
 export const StudioStatement = () => {

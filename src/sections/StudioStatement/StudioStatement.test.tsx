@@ -17,14 +17,14 @@ describe('StudioStatement', () => {
 
   test('renders all three pillar titles', () => {
     renderWithRouter(<StudioStatement />);
-    expect(screen.getByText('Player First')).toBeInTheDocument();
-    expect(screen.getByText('Clean Design')).toBeInTheDocument();
-    expect(screen.getByText('In-house Tech')).toBeInTheDocument();
+    expect(screen.getByText('Made to Entertain')).toBeInTheDocument();
+    expect(screen.getByText('Your Pace, Your Rules')).toBeInTheDocument();
+    expect(screen.getByText('Born In-House')).toBeInTheDocument();
   });
 
   test('renders pillar body text', () => {
     renderWithRouter(<StudioStatement />);
-    expect(screen.getByText(/meaningful engagement/i)).toBeInTheDocument();
+    expect(screen.getByText(/is it actually fun/i)).toBeInTheDocument();
   });
 
   test('renders the section with id="studio"', () => {

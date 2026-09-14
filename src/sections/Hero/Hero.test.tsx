@@ -14,12 +14,12 @@ beforeEach(() => {
 
 describe('Testing the Hero section', () => {
   test('should render the eyebrow text', () => {
-    expect(screen.getByText('INDIE GAME STUDIO')).toBeInTheDocument();
+    expect(screen.getByText('GAMES WORTH YOUR TIME')).toBeInTheDocument();
   });
 
   test('should render the headline', () => {
     expect(
-      screen.getByText('We build mobile experiences worth playing.'),
+      screen.getByText('Fun that respects your time.'),
     ).toBeInTheDocument();
   });
 });

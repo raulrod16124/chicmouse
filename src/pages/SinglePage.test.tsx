@@ -12,7 +12,7 @@ describe('SinglePage', () => {
 
   test('renders the Hero section', () => {
     renderWithRouter(<SinglePage />);
-    expect(screen.getByText('INDIE GAME STUDIO')).toBeInTheDocument();
+    expect(screen.getByText('GAMES WORTH YOUR TIME')).toBeInTheDocument();
   });
 
   test('renders the FeaturedGame section', () => {

@@ -135,7 +135,7 @@ export const ContactStrip = () => {
               <ContactInfoIcon>
                 <MapPin size={18} />
               </ContactInfoIcon>
-              Spain · Remote worldwide
+              {intl.formatMessage({id: 'locationLine'})}
             </ContactInfoItem>
           </ContactInfoList>
         </ContactHeadingBlock>

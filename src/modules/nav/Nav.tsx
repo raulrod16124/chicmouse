@@ -103,10 +103,7 @@ export const Nav = memo(() => {
             {DISPLAY_NAV_ITEMS.map(({id, labelKey}) => (
               <NavLink
                 key={id}
-                $active={
-                  activeSection === id ||
-                  (id === 'studio' && activeSection === 'team')
-                }
+                $active={activeSection === id}
                 onClick={() => handleNavClick(id)}>
                 {intl.formatMessage({id: labelKey})}
               </NavLink>
@@ -159,10 +156,7 @@ export const Nav = memo(() => {
             {DISPLAY_NAV_ITEMS.map(({id, labelKey}) => (
               <DrawerNavLink
                 key={id}
-                $active={
-                  activeSection === id ||
-                  (id === 'studio' && activeSection === 'team')
-                }
+                $active={activeSection === id}
                 onClick={() => handleNavClick(id)}>
                 {intl.formatMessage({id: labelKey})}
               </DrawerNavLink>

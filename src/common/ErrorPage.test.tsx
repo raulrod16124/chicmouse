@@ -7,7 +7,7 @@ import {renderWithRouter} from 'utils/test_utils';
 describe('ErrorPage', () => {
   test('renders the error message', () => {
     renderWithRouter(<ErrorPage />);
-    expect(screen.getByText(/page.*not found/i)).toBeInTheDocument();
+    expect(screen.getByText(/couldn't find that page/i)).toBeInTheDocument();
   });
 
   test('renders the go home button', () => {

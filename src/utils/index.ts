@@ -49,8 +49,7 @@ export const AppPages: IAppPage[] = [
     icon: stellarFusionIcon,
     stars: 0.0,
     downloadsNumber: 0,
-    url: 'https://play.google.com/store/apps/details?id=com.matchupcardgame2023',
-    // url: VITE_MATCHUP_APP_URL,
+    url: 'https://play.google.com/store/apps/details?id=com.stellarmerge.app',
   },
   {
     name: 'notReady',
